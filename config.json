@@ -1,0 +1,17 @@
+{
+  "version": "1.0.0",
+  "db": {
+      "host": "localhost",
+      "username": "root",
+      "password": "",
+      "name": "linkjobs",
+      "driver": "mysql"
+  },
+  "api": {
+    "token": "123456"
+  },
+  "info": {
+    "title": "Linkjobs",
+    "phone": "(81) 9 99899-4052"
+  }
+}
