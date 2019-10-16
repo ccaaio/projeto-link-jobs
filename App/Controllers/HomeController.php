@@ -17,10 +17,10 @@ class HomeController extends Controller {
         $this->existeLayout(false);
 
 
-        self::setViewCss('/xavier-link-jobs/public/css/slick.css');
-        self::setViewCss('/xavier-link-jobs/public/css/slick-theme.css');
+        self::setViewCss('/public/css/slick.css');
+        self::setViewCss('/public/css/slick-theme.css');
 
-        self::setViewJs('/xavier-link-jobs/public/js/slick.min.js');
+        self::setViewJs('/public/js/slick.min.js');
 
         self::setViewParam('nameController', $this->app->getNameController());
 
