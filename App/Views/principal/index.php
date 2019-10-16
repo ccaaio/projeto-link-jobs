@@ -1,3 +1,4 @@
+<input type="hidden" id="id-logado" value="<?php  echo \App\Lib\Auth::usuario()->id; ?>">
 <style>
     .user-account {
         width: 165px !important;
@@ -9,7 +10,7 @@
 
     .user-info a {
         white-space: nowrap !important;
-        width: 102px !important;
+        width: 91px !important;
         overflow: hidden !important;
         text-overflow: ellipsis !important;
     }
