@@ -36,7 +36,7 @@
                 <div class="user-account">
                     <div class="user-info">
                         <img href="perfildousuario.html" src="http://via.placeholder.com/30x30" alt="">
-                        <a title="">John</a>
+                        <a title=""><?php  echo \App\Lib\Auth::usuario()->usuario; ?></a>
                         <i class="la la-sort-down"></i>
                     </div>
                     <div class="user-account-settingss">
