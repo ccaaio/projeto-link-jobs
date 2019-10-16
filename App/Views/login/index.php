@@ -20,17 +20,17 @@
                                 <div class="sign_in_sec current" id="tab-1">
 
                                     <h3>Faça seu Login</h3>
-                                    <form>
+                                    <form action="/login/entrar" method="post">
                                         <div class="row">
                                             <div class="col-lg-12 no-pdd">
                                                 <div class="sn-field">
-                                                    <input type="text" name="username" placeholder="Usuário">
+                                                    <input type="text" name="username" placeholder="E-mail">
                                                     <i class="la la-user"></i>
                                                 </div>
                                             </div>
                                             <div class="col-lg-12 no-pdd">
                                                 <div class="sn-field">
-                                                    <input type="password" name="password" placeholder="Senha">
+                                                    <input type="password" name="senha" placeholder="Senha">
                                                     <i class="la la-lock"></i>
                                                 </div>
                                             </div>
@@ -47,7 +47,7 @@
                                                 </div>
                                             </div>
                                             <div class="col-lg-12 no-pdd">
-                                                <button href=index.html type="submit" value="submit">Entrar</button>
+                                                <button type="submit" value="submit">Entrar</button>
                                             </div>
                                         </div>
                                     </form>

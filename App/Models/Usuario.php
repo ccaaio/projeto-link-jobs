@@ -11,12 +11,12 @@ class Usuario
     {
         $db = new DB();
 
-        $usuario    = $data['usuario'];
+        $email    = $data['email'];
         $senha      = Util::hash($data['senha']);
 
         try {
             $query = $db->query(
-                "SELECT * FROM usuario WHERE usuario = '$usuario' AND senha = '$senha'"
+                "SELECT * FROM usuario WHERE email = '$email' AND senha = '$senha'"
             );
             return $query->fetch();
         }catch (Exception $e){
