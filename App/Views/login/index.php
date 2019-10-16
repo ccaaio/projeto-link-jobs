@@ -61,7 +61,7 @@
                                         </ul>
                                     </div>
                                     <div class="dff-tab current" id="tab-3">
-                                        <form action="/login/" method="post">
+                                        <form action="/login/salvar" method="post">
                                             <div class="row">
                                                 <div class="col-lg-12 no-pdd">
                                                     <div class="sn-field">
@@ -100,12 +100,6 @@
                                                 <div class="col-lg-12 no-pdd">
                                                     <div class="sn-field">
                                                         <input type="password" name="senha" placeholder="Senha">
-                                                        <i class="la la-lock"></i>
-                                                    </div>
-                                                </div>
-                                                <div class="col-lg-12 no-pdd">
-                                                    <div class="sn-field">
-                                                        <input type="password" name="repeat-password" placeholder="Repita a Senha">
                                                         <i class="la la-lock"></i>
                                                     </div>
                                                 </div>
