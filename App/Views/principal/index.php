@@ -330,9 +330,6 @@
         </div>
     </main>
 
-
-
-
     <div class="post-popup pst-pj">
         <div class="post-project">
             <h3>Postar um Projeto</h3>

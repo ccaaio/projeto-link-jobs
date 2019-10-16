@@ -16,8 +16,7 @@ class PrincipalController extends Controller {
 
         self::setViewParam('nameController',$this->app->getNameController());
 
-        self::setViewCss('/public/css/slick.css');
-        self::setViewCss('/public/css/slick-theme.css');
+        self::setViewJs('/public/js/funcoes/listagens/sugestoes.js');
 
         $this->render('principal/index');
 
