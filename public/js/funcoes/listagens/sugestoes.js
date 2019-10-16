@@ -26,7 +26,7 @@ $(document).ready(function () {
             $.ajax({
                 url:"/principal/getDadosAmizade/",
                 method:"POST",
-                data:{idSolicitante: id, idRequisitado: idAmigo, nome: nome},
+                data:{idSolicitante: idLogado, idRequisitado: idAmigo, nome: nome},
                 success:function(s){
                     alert('solicitação realizada! ');
                 }
