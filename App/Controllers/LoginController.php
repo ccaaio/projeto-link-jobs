@@ -39,7 +39,13 @@ class LoginController extends Controller
 
             Auth::gravaSessao($oUser);
 
-            $this->redirect('admin/');
+            self::setViewCss('/public/css/flatpickr.min.css');
+            self::setViewCss('/public/css/slick.css');
+            self::setViewCss('/public/css/slick-theme.css');
+
+            self::setViewJs('/public/js/slick.min.js');
+
+            $this->redirect('principal/');
         } else {
 
             $this->redirect('login/');
