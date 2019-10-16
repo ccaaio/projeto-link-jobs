@@ -9,7 +9,7 @@
                         <div class="col-lg-6">
                             <div class="cmp-info">
 
-                                <img src="/xavier-link-jobs/public/images/cm-main-img.png" alt="">
+                                <img src="/public/images/cm-main-img.png" alt="">
                             </div>
                         </div>
                         <div class="col-lg-6">
