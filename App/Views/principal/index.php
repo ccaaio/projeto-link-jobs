@@ -86,7 +86,7 @@
                                             </div>
                                         </div>
                                         <div class="user-specs">
-                                            <h3>John Doe</h3>
+                                            <h3><?php  echo \App\Lib\Auth::usuario()->usuario; ?></h3>
                                             <span>Designer Gráfico</span>
                                         </div>
                                     </div>
