@@ -13,13 +13,15 @@ $(document).ready(function () {
 
     //ao clicar em add amigo - SUGESTOES
 
-    $('.add-amigo').on('click', function () {
-        var idLogado = $('#id-logado').val();
-       var idAmigo = $(this).attr('data-id-usuario');
-       var nome = $(this).attr('data-nome-usuario');
+    setTimeout(function () {
+        $('.add-amigo').on('click', function () {
+            var idLogado = $('#id-logado').val();
+            var idAmigo = $(this).attr('data-id-usuario');
+            var nome = $(this).attr('data-nome-usuario');
 
-       console.log('id logado: ', idLogado);
-        console.log('id amigo: ', idAmigo);
-        console.log('nome: ', nome);
-    });
+            console.log('id logado: ', idLogado);
+            console.log('id amigo: ', idAmigo);
+            console.log('nome: ', nome);
+        });
+    },1000);
 });
