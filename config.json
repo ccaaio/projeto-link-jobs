@@ -1,9 +1,9 @@
 {
   "version": "1.0.0",
   "db": {
-      "host": "localhost",
-      "username": "root",
-      "password": "",
+      "host": "remotemysql.com",
+      "username": "GQ4OpczpAV",
+      "password": "jt4ifMIloM",
       "name": "linkjobs",
       "driver": "mysql"
   },
