@@ -1,3 +1,19 @@
+<style>
+    .user-account {
+        width: 165px !important;
+    }
+
+    nav {
+        width: 56%;
+    }
+
+    .user-info a {
+        white-space: nowrap !important;
+        width: 102px !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+    }
+</style>
 <div class="wrapper">
     <header>
         <div class="container">

@@ -16,13 +16,8 @@ class PrincipalController extends Controller {
 
         self::setViewParam('nameController',$this->app->getNameController());
 
-        self::setViewCss('/public/css/flatpickr.min.css');
         self::setViewCss('/public/css/slick.css');
         self::setViewCss('/public/css/slick-theme.css');
-
-        self::setViewJs('/public/js/jquery.mCustomScrollbar.js');
-        self::setViewJs('/public/js/slick.min.js');
-        self::setViewJs('/public/js/scrollbar.js');
 
         $this->render('principal/index');
 
