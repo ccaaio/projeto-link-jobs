@@ -24,7 +24,7 @@
                                         <div class="row">
                                             <div class="col-lg-12 no-pdd">
                                                 <div class="sn-field">
-                                                    <input type="text" name="username" placeholder="E-mail">
+                                                    <input type="text" name="email" placeholder="E-mail">
                                                     <i class="la la-user"></i>
                                                 </div>
                                             </div>
