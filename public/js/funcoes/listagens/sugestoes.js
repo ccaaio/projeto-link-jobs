@@ -22,6 +22,15 @@ $(document).ready(function () {
             console.log('id logado: ', idLogado);
             console.log('id amigo: ', idAmigo);
             console.log('nome: ', nome);
+
+            $.ajax({
+                url:"/principal/getDadosAmizade/",
+                method:"POST",
+                data:{idSolicitante: id, idRequisitado: idAmigo, nome: nome},
+                success:function(s){
+                    alert('solicitação realizada! ');
+                }
+            });
         });
     },1000);
 });

@@ -44,4 +44,14 @@ class PrincipalController extends Controller {
         }
     }
 
+    public function getDadosAmizade() {
+        $conn = mysqli_connect("remotemysql.com", "GQ4OpczpAV", "jt4ifMIloM", "GQ4OpczpAV");
+
+        $idSolicitante = $_POST['idSolicitante'];
+        $idRequisitado = $_POST['idRequisitado'];
+        $nome = $_POST['nome'];
+
+        $result = mysqli_query($conn, "INSERT INTO amizade (id_solicitante, id_requisitado, nome_requisitado) VALUES ('$idSolicitante', '$idRequisitado', '$nome')");
+    }
+
 }
