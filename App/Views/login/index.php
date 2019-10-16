@@ -68,6 +68,10 @@
                                                         <input type="text" name="titulo" placeholder="Nome Completo">
                                                         <i class="la la-user"></i>
                                                     </div>
+                                                    <div class="sn-field">
+                                                        <input type="text" name="email" placeholder="Seu principal e-mail">
+                                                        <i class="la la-mail-forward"></i>
+                                                    </div>
                                                 </div>
                                                 <div class="col-lg-12 no-pdd">
                                                     <div class="sn-field">
