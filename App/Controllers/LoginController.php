@@ -45,7 +45,7 @@ class LoginController extends Controller
 
             self::setViewJs('/public/js/slick.min.js');
 
-            $this->render('principal/');
+            $this->redirect('principal/');
         } else {
 
             $this->redirect('login/');
