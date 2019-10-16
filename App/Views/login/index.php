@@ -8,7 +8,6 @@
                     <div class="row">
                         <div class="col-lg-6">
                             <div class="cmp-info">
-
                                 <img src="/public/images/cm-main-img.png" alt="">
                             </div>
                         </div>
@@ -62,11 +61,11 @@
                                         </ul>
                                     </div>
                                     <div class="dff-tab current" id="tab-3">
-                                        <form>
+                                        <form id="form-cadastro-usuario" action="/login/salvar/" method="post">
                                             <div class="row">
                                                 <div class="col-lg-12 no-pdd">
                                                     <div class="sn-field">
-                                                        <input type="text" name="nome" placeholder="Nome Completo">
+                                                        <input type="text" name="titulo" placeholder="Nome Completo">
                                                         <i class="la la-user"></i>
                                                     </div>
                                                 </div>

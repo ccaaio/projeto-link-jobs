@@ -31,16 +31,21 @@ class Usuario
 
             $db = new DB();
 
-            $usuario    = $data['usuario'];
+            $nome = $data['titulo'];
             $senha      = Util::hash($data['senha']);
+            $email    = $data['email'];
+            $data_nascimento = $data['data_nascimento'];
+            $inicio_trabalho = $data['inicio_trabalho'];
+            $cidade = $data['cidade'];
+            $salario = $data['salario'];
 
             $db->insert('usuario',
-                        "usuario,senha",
-                        "'".$data['usuario']."','".$senha."'"
+                        "titulo,senha,email,data_nascimento,inicio_trabalho,cidade,salario",
+                        "'".$nome."','".$senha."', '".$email."', '".$data_nascimento."', '".$inicio_trabalho."', '".$cidade."', '".$salario."'"
             );
 
             $query = $db->query(
-                "SELECT * FROM usuario WHERE usuario = '$usuario' AND senha = '$senha'"
+                "SELECT * FROM usuario WHERE email = '$email' AND senha = '$senha'"
             );
 
             return $query->fetch();
