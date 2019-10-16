@@ -61,7 +61,7 @@
                                         </ul>
                                     </div>
                                     <div class="dff-tab current" id="tab-3">
-                                        <form action="/usuario/" method="post">
+                                        <form action="/login/" method="post">
                                             <div class="row">
                                                 <div class="col-lg-12 no-pdd">
                                                     <div class="sn-field">
