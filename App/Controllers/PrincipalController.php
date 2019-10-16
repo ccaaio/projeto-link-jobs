@@ -34,7 +34,7 @@ class PrincipalController extends Controller {
                                 <h4>".$row['titulo']."</h4>
                                 <span>Designer Gráfico</span>
                             </div>
-                            <span><i class='la la-plus'></i></span>
+                            <span class='add-amigo' data-id-usuario='".$row['id']."' data-nome-usuario='".$row['titulo']."'><i class='la la-plus'></i></span>
                         </div>
                     </div>  
                     ";
