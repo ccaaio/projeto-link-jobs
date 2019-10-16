@@ -109,7 +109,7 @@
                                         <h3>Sugestões</h3>
                                         <i class="la la-ellipsis-v"></i>
                                     </div>
-                                    <div class="suggestions-list">
+                                    <div id="content-sugestoes" class="suggestions-list">
                                         <div class="suggestion-usd">
                                             <img src="http://via.placeholder.com/35x35" alt="">
                                             <div class="sgt-text">
