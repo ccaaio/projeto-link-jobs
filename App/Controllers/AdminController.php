@@ -17,7 +17,7 @@ class AdminController extends Controller
 
         self::setViewParam('nameController',$this->app->getNameController());
 
-        $this->render('admin/index');
+        $this->render('principal/index');
 
     }
 
