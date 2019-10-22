@@ -111,7 +111,7 @@
                                         <i class="la la-ellipsis-v"></i>
                                     </div>
                                     <div class="suggestions-list">
-                                        <div id="content-sugestoes">
+                                        <div id="content-sugestoes" style="text-align: center;">
                                             <div class="lds-facebook"><div></div><div></div><div></div></div>
                                         </div>
                                         <div class="view-more">

@@ -35,7 +35,7 @@ class PrincipalController extends Controller {
                         <div class='suggestion-usd'>
                             <img src='http://via.placeholder.com/35x35' alt='".$row['titulo']."'>
                             <div class='sgt-text'>
-                                <h4>".$row['titulo']."</h4>
+                                <h4 style='text-align: left !important;'>".$row['titulo']."</h4>
                                 <span>Designer Gráfico</span>
                             </div>
                             <span class='add-amigo' data-id-usuario='".$row['id']."' data-nome-usuario='".$row['titulo']."'><i class='la la-plus'></i></span>
