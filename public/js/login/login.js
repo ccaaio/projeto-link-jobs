@@ -20,7 +20,6 @@ $(document).ready(function () {
     $('#tipo-conta').on('change', function () {
        if($(this).val() == 'GT') {
            $('.info-cartao').addClass('invisivel');
-           $('.info-cartao').removeClass('invisivel');
            $('#numero_cartao').prop('required', false);
            $('#nome_cartao').prop('required', false);
            $('#data_validade_cartao').prop('required', false);
