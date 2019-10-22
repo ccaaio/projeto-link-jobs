@@ -11,6 +11,8 @@ $(document).ready(function () {
         } else {
             $('#btn-cad-form').prop('disabled', true);
             $('#btn-cad-form').addClass('disabled');
+            $('#btn-cad-form').attr('alt', 'Você precisa ler e estar de acordo com os nossos Termos!');
+            $('#btn-cad-form').attr('title', 'Você precisa ler e estar de acordo com os nossos Termos!');
         }
     });
 });

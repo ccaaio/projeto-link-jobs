@@ -21,6 +21,7 @@ class LoginController extends Controller
 
         self::setViewCss('/public/css/slick.css');
         self::setViewCss('/public/css/slick-theme.css');
+        self::setViewCss('/public/css/pages/login/login.css');
 
         self::setViewJs('/public/js/slick.min.js');
         self::setViewJs('/public/js/jquery.mask.min.js');
