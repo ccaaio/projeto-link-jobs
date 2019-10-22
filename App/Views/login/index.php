@@ -85,6 +85,12 @@
                                                 </div>
                                                 <div class="col-lg-12 no-pdd">
                                                     <div class="sn-field">
+                                                        <input type="text" name="nivel_instrucao" placeholder="Nível de Instrução" required>
+                                                        <i class="la la-graduation-cap"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-12 no-pdd">
+                                                    <div class="sn-field">
                                                         <input type="text" name="inicio_trabalho" placeholder="Quando Iniciou na Area" required>
                                                         <i class="la la-globe"></i>
                                                     </div>
@@ -144,10 +150,37 @@
                                                 </div>
                                                 <div class="col-lg-12 no-pdd">
                                                     <div class="sn-field">
-                                                        <ul class="sign-control">
-                                                            <li data-tab="tipo-1" class="current"><a href="#" title="">Grátis</a></li>
-                                                            <li data-tab="tipo-2"><a href="#" title="">Paga</a></li>
-                                                        </ul>
+                                                        <select class="form-control" id="tipo-conta" name="tipo" required>
+                                                            <option>Selecione o tipo de Conta...</option>
+                                                            <option value="GT">Grátis</option>
+                                                            <option value="PG">Paga</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="info-cartao">
+                                                    <div class="col-lg-12 no-pdd">
+                                                        <div class="sn-field">
+                                                            <input id="numero_cartao" type="text" name="numero_cartao" placeholder="Número do Cartão">
+                                                            <i class="la la-globe"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-12 no-pdd">
+                                                        <div class="sn-field">
+                                                            <input type="text" name="nome_cartao" placeholder="Nome do Cartão">
+                                                            <i class="la la-globe"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-12 no-pdd">
+                                                        <div class="sn-field">
+                                                            <input id="data_validade_cartao" type="text" name="data_validade_cartao" placeholder="Data de Validade">
+                                                            <i class="la la-globe"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-12 no-pdd">
+                                                        <div class="sn-field">
+                                                            <input id="cvc_cartao" type="text" name="cvc-cartao" placeholder="Código CVC">
+                                                            <i class="la la-globe"></i>
+                                                        </div>
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-12 no-pdd">
