@@ -1,7 +1,7 @@
 $(document).ready(function () {
-    setTimeout(function () {
+
         var idLogado = $('#id-logado').val();
-        setTimeout(function () {
+
             //obtem a lista de usuarios do bd e exibe em sugestoes
             $.ajax({
                 url:"/principal/getSugestoes/",
@@ -12,8 +12,6 @@ $(document).ready(function () {
                 }
             });
 
-        },200);
-    },200);
     //ao clicar em add amigo - SUGESTOES
 
     setTimeout(function () {
