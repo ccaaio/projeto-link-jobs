@@ -55,7 +55,7 @@
                 </div>
                 <div class="user-account">
                     <div class="user-info">
-                        <img href="perfildousuario.html" src="http://via.placeholder.com/30x30" alt="">
+                        <img class="foto-perfil-navbar" src="/public/images/perfil/profile-default.png" alt="">
                         <a title=""><?php  echo \App\Lib\Auth::usuario()->usuario; ?></a>
                         <i class="la la-sort-down"></i>
                     </div>
@@ -129,7 +129,7 @@
                             <div class="main-ws-sec">
                                 <div class="post-topbar">
                                     <div class="user-picy">
-                                        <img src="http://via.placeholder.com/100x100" alt="">
+                                        <div class="lds-facebook" style="background: #ffffff;border-radius: 50%;"><div></div><div></div><div></div></div>
                                     </div>
                                     <div class="post-st">
                                         <ul>
