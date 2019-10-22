@@ -110,55 +110,8 @@
                                         <h3>Sugestões</h3>
                                         <i class="la la-ellipsis-v"></i>
                                     </div>
-                                    <div id="content-sugestoes" class="suggestions-list">
-                                        <div class="suggestion-usd">
-                                            <img src="http://via.placeholder.com/35x35" alt="">
-                                            <div class="sgt-text">
-                                                <h4>Jessica William</h4>
-                                                <span>Designer Gráfico</span>
-                                            </div>
-                                            <span><i class="la la-plus"></i></span>
-                                        </div>
-                                        <div class="suggestion-usd">
-                                            <img src="http://via.placeholder.com/35x35" alt="">
-                                            <div class="sgt-text">
-                                                <h4>John Doe</h4>
-                                                <span>Desenvolvedor PHP</span>
-                                            </div>
-                                            <span><i class="la la-plus"></i></span>
-                                        </div>
-                                        <div class="suggestion-usd">
-                                            <img src="http://via.placeholder.com/35x35" alt="">
-                                            <div class="sgt-text">
-                                                <h4>Felipe Camargo</h4>
-                                                <span> Desenvolverdor Java</span>
-                                            </div>
-                                            <span><i class="la la-plus"></i></span>
-                                        </div>
-                                        <div class="suggestion-usd">
-                                            <img src="http://via.placeholder.com/35x35" alt="">
-                                            <div class="sgt-text">
-                                                <h4>Bill Gates</h4>
-                                                <span>Desenvolvedor C & C++</span>
-                                            </div>
-                                            <span><i class="la la-plus"></i></span>
-                                        </div>
-                                        <div class="suggestion-usd">
-                                            <img src="http://via.placeholder.com/35x35" alt="">
-                                            <div class="sgt-text">
-                                                <h4>Jessica William</h4>
-                                                <span>Designer Gráfico</span>
-                                            </div>
-                                            <span><i class="la la-plus"></i></span>
-                                        </div>
-                                        <div class="suggestion-usd">
-                                            <img src="http://via.placeholder.com/35x35" alt="">
-                                            <div class="sgt-text">
-                                                <h4>John Doe</h4>
-                                                <span>Desenvolvedor PHP</span>
-                                            </div>
-                                            <span><i class="la la-plus"></i></span>
-                                        </div>
+                                    <div class="suggestions-list">
+                                        <div id="content-sugestoes"></div>
                                         <div class="view-more">
                                             <a href="#" title="">Ver Mais</a>
                                         </div>
