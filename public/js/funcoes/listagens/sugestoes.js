@@ -12,8 +12,8 @@ $(document).ready(function () {
                 }
             });
 
-        },200)
-    },500)
+        },200);
+    },200);
     //ao clicar em add amigo - SUGESTOES
 
     setTimeout(function () {
