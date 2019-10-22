@@ -139,8 +139,8 @@
                                                 <div class="col-lg-12 no-pdd">
                                                     <div class="checky-sec st2">
                                                         <div class="fgt-sec">
-                                                            <input type="checkbox" name="cc" id="c2">
-                                                            <label for="c2">
+                                                            <input type="checkbox" name="cc" id="check-condicoes">
+                                                            <label for="check-condicoes">
                                                                 <span></span>
                                                             </label>
                                                             <small>Sim, eu li e concordo com os Termos de Uso do LinkJobs.</small>
@@ -184,7 +184,7 @@
                                                     <div class="checky-sec st2">
                                                         <div class="fgt-sec">
                                                             <input type="checkbox" name="cc" id="c1">
-                                                            <label for="check-condicoes">
+                                                            <label for="c1">
                                                                 <span></span>
                                                             </label>
                                                             <small>Sim, eu li e concordo com os Termos de Uso do LinkJobs.</small>
