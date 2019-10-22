@@ -67,13 +67,13 @@
                                                         <i class="la la-user"></i>
                                                     </div>
                                                     <div class="sn-field">
-                                                        <input type="text" name="email" placeholder="Seu principal e-mail" required>
+                                                        <input type="email" name="email" placeholder="Seu principal e-mail" required>
                                                         <i class="la la-mail-forward"></i>
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-12 no-pdd">
                                                     <div class="sn-field">
-                                                        <input type="text" name="data_nascimento" placeholder="Data de Nascimento (ex: dd/mm/aaaa)" required>
+                                                        <input id="data-nascimento" type="date" name="data_nascimento" placeholder="Data de Nascimento (dd/mm/aaaa)" required>
                                                         <i class="la la-globe"></i>
                                                     </div>
                                                 </div>
@@ -126,7 +126,7 @@
                                                 </div>
                                                 <div class="col-lg-12 no-pdd">
                                                     <div class="sn-field">
-                                                        <input type="text" name="salario" placeholder="Salário" required>
+                                                        <input type="number" name="salario" placeholder="Salário" required>
                                                         <i class="la la-globe"></i>
                                                     </div>
                                                 </div>

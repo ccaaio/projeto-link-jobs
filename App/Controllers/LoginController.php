@@ -14,8 +14,7 @@ class LoginController extends Controller
         $this->app = $app;
     }
 
-    public function index()
-    {
+    public function index() {
 
         $this->existeLayout(false);
 
@@ -24,6 +23,8 @@ class LoginController extends Controller
         self::setViewCss('/public/css/slick-theme.css');
 
         self::setViewJs('/public/js/slick.min.js');
+        self::setViewJs('/public/js/jquery.mask.min.js');
+        self::setViewJs('/public/js/login/login.js');
 
         self::setViewParam('nameController', $this->app->getNameController());
 
