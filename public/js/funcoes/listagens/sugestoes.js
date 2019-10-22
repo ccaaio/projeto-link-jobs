@@ -19,20 +19,20 @@ $(document).ready(function () {
         $('.add-amigo').on('click', function () {
             var idLogado = $('#id-logado').val();
             var idAmigo = $(this).attr('data-id-usuario');
+            $('#id-amigo').val(idAmigo);
             var nome = $(this).attr('data-nome-usuario');
+            $('#nome-amigo').val(nome);
 
-            console.log('id logado: ', idLogado);
-            console.log('id amigo: ', idAmigo);
-            console.log('nome: ', nome);
-
-            $.ajax({
-                url:"/principal/getDadosAmizade/",
-                method:"POST",
-                data:{idSolicitante: idUserLogado, idRequisitado: idAmigo, nome: nome},
-                success:function(s){
-                    alert('solicitação realizada! ');
-                }
-            });
+            setTimeout(function () {
+                $.ajax({
+                    url:"/principal/getDadosAmizade/",
+                    method:"POST",
+                    data:{idSolicitante: idUserLogado, idRequisitado: $('#id-amigo').val(), nome: $('#nome-amigo').val()},
+                    success:function(s){
+                        $(this).addClass('animated fadeOutLeft');
+                    }
+                });
+            },100);
         });
     },1000);
 });
