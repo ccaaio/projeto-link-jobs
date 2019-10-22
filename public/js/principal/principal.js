@@ -8,7 +8,7 @@ $(document).ready(function () {
         data:{idUser: idLogadoFoto},
         success:function(s){
             alert(s.foto);
-            $('.usr-pic').html('<img class="foto-perfil-user-logado" src="/public/images/"+s.foto+"" alt="Foto do Perfil">');
+            $('.usr-pic').html('<img class="foto-perfil-user-logado" src="/public/images/'+s.foto+'" alt="Foto do Perfil">');
         }
     });
 });
