@@ -41,7 +41,7 @@ class Usuario
             $estado = $data['estado'];
 
             $db->insert('usuario',
-                        "titulo,senha,email,data_nascimento,inicio_trabalho,cidade,salario",
+                        "titulo,senha,email,data_nascimento,inicio_trabalho,cidade,salario,estado",
                         "'".$nome."','".$senha."', '".$email."', '".$data_nascimento."', '".$inicio_trabalho."', '".$cidade."', '".$salario."', '".$estado."'"
             );
 
