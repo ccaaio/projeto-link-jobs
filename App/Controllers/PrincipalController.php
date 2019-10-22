@@ -38,9 +38,9 @@ class PrincipalController extends Controller {
                     <div class='suggestions-list' data-id-user-list='".$row['id']."'>
                         <div class='suggestion-usd'>
                             <img src='http://via.placeholder.com/35x35' alt='".$row['titulo']."'>
-                            <div class='sgt-text'>
+                            <div class='sgt-text' style='white-space: nowrap;width: 150px;overflow: hidden;text-overflow: ellipsis;'>
                                 <h4 style='text-align: left !important;'>".$row['titulo']."</h4>
-                                <span>".$row['profissao']."</span>
+                                <span class='profissao-sidebar'>".$row['profissao']."</span>
                             </div>
                             <span class='add-amigo' data-id-usuario='".$row['id']."' data-nome-usuario='".$row['titulo']."'><i class='la la-plus'></i></span>
                         </div>
