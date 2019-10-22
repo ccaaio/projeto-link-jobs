@@ -24,14 +24,7 @@ $(document).ready(function () {
             $('#nome-amigo').val(nome);
 
             $(this).parent().parent().addClass('animated fadeOutLeft');
-
             var item = $(this).parent().parent().addClass('animated fadeOutLeft');
-            setTimeout(function () {
-                $(item).remove();
-            },100)
-
-
-
 
             setTimeout(function () {
                 $.ajax({
@@ -45,7 +38,10 @@ $(document).ready(function () {
                             title: 'Solicitação de Amizade enviada!',
                             showConfirmButton: false,
                             timer: 1500
-                        })
+                        });
+                        setTimeout(function () {
+                            $(item).remove();
+                        },1600);
                     }
                 });
             },100);
