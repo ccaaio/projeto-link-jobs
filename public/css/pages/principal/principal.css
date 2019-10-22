@@ -55,8 +55,7 @@
     float: left;
     width: 100%;
     text-align: center;
-    padding-top: 1em !important;
-    border-top: 1px solid #e7e7e7 !important;
+    padding-top: 0.5em !important;
     text-transform: uppercase !important;
 }
 
