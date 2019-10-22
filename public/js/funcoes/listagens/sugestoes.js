@@ -31,6 +31,9 @@ $(document).ready(function () {
                     method:"POST",
                     data:{idSolicitante: idUserLogado, idRequisitado: $('#id-amigo').val(), nome: $('#nome-amigo').val()},
                     success:function(s){
+                        setTimeout(function () {
+                            $(item).remove();
+                        },1500);
                         Swal.fire({
                             position: 'top-end',
                             type: 'success',
@@ -38,9 +41,6 @@ $(document).ready(function () {
                             showConfirmButton: false,
                             timer: 1500
                         });
-                        setTimeout(function () {
-                            $(item).remove();
-                        },1500);
                     }
                 });
             },100);
