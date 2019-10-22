@@ -111,7 +111,9 @@
                                         <i class="la la-ellipsis-v"></i>
                                     </div>
                                     <div class="suggestions-list">
-                                        <div id="content-sugestoes"></div>
+                                        <div id="content-sugestoes">
+                                            <div class="lds-facebook"><div></div><div></div><div></div></div>
+                                        </div>
                                         <div class="view-more">
                                             <a href="#" title="">Ver Mais</a>
                                         </div>
