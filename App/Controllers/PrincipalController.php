@@ -40,7 +40,7 @@ class PrincipalController extends Controller {
                             <img src='http://via.placeholder.com/35x35' alt='".$row['titulo']."'>
                             <div class='sgt-text'>
                                 <h4 style='text-align: left !important;'>".$row['titulo']."</h4>
-                                <span>Designer Gráfico</span>
+                                <span>".$row['profissao']."</span>
                             </div>
                             <span class='add-amigo' data-id-usuario='".$row['id']."' data-nome-usuario='".$row['titulo']."'><i class='la la-plus'></i></span>
                         </div>
