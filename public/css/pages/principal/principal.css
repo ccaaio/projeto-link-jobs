@@ -62,3 +62,8 @@
 .sgt-text {
     text-align: left !important;
 }
+
+.user-info img {
+    border-radius: 50% !important;
+    width: 30px !important;
+}
