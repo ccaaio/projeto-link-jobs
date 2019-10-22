@@ -80,7 +80,7 @@
                                                 <div class="col-lg-12 no-pdd">
                                                     <div class="sn-field">
                                                         <input type="text" name="profissao" placeholder="Qual a sua profissão?" required>
-                                                        <i class="la la-get-pocket"></i>
+                                                        <i class="la la-briefcase"></i>
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-12 no-pdd">
@@ -132,7 +132,7 @@
                                                 </div>
                                                 <div class="col-lg-12 no-pdd">
                                                     <div class="sn-field">
-                                                        <input type="number" name="salario" placeholder="Salário" required>
+                                                        <input type="text" name="salario" placeholder="Salário" required>
                                                         <i class="la la-globe"></i>
                                                     </div>
                                                 </div>
