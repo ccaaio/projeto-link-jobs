@@ -178,7 +178,7 @@
                                                     </div>
                                                     <div class="col-lg-12 no-pdd">
                                                         <div class="sn-field">
-                                                            <input id="cvc_cartao" type="text" name="cvc-cartao" placeholder="Código CVC">
+                                                            <input id="cvc_cartao" type="text" name="cvc_cartao" placeholder="Código CVC">
                                                             <i class="la la-globe"></i>
                                                         </div>
                                                     </div>
