@@ -63,35 +63,36 @@
                                             <div class="row">
                                                 <div class="col-lg-12 no-pdd">
                                                     <div class="sn-field">
-                                                        <input type="text" name="titulo" placeholder="Nome Completo">
+                                                        <input type="text" name="titulo" placeholder="Nome Completo" required>
                                                         <i class="la la-user"></i>
                                                     </div>
                                                     <div class="sn-field">
-                                                        <input type="text" name="email" placeholder="Seu principal e-mail">
+                                                        <input type="text" name="email" placeholder="Seu principal e-mail" required>
                                                         <i class="la la-mail-forward"></i>
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-12 no-pdd">
                                                     <div class="sn-field">
-                                                        <input type="text" name="data_nascimento" placeholder="Data de Nascimento">
+                                                        <input type="text" name="data_nascimento" placeholder="Data de Nascimento (ex: dd/mm/aaaa)" required>
                                                         <i class="la la-globe"></i>
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-12 no-pdd">
                                                     <div class="sn-field">
-                                                        <input type="text" name="inicio_trabalho" placeholder="Quando Iniciou na Area">
+                                                        <input type="text" name="inicio_trabalho" placeholder="Quando Iniciou na Area" required>
                                                         <i class="la la-globe"></i>
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-12 no-pdd">
                                                     <div class="sn-field">
-                                                        <input type="text" name="cidade" placeholder="Cidade">
+                                                        <input type="text" name="cidade" placeholder="Cidade" required>
                                                         <i class="la la-globe"></i>
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-12 no-pdd">
                                                     <div class="sn-field">
-                                                        <select class="form-control" id="estado" name="estado">
+                                                        <select class="form-control" id="estado" name="estado" required>
+                                                            <option>Selecione o Estado...</option>
                                                             <option value="AC">Acre</option>
                                                             <option value="AL">Alagoas</option>
                                                             <option value="AP">Amapá</option>
@@ -125,13 +126,13 @@
                                                 </div>
                                                 <div class="col-lg-12 no-pdd">
                                                     <div class="sn-field">
-                                                        <input type="text" name="salario" placeholder="Salário">
+                                                        <input type="text" name="salario" placeholder="Salário" required>
                                                         <i class="la la-globe"></i>
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-12 no-pdd">
                                                     <div class="sn-field">
-                                                        <input type="password" name="senha" placeholder="Senha">
+                                                        <input type="password" name="senha" placeholder="Senha" required>
                                                         <i class="la la-lock"></i>
                                                     </div>
                                                 </div>
