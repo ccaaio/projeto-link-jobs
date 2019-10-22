@@ -22,6 +22,7 @@ $(document).ready(function () {
             $('#id-amigo').val(idAmigo);
             var nome = $(this).attr('data-nome-usuario');
             $('#nome-amigo').val(nome);
+            $(this).parent().parent().addClass('animated fadeOutLeft');
 
             setTimeout(function () {
                 $.ajax({
@@ -29,7 +30,13 @@ $(document).ready(function () {
                     method:"POST",
                     data:{idSolicitante: idUserLogado, idRequisitado: $('#id-amigo').val(), nome: $('#nome-amigo').val()},
                     success:function(s){
-                        $(this).addClass('animated fadeOutLeft');
+                        Swal.fire({
+                            position: 'top-end',
+                            type: 'success',
+                            title: 'Solicitação de Amizade enviada!',
+                            showConfirmButton: false,
+                            timer: 1500
+                        })
                     }
                 });
             },100);

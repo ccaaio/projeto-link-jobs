@@ -32,7 +32,7 @@ class PrincipalController extends Controller {
 
             while($row = mysqli_fetch_assoc($result)) {
                 $row["listagem"] = "
-                    <div class='suggestions-list'>
+                    <div class='suggestions-list' data-id-user-list='".$row['id']."'>
                         <div class='suggestion-usd'>
                             <img src='http://via.placeholder.com/35x35' alt='".$row['titulo']."'>
                             <div class='sgt-text'>
