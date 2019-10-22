@@ -1,6 +1,7 @@
 <input type="hidden" id="id-logado" value="<?php  echo \App\Lib\Auth::usuario()->id; ?>">
 <input type="hidden" id="id-amigo">
 <input type="hidden" id="nome-amigo">
+<input type="hidden" id="nome-logado" value="<?php  echo \App\Lib\Auth::usuario()->usuario; ?>">
 <style>
     .user-account {
         width: 165px !important;

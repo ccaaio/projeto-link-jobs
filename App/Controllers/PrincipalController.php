@@ -59,8 +59,9 @@ class PrincipalController extends Controller {
         $idSolicitante = $_POST['idSolicitante'];
         $idRequisitado = $_POST['idRequisitado'];
         $nome = $_POST['nome'];
+        $nomeSolicitante = $_POST['nomeSolicitante'];
 
-        $result = mysqli_query($conn, "INSERT INTO amizade (id_solicitante, id_requisitado, nome_requisitado) VALUES ('$idSolicitante', '$idRequisitado', '$nome')");
+        $result = mysqli_query($conn, "INSERT INTO amizade (id_solicitante, id_requisitado, nome_requisitado, nome_solicitado) VALUES ('$idSolicitante', '$idRequisitado', '$nome', '$nomeSolicitante')");
     }
 
     public function getFotoPerfil() {

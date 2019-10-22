@@ -29,7 +29,7 @@ $(document).ready(function () {
                 $.ajax({
                     url:"/principal/getDadosAmizade/",
                     method:"POST",
-                    data:{idSolicitante: idUserLogado, idRequisitado: $('#id-amigo').val(), nome: $('#nome-amigo').val()},
+                    data:{idSolicitante: idUserLogado, idRequisitado: $('#id-amigo').val(), nome: $('#nome-amigo').val(), nomeSolicitante: $('#nome-logado').val()},
                     success:function(s){
                         setTimeout(function () {
                             $(item).remove();
