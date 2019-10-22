@@ -35,7 +35,7 @@
                                             <div class="col-lg-12 no-pdd">
                                                 <div class="checky-sec">
                                                     <div class="fgt-sec">
-                                                        <input type="checkbox" name="cc" id="c1">
+                                                        <input type="checkbox" name="cc" id="check-condicoes">
                                                         <label for="c1">
                                                             <span></span>
                                                         </label>
@@ -148,7 +148,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-12 no-pdd">
-                                                    <button type="submit" value="submit">Vamos começar!</button>
+                                                    <button id="btn-cad-form" type="submit" value="submit">Vamos começar!</button>
                                                 </div>
                                             </div>
                                         </form>
@@ -183,7 +183,7 @@
                                                 <div class="col-lg-12 no-pdd">
                                                     <div class="checky-sec st2">
                                                         <div class="fgt-sec">
-                                                            <input type="checkbox" name="cc" id="check-condicoes">
+                                                            <input type="checkbox" name="cc" id="c1">
                                                             <label for="check-condicoes">
                                                                 <span></span>
                                                             </label>
@@ -192,7 +192,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-12 no-pdd">
-                                                    <button id="btn-cad-form"  type="submit" value="submit">Vamos começar!</button>
+                                                    <button id="btn-cad-form-empresa"  type="submit" value="submit">Vamos começar!</button>
                                                 </div>
                                             </div>
                                         </form>
