@@ -22,7 +22,16 @@ $(document).ready(function () {
             $('#id-amigo').val(idAmigo);
             var nome = $(this).attr('data-nome-usuario');
             $('#nome-amigo').val(nome);
+
             $(this).parent().parent().addClass('animated fadeOutLeft');
+
+            var item = $(this).parent().parent().addClass('animated fadeOutLeft');
+            setTimeout(function () {
+                $(item).remove();
+            },100)
+
+
+
 
             setTimeout(function () {
                 $.ajax({
