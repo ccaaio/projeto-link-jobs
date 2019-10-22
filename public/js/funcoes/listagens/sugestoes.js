@@ -33,7 +33,7 @@ $(document).ready(function () {
                     success:function(s){
                         setTimeout(function () {
                             $(item).remove();
-                        },500);
+                        },300);
                         Swal.fire({
                             position: 'top-end',
                             type: 'success',
