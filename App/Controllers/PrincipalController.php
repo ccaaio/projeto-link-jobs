@@ -16,7 +16,7 @@ class PrincipalController extends Controller {
         self::setViewParam('nameController',$this->app->getNameController());
 
 
-        self::setViewCss('/public/css/principal/principal.css');
+        self::setViewCss('/public/css/pages/principal/principal.css');
         self::setViewJs('/public/js/funcoes/listagens/sugestoes.js');
 
         $this->render('principal/index');
