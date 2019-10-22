@@ -166,13 +166,13 @@
                                                     </div>
                                                     <div class="col-lg-12 no-pdd">
                                                         <div class="sn-field">
-                                                            <input type="text" name="nome_cartao" placeholder="Nome do Cartão">
+                                                            <input id="nome_cartao" type="text" name="nome_cartao" placeholder="Nome do Cartão">
                                                             <i class="la la-globe"></i>
                                                         </div>
                                                     </div>
                                                     <div class="col-lg-12 no-pdd">
                                                         <div class="sn-field">
-                                                            <input id="data_validade_cartao" type="text" name="data_validade_cartao" placeholder="Data de Validade">
+                                                            <input id="data_validade_cartao" type="text" name="data_validade_cartao" placeholder="Data de Validade (dd/aaaa)">
                                                             <i class="la la-globe"></i>
                                                         </div>
                                                     </div>
