@@ -88,7 +88,7 @@
                                         </div>
                                         <div class="user-specs">
                                             <h3><?php  echo \App\Lib\Auth::usuario()->usuario; ?></h3>
-                                            <span>Designer Gráfico</span>
+                                            <span><?php  echo \App\Lib\Auth::usuario()->profissao; ?></span>
                                         </div>
                                     </div>
                                     <ul class="user-fw-status">
