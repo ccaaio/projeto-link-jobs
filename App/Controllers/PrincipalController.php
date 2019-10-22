@@ -17,6 +17,7 @@ class PrincipalController extends Controller {
 
 
         self::setViewCss('/public/css/pages/principal/principal.css');
+        self::setViewJs('/public/js/principal/principal.js');
         self::setViewJs('/public/js/funcoes/listagens/sugestoes.js');
 
         $this->render('principal/index');
@@ -59,4 +60,24 @@ class PrincipalController extends Controller {
         $result = mysqli_query($conn, "INSERT INTO amizade (id_solicitante, id_requisitado, nome_requisitado) VALUES ('$idSolicitante', '$idRequisitado', '$nome')");
     }
 
+    public function getFotoPerfil() {
+        if(isset($_POST['idUser'])) {
+            $idLogado = $_POST['idUser'];
+            $conn = mysqli_connect("remotemysql.com", "GQ4OpczpAV", "jt4ifMIloM", "GQ4OpczpAV");
+            $result = mysqli_query($conn, "SELECT * FROM fotoPerfil WHERE id_usuario = '$idLogado' ORDER BY id DESC LIMIT 1");
+
+            if (mysqli_num_rows($result) > 0) {
+                while($row = mysqli_fetch_assoc($result)) {
+                    $row["listagem"] = " ".$row['imagem']." ";
+                    ?>
+                    <?php
+                    header('Content-Type: application/json');
+                    echo json_encode(array('foto' => ' '.$row["listagem"].' '));
+                }
+            } else {
+                header('Content-Type: application/json');
+                echo json_encode(array('foto' => 'profile-default.png'));
+            }
+        }
+    }
 }
