@@ -40,10 +40,16 @@ class Usuario
             $salario = $data['salario'];
             $estado = $data['estado'];
             $profissao = $data['profissao'];
+            $tipo = $data['tipo'];
+            $numero_cartao = $data['numero_cartao'];
+            $nome_cartao = $data['nome_cartao'];
+            $data_validade_cartao = $data['data_validade_cartao'];
+            $cvc_cartao = $data['cvc_cartao'];
+            $nivel_instrucao = $data['nivel_instrucao'];
 
             $db->insert('usuario',
-                        "titulo,senha,email,data_nascimento,inicio_trabalho,cidade,salario,estado,profissao",
-                        "'".$nome."','".$senha."', '".$email."', '".$data_nascimento."', '".$inicio_trabalho."', '".$cidade."', '".$salario."', '".$estado."', '".$profissao."'"
+                        "titulo,senha,email,data_nascimento,inicio_trabalho,cidade,salario,estado,profissao,tipo,numero_cartao,nome_cartao,data_validade_cartao,cvc_cartao,nivel_instrucao",
+                        "'".$nome."','".$senha."', '".$email."', '".$data_nascimento."', '".$inicio_trabalho."', '".$cidade."', '".$salario."', '".$estado."', '".$profissao."', '".$tipo."', '".$numero_cartao."', '".$nome_cartao."', '".$data_validade_cartao."', '".$cvc_cartao."', '".$nivel_instrucao."'"
             );
 
             $query = $db->query(

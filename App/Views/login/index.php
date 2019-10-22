@@ -143,6 +143,14 @@
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-12 no-pdd">
+                                                    <div class="sn-field">
+                                                        <ul class="sign-control">
+                                                            <li data-tab="tipo-1" class="current"><a href="#" title="">Grátis</a></li>
+                                                            <li data-tab="tipo-2"><a href="#" title="">Paga</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-12 no-pdd">
                                                     <div class="checky-sec st2">
                                                         <div class="fgt-sec">
                                                             <input type="checkbox" name="cc" id="check-condicoes">
