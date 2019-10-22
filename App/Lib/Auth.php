@@ -40,6 +40,7 @@ class Auth
         $oU->id         = $oUsuario['id'];
         $oU->usuario    = $oUsuario['titulo'];
         $oU->perfil     = $oUsuario['perfil'];
+        $oU->profissao     = $oUsuario['profissao'];
 
         $_SESSION['oUser'] = $oU;
 
