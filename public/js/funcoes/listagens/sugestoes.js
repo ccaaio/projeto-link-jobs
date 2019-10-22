@@ -23,7 +23,6 @@ $(document).ready(function () {
             var nome = $(this).attr('data-nome-usuario');
             $('#nome-amigo').val(nome);
 
-            $(this).parent().parent().addClass('animated fadeOutLeft');
             var item = $(this).parent().parent().addClass('animated fadeOutLeft');
 
             setTimeout(function () {
@@ -41,7 +40,7 @@ $(document).ready(function () {
                         });
                         setTimeout(function () {
                             $(item).remove();
-                        },1600);
+                        },1500);
                     }
                 });
             },100);
