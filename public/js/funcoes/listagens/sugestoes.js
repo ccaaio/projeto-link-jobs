@@ -23,7 +23,7 @@ $(document).ready(function () {
             var nome = $(this).attr('data-nome-usuario');
             $('#nome-amigo').val(nome);
 
-            var item = $(this).parent().parent().addClass('animated fadeOutLeft');
+            var item = $(this).parent().parent().addClass('animated zoomOut');
 
             setTimeout(function () {
                 $.ajax({
