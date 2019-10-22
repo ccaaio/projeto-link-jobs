@@ -2,7 +2,7 @@
     <div class="wrapper">
         <div class="sign-in-page">
             <div class="signin-popup">
-                <div class="signin-pop" style="height: 500px;overflow-y: auto;">
+                <div class="signin-pop">
                     <div class="row">
                         <div class="col-lg-6">
                             <div class="cmp-info">
