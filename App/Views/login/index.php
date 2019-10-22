@@ -148,7 +148,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-12 no-pdd">
-                                                    <button id="btn-cad-form" type="submit" value="submit">Vamos começar!</button>
+                                                    <button class="disabled" id="btn-cad-form" type="submit" value="submit" disabled>Vamos começar!</button>
                                                 </div>
                                             </div>
                                         </form>
