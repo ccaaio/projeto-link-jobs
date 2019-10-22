@@ -38,10 +38,11 @@ class Usuario
             $inicio_trabalho = $data['inicio_trabalho'];
             $cidade = $data['cidade'];
             $salario = $data['salario'];
+            $estado = $data['estado'];
 
             $db->insert('usuario',
                         "titulo,senha,email,data_nascimento,inicio_trabalho,cidade,salario",
-                        "'".$nome."','".$senha."', '".$email."', '".$data_nascimento."', '".$inicio_trabalho."', '".$cidade."', '".$salario."'"
+                        "'".$nome."','".$senha."', '".$email."', '".$data_nascimento."', '".$inicio_trabalho."', '".$cidade."', '".$salario."', '".$estado."'"
             );
 
             $query = $db->query(
