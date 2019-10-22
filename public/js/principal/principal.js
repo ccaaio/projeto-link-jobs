@@ -7,7 +7,7 @@ $(document).ready(function () {
         method:"POST",
         data:{idUser: idLogadoFoto},
         success:function(s){
-            alert(s.foto);
+            //alert(s.foto);
             $('.usr-pic').html('<img class="foto-perfil-user-logado" src="/public/images/'+s.foto+'" alt="Foto do Perfil">');
         }
     });
