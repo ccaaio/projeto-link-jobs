@@ -2,3 +2,8 @@
     background-color: #e1837c !important;
     cursor: no-drop !important;
 }
+
+.invisivel{
+    display: none !important;
+    visibility: hidden !important;
+}

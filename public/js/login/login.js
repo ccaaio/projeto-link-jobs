@@ -15,4 +15,12 @@ $(document).ready(function () {
             $('#btn-cad-form').attr('title', 'Você precisa ler e estar de acordo com os nossos Termos!');
         }
     });
+
+    $('#tipo-conta').on('change', function () {
+       if($(this).val() == 'GT') {
+           $('.info-cartao').addClass('invisivel');
+       } else if($(this).val() == 'PG') {
+           $('.info-cartao').removeClass('invisivel');
+       }
+    });
 });

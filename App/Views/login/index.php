@@ -157,7 +157,7 @@
                                                         </select>
                                                     </div>
                                                 </div>
-                                                <div class="info-cartao">
+                                                <div class="info-cartao col-lg-12 no-pdd invisivel">
                                                     <div class="col-lg-12 no-pdd">
                                                         <div class="sn-field">
                                                             <input id="numero_cartao" type="text" name="numero_cartao" placeholder="Número do Cartão">
