@@ -35,7 +35,7 @@
                                             <div class="col-lg-12 no-pdd">
                                                 <div class="checky-sec">
                                                     <div class="fgt-sec">
-                                                        <input type="checkbox" name="cc" id="check-condicoes">
+                                                        <input type="checkbox" name="cc" id="lembrar-de-mim">
                                                         <label for="c1">
                                                             <span></span>
                                                         </label>
