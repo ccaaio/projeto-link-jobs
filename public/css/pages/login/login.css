@@ -2,9 +2,3 @@
     background-color: #e1837c !important;
     cursor: no-drop !important;
 }
-
-.sign_in_sec.current {
-    overflow-y: auto !important;
-    height: 300px !important;
-    padding-top: 2em !important;
-}
