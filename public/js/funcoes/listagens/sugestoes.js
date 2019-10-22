@@ -1,11 +1,10 @@
 $(document).ready(function () {
-
+    var idLogado = $('#id-logado').val();
     //obtem a lista de usuarios do bd e exibe em sugestoes
-    var id = '1';
     $.ajax({
         url:"/principal/getSugestoes/",
         method:"POST",
-        data:{id: id},
+        data:{id: idLogado},
         success:function(s){
             $('#content-sugestoes').html(s);
         }

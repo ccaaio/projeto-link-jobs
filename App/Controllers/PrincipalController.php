@@ -24,8 +24,9 @@ class PrincipalController extends Controller {
     }
 
     public function getSugestoes() {
+        $idLogado = $_POST['id'];
         $conn = mysqli_connect("remotemysql.com", "GQ4OpczpAV", "jt4ifMIloM", "GQ4OpczpAV");
-        $result = mysqli_query($conn, "SELECT * FROM usuario LIMIT 20");
+        $result = mysqli_query($conn, "SELECT * FROM usuario WHERE NOT id = '$idLogado' LIMIT 20");
 
         while($row = mysqli_fetch_assoc($result)) {
             $row["listagem"] = "
