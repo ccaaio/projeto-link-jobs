@@ -31,7 +31,7 @@ $(document).ready(function () {
                 $('.badge-notificacoes').removeClass('invisivel').addClass('animated bounceIn');
 
                 setTimeout(function () {
-                    $('.badge-notificacoes').removeClass('animated bounceIn').addClass('animated tada');
+                    $('.badge-notificacoes').removeClass('animated bounceIn').addClass('animated heartBeat');
                 },1000);
             }
         }
