@@ -26,6 +26,10 @@ $(document).ready(function () {
                 method:"POST",
                 data:{idAceitado: idAceitado, nomeAceitado: nomeAceitado, idLogado: userLogado2, nomeLogado: nomeUsuarioLogado},
                 success:function(p){
+                    console.log('idAceitado: ', idAceitado);
+                    console.log('nomeAceitado: ', nomeAceitado);
+                    console.log('idLogado: ', userLogado2);
+                    console.log('nomeLogado: ', nomeUsuarioLogado);
                     setTimeout(function () {
                         $(item).remove();
                     },300);
