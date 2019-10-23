@@ -133,7 +133,7 @@ class PrincipalController extends Controller {
                 <div class="col-lg-4 col-md-4 col-sm-6 col-12">
                     <div class="company_profile_info">
                         <div class="company-up-info">
-                            <img src="http://via.placeholder.com/91x91" alt="">
+                            <img src="/public/images/profile-default.png" alt="Foto do Usuário Solicitante">
                             <h3>'.$row['nome_solicitado'].'</h3>
                             <h4>Profissão</h4>
                             <ul>

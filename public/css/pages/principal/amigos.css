@@ -27,3 +27,14 @@
     padding-left: 0.11em !important;
     padding-right: 0.11em !important;
 }
+
+.company-up-info h3 {
+    font-size: 15px !important;
+    white-space: nowrap !important;
+    width: 100% !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    text-align: center !important;
+    padding-left: 0.5em !important;
+    padding-right: 0.5em !important;
+}
