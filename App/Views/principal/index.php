@@ -106,7 +106,7 @@
                                             <span>53K</span>
                                         </li>
                                         <li>
-                                            <a href="perfildousuario.html" title="">Ver Perfil</a>
+                                            <a href="/perfil/" title="">Ver Perfil</a>
                                         </li>
                                     </ul>
                                 </div>
