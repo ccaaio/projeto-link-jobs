@@ -29,6 +29,10 @@ $(document).ready(function () {
             } else if(qtd > 0) {
                 $('.badge-notificacoes-quantidade').text(qtd);
                 $('.badge-notificacoes').removeClass('invisivel').addClass('animated bounceIn');
+
+                setTimeout(function () {
+                    $('.badge-notificacoes').removeClass('animated bounceIn').addClass('animated shake');
+                },1000);
             }
         }
     });
