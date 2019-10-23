@@ -191,10 +191,6 @@ class PrincipalController extends Controller {
                             <img src="/public/images/profile-default.png" alt="Foto do Usuário Solicitante">
                             <h3>'.$row['nome_solicitante'].'</h3>
                             <h4>Profissão</h4>
-                            <ul>
-                                <li><a href="#" title="" class="follow aceitar-solicitacao" data-id-usuario-solicitante="'.$row['id_solicitante'].'" data-nome-usuario-solicitante="'.$row['nome_solicitante'].'"><i class="fa fa-check" aria-hidden="true"></i></a></li>
-                                <li><a href="#" title="" class="hire-us recusar-solicitacao"><i class="fa fa-times" aria-hidden="true""></i></a></li>
-                            </ul>
                         </div>
                         <a href="/principal/perfil/" title="" class="view-more-pro">Ver Perfil</a>
                     </div>
