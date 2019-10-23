@@ -165,4 +165,15 @@ class PrincipalController extends Controller {
             $result2 = mysqli_query($conn, "UPDATE amizade SET status = '1' WHERE id_solicitante = '$idLogado' AND id_requisitado = '$idAceitado'");
         }
     }
+
+    public function atualizaStatusAceitacaoAmizade() {
+        if(isset($_POST['idAceitado']) && isset($_POST['idLogado'])) {
+            $conn = mysqli_connect("remotemysql.com", "GQ4OpczpAV", "jt4ifMIloM", "GQ4OpczpAV");
+
+            $idAceitado = $_POST['idAceitado'];
+            $idLogado = $_POST['idLogado'];
+
+            $result2 = mysqli_query($conn, "UPDATE amizade SET status = '1' WHERE id_solicitante = '$idLogado' AND id_requisitado = '$idAceitado'");
+        }
+    }
 }

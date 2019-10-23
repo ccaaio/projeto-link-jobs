@@ -32,6 +32,15 @@ $(document).ready(function () {
                     console.log('nomeLogado: ', nomeUsuarioLogado);
                     setTimeout(function () {
                         $(item).remove();
+                        //atualiza status da amizade
+                        $.ajax({
+                            url:"/principal/atualizaStatusAceitacaoAmizade/",
+                            method:"POST",
+                            data:{idAceitado: idAceitado, idLogado: userLogado2},
+                            success:function(p){
+                                console.log('status atualizado!');
+                            }
+                        });
                     },300);
                 }
             });
