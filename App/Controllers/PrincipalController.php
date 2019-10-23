@@ -187,7 +187,7 @@ class PrincipalController extends Controller {
                 $row["listagem"] = '
                 <div class="col-lg-4 col-md-4 col-sm-6 col-12">
                     <div class="company_profile_info">
-                        <div class="company-up-info">
+                        <div class="card-item-amigos">
                             <img src="/public/images/profile-default.png" alt="Foto do Usuário Solicitante">
                             <h3>'.$row['nome_solicitante'].'</h3>
                             <h4>Profissão</h4>
