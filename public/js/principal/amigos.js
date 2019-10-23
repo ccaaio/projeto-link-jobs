@@ -66,21 +66,19 @@ $(document).ready(function () {
 
     //ao clicar em recusar a  solicitação de amizade...
     setTimeout(function () {
-        var idAceitadoR = $(this).attr('data-id-usuario-solicitante');
-        var nomeAceitadoR = $(this).attr('data-nome-usuario-solicitante');
-        var nomeUsuarioLogadoR = $('#nome-user-logado-titulo').text();
-
-        var item = $(this).parent().parent().parent().parent().parent().addClass('animated fadeOut');
-
         $('.recusar-solicitacao').on('click', function () {
-            $.ajax({
-                url:"/principal/atualizaStatusAceitacaoAmizade/",
-                method:"POST",
-                data:{idAceitado: idAceitadoR, idLogado: userLogado3},
-                success:function(rr){
-                   console.log('recusado');
-                }
-            });
+        var idAceitadoR = $(this).attr('data-id-usuario-solicitante');
+
+        var item2 = $(this).parent().parent().parent().parent().parent().addClass('animated fadeOut');
+
+        $.ajax({
+            url:"/principal/atualizaStatusAceitacaoAmizade/",
+            method:"POST",
+            data:{idAceitado: idAceitadoR, idLogado: userLogado3},
+            success:function(rr){
+                console.log('recusado');
+                $(item2).remove();
+            }
         });
     },1000);
 });
