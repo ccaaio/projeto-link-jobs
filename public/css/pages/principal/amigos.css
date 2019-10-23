@@ -6,3 +6,24 @@
 .post-topbar {
     margin-bottom: 0.25em !important;
 }
+
+.company_profile_info {
+    border-top: 2px solid #ffbab1 !important;
+    box-shadow: 0 4px 5px -5px black !important;
+    border-radius: 25px !important;
+}
+
+.company-up-info ul li a {
+    padding: 0 5px !important;
+    height: 29px !important;
+    line-height: 28px !important;
+}
+
+.hire-us {
+    background-color: #f21b00 !important;
+}
+
+.hire-us .fa-times{
+    padding-left: 0.11em !important;
+    padding-right: 0.11em !important;
+}
