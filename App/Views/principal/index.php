@@ -34,7 +34,7 @@
                 <nav>
                     <ul>
                         <li>
-                            <a href="principal.html" title="">
+                            <a href="/principal/" title="">
                                 <span><img src="/public/images/icon1.png" alt=""></span>
                                 Home
                             </a>
