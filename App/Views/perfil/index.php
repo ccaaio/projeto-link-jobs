@@ -16,7 +16,7 @@
                 <nav>
                     <ul>
                         <li>
-                            <a href="principal.html" title="">
+                            <a href="/principal/" title="">
                                 <span><img src="images/icon1.png" alt=""></span>
                                 Home
                             </a>
@@ -24,7 +24,7 @@
 
                         <li>
 
-                            <a href="pesquisa.html" title="">
+                            <a href="/principal/amigos" title="">
                                 <span><img src="images/icon4.png" alt=""></span>
                                 Amigos
                             </a>
@@ -46,11 +46,11 @@
 
                         <h3>Configurações</h3>
                         <ul class="us-links">
-                            <li><a href="perfildousuario.html" title="">Meu Perfil</a></li>
-                            <li><a href="editar%20info.html" title="">Editar meu Perfil</a></li>
+                            <li><a href="/perfil/" title="">Meu Perfil</a></li>
+                            <li><a href="/perfil/editar" title="">Editar meu Perfil</a></li>
 
                         </ul>
-                        <h3 class="tc"><a href="entrar.html" title="">Logout</a></h3>
+                        <h3 class="tc"><a href="/login/sair" title=""><i class="la la-sign-out" style="color: #e44d3a;"></i> Sair</a></h3>
                     </div>
                 </div>
             </div>
