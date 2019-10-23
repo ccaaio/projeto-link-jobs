@@ -160,7 +160,7 @@ class PrincipalController extends Controller {
         $idLogado = $_POST['idLogado'];
         $nomeLogado = $_POST['nomeLogado'];
 
-        $result = mysqli_query($conn, "INSERT INTO amizade (id_solicitante, id_requisitado, nome_requisitado, nome_solicitado) VALUES ('$idLogado', '$idAceitado', '$nomeAceitado', '$nomeLogado')");
+        $result = mysqli_query($conn, "INSERT INTO lista_amigos (id_solicitante, id_requisitado, nome_requisitado, nome_solicitado) VALUES ('$idLogado', '$idAceitado', '$nomeAceitado', '$nomeLogado')");
         $result2 = mysqli_query($conn, "UPDATE amizade SET status = 1 WHERE id_solicitante = '$idLogado' AND id_requisitado = '$idAceitado'");
     }
 }
