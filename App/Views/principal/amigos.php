@@ -130,15 +130,7 @@
                         <div class="col-lg-6 col-md-8 no-pd">
                             <div class="main-ws-sec">
                                 <div class="post-topbar">
-                                    <div class="user-picy">
-                                        <div class="lds-facebook" style="background: #ffffff;border-radius: 50%;"><div></div><div></div><div></div></div>
-                                    </div>
-                                    <div class="post-st">
-                                        <ul>
-                                            <li><a class="post_project" href="#" title="">Postar um Projeto</a></li>
-                                            <li><a class="post-jb active" href="#" title="">Poste uma Vaga</a></li>
-                                        </ul>
-                                    </div>
+                                    <h3>Solicitações de Amizades</h3>
                                 </div>
                                 <div class="posts-section">
                                     <div class="post-bar">
