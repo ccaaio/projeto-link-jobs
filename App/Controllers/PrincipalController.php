@@ -153,14 +153,16 @@ class PrincipalController extends Controller {
     }
 
     public function processaAceitacaoAmizade() {
-        $conn = mysqli_connect("remotemysql.com", "GQ4OpczpAV", "jt4ifMIloM", "GQ4OpczpAV");
+        if(isset($_POST['idAceitado']) && isset($_POST['idLogado'])) {
+            $conn = mysqli_connect("remotemysql.com", "GQ4OpczpAV", "jt4ifMIloM", "GQ4OpczpAV");
 
-        $idAceitado = $_POST['idAceitado'];
-        $nomeAceitado = $_POST['nomeAceitado'];
-        $idLogado = $_POST['idLogado'];
-        $nomeLogado = $_POST['nomeLogado'];
+            $idAceitado = $_POST['idAceitado'];
+            $nomeAceitado = $_POST['nomeAceitado'];
+            $idLogado = $_POST['idLogado'];
+            $nomeLogado = $_POST['nomeLogado'];
 
-        $result = mysqli_query($conn, "INSERT INTO lista_amigos (id_solicitante, id_requisitado, nome_requisitado, nome_solicitado) VALUES ('$idLogado', '$idAceitado', '$nomeAceitado', '$nomeLogado')");
-        $result2 = mysqli_query($conn, "UPDATE amizade SET status = 1 WHERE id_solicitante = '$idLogado' AND id_requisitado = '$idAceitado'");
+            $result = mysqli_query($conn, "INSERT INTO lista_amigos (id_solicitante, id_requisitado, nome_requisitado, nome_solicitado) VALUES ('$idLogado', '$idAceitado', '$nomeAceitado', '$nomeLogado')");
+            $result2 = mysqli_query($conn, "UPDATE amizade SET status = 1 WHERE id_solicitante = '$idLogado' AND id_requisitado = '$idAceitado'");
+        }
     }
 }
