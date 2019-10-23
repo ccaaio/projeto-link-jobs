@@ -62,4 +62,9 @@ $(document).ready(function () {
             });
         });
     },1000);
+
+    //ao clicar em recusar a  solicitação de amizade...
+    $('.recusar-solicitacao').on('click', function () {
+
+    });
 });

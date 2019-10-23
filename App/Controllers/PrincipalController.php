@@ -138,7 +138,7 @@ class PrincipalController extends Controller {
                             <h4>Profissão</h4>
                             <ul>
                                 <li><a href="#" title="" class="follow aceitar-solicitacao" data-id-usuario-solicitante="'.$row['id_solicitante'].'" data-nome-usuario-solicitante="'.$row['nome_solicitado'].'"><i class="fa fa-check" aria-hidden="true"></i></a></li>
-                                <li><a href="#" title="" class="hire-us recusar-solicitacao"><i class="fa fa-times" aria-hidden="true""></i></a></li>
+                                <li><a href="#" title="" class="hire-us recusar-solicitacao" data-id-usuario-solicitante="'.$row['id_solicitante'].'" data-nome-usuario-solicitante="'.$row['nome_solicitado'].'"><i class="fa fa-times" aria-hidden="true"></i></a></li>
                             </ul>
                         </div>
                         <a href="/principal/perfil/" title="" class="view-more-pro">Ver Perfil</a>
@@ -167,6 +167,17 @@ class PrincipalController extends Controller {
     }
 
     public function atualizaStatusAceitacaoAmizade() {
+        if(isset($_POST['idAceitado']) && isset($_POST['idLogado'])) {
+            $conn = mysqli_connect("remotemysql.com", "GQ4OpczpAV", "jt4ifMIloM", "GQ4OpczpAV");
+
+            $idAceitado = $_POST['idAceitado'];
+            $idLogado = $_POST['idLogado'];
+
+            $result2 = mysqli_query($conn, "UPDATE amizade SET status = 1 WHERE id_solicitante = '$idLogado' AND id_requisitado = '$idAceitado'");
+        }
+    }
+
+    public function atualizaStatusNegacaoAmizade() {
         if(isset($_POST['idAceitado']) && isset($_POST['idLogado'])) {
             $conn = mysqli_connect("remotemysql.com", "GQ4OpczpAV", "jt4ifMIloM", "GQ4OpczpAV");
 
