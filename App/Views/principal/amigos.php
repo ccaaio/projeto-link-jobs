@@ -134,61 +134,56 @@
                                 </div>
                                 <div class="posts-section">
                                     <div class="post-bar">
-                                        <div class="post_topbar">
-                                            <div class="usy-dt">
-                                                <img src="http://via.placeholder.com/50x50" alt="">
-                                                <div class="usy-name">
-                                                    <h3>John Doe</h3>
-                                                    <span><img src="/public/images/clock.png" alt="">3 minutos atrás</span>
+                                        <div class="companies-list">
+                                            <div class="row">
+                                                <div class="col-lg-4 col-md-4 col-sm-6 col-12">
+                                                    <div class="company_profile_info">
+                                                        <div class="company-up-info">
+                                                            <img src="http://via.placeholder.com/91x91" alt="">
+                                                            <h3>John Doe</h3>
+                                                            <h4>Designer Gráfico</h4>
+                                                            <ul>
+                                                                <li><a href="#" title="" class="follow">Adicionar</a></li>
+                                                                <li><a href="#" title="" class="message-us"><i class="fa fa-envelope"></i></a></li>
+                                                                <li><a href="#" title="" class="hire-us">Contratar</a></li>
+                                                            </ul>
+                                                        </div>
+                                                        <a href="perfildousuario2.html" title="" class="view-more-pro">Ver Perfil</a>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-4 col-md-4 col-sm-6 col-12">
+                                                    <div class="company_profile_info">
+                                                        <div class="company-up-info">
+                                                            <img src="http://via.placeholder.com/91x91" alt="">
+                                                            <h3>John Doe</h3>
+                                                            <h4>Designer Gráfico</h4>
+                                                            <ul>
+                                                                <li><a href="#" title="" class="follow">Adicionar</a></li>
+                                                                <li><a href="#" title="" class="message-us"><i class="fa fa-envelope"></i></a></li>
+                                                                <li><a href="#" title="" class="hire-us">Contratar</a></li>
+                                                            </ul>
+                                                        </div>
+                                                        <a href="perfildousuario2.html" title="" class="view-more-pro">Ver Perfil</a>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-4 col-md-4 col-sm-6 col-12">
+                                                    <div class="company_profile_info">
+                                                        <div class="company-up-info">
+                                                            <img src="http://via.placeholder.com/91x91" alt="">
+                                                            <h3>John Doe</h3>
+                                                            <h4>Designer Gráfico</h4>
+                                                            <ul>
+                                                                <li><a href="#" title="" class="follow">Adicionar</a></li>
+                                                                <li><a href="#" title="" class="message-us"><i class="fa fa-envelope"></i></a></li>
+                                                                <li><a href="#" title="" class="hire-us">Contratar</a></li>
+                                                            </ul>
+                                                        </div>
+                                                        <a href="perfildousuario2.html" title="" class="view-more-pro">Ver Perfil</a>
+                                                    </div>
                                                 </div>
                                             </div>
-                                            <div class="ed-opts">
-                                                <a href="#" title="" class="ed-opts-open"><i class="la la-ellipsis-v"></i></a>
-                                                <ul class="ed-options">
-                                                    <li><a href="#" title="">Editar uma postagem</a></li>
-                                                    <li><a href="#" title="">Não foi Salvo</a></li>
-                                                    <li><a href="#" title="">Liberar</a></li>
-                                                    <li><a href="#" title="">Fechar</a></li>
-                                                    <li><a href="#" title="">Esconder</a></li>
-                                                </ul>
-                                            </div>
                                         </div>
-                                        <div class="epi-sec">
-                                            <ul class="descp">
-                                                <li><img src="/public/images/icon8.png" alt=""><span>Codificador Épico</span></li>
-                                                <li><img src="/public/images/icon9.png" alt=""><span>India</span></li>
-                                            </ul>
-                                            <ul class="bk-links">
-                                                <li><a href="#" title=""><i class="la la-bookmark"></i></a></li>
-                                                <li><a href="#" title=""><i class="la la-envelope"></i></a></li>
-                                            </ul>
-                                        </div>
-                                        <div class="job_descp">
-                                            <h3>Desenvolverdor Wordpress Senior</h3>
-                                            <ul class="job-dt">
-                                                <li><a href="#" title="">Integral</a></li>
-                                                <li><span>R$90 / hr</span></li>
-                                            </ul>
 
-                                            <ul class="skill-tags">
-                                                <li><a href="#" title="">HTML</a></li>
-                                                <li><a href="#" title="">PHP</a></li>
-                                                <li><a href="#" title="">CSS</a></li>
-                                                <li><a href="#" title="">Javascript</a></li>
-                                                <li><a href="#" title="">Wordpress</a></li>
-                                            </ul>
-                                        </div>
-                                        <div class="job-status-bar">
-                                            <ul class="like-com">
-                                                <li>
-                                                    <a href="#"><i class="la la-heart"></i>Curtir</a>
-                                                    <img src="/public/images/liked-img.png" alt="">
-                                                    <span>25</span>
-                                                </li>
-                                                <li><a href="#" title="" class="com"><img src="/public/images/com.png" alt=""> Comentário 15</a></li>
-                                            </ul>
-                                            <a><i class="la la-eye"></i>Visualizações 50</a>
-                                        </div>
                                     </div>
                                     <div class="top-profiles">
                                         <div class="pf-hd">
