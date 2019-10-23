@@ -76,7 +76,7 @@
 
 .badge-notificacoes-quantidade{
     color: #fff;
-    background-color: #ffc107;
-    padding-bottom: 1em;
-    line-height: 0.59;
+    background-color: #ffc107 !important;
+    padding-bottom: 1em !important;
+    line-height: 0.59 !important;
 }
