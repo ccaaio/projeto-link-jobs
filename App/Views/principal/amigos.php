@@ -44,7 +44,7 @@
                             <div class="badge-notificacoes invisivel">
                                 <span class="badge badge-notificacoes-quantidade"></span>
                             </div>
-                            <a href="/principal/amigos" title="">
+                            <a href="#" title="">
                                 <span><img src="/public/images/icon4.png" alt=""></span>
                                 Amigos
                             </a>
