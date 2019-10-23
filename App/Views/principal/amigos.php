@@ -92,7 +92,7 @@
                                             </div>
                                         </div>
                                         <div class="user-specs">
-                                            <h3><?php  echo \App\Lib\Auth::usuario()->usuario; ?></h3>
+                                            <h3 id="nome-user-logado-titulo"><?php  echo \App\Lib\Auth::usuario()->usuario; ?></h3>
                                             <span><?php  echo \App\Lib\Auth::usuario()->profissao; ?></span>
                                         </div>
                                     </div>
