@@ -84,4 +84,25 @@ class PrincipalController extends Controller {
             }
         }
     }
+
+    public function getSolicitacoesAmizades() {
+        if(isset($_POST['idUser'])) {
+            $idLogado = $_POST['idUser'];
+            $conn = mysqli_connect("remotemysql.com", "GQ4OpczpAV", "jt4ifMIloM", "GQ4OpczpAV");
+            $result = mysqli_query($conn, "SELECT COUNT(*) FROM amizade WHERE id_requisitado = '$idLogado' LIMIT 999");
+
+            if (mysqli_num_rows($result) > 0) {
+                while($row = mysqli_fetch_assoc($result)) {
+                    $row["listagem"] = " ".$row['COUNT(*)']." ";
+                    ?>
+                    <?php
+                    header('Content-Type: application/json');
+                    echo json_encode(array('qtdSolicitacoesAmizade' => ' '.$row["listagem"].' '));
+                }
+            } else {
+                header('Content-Type: application/json');
+                echo json_encode(array('qtdSolicitacoesAmizade' => '0'));
+            }
+        }
+    }
 }

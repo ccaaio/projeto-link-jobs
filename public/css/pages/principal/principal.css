@@ -80,3 +80,8 @@
     padding-bottom: 1em !important;
     line-height: 0.59 !important;
 }
+
+.invisivel{
+    display: none !important;
+    visibility: hidden !important;
+}

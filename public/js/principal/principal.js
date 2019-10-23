@@ -15,4 +15,21 @@ $(document).ready(function () {
             $('.foto-perfil-navbar').attr('src', '/public/images/perfil/'+trimFoto+'');
         }
     });
+
+    //Obtem a quantidade de solicitacoes de amizade para o usuario logado
+    $.ajax({
+        url:"/principal/getSolicitacoesAmizades/",
+        method:"POST",
+        data:{idUser: idLogadoFoto},
+        success:function(n){
+            var qtd = n.qtdSolicitacoesAmizade;
+
+            if(qtd == '0') {
+                $('.badge-notificacoes').addClass('invisivel');
+            } else if(qtd > 0) {
+                $('.badge-notificacoes-quantidade').text(qtd);
+                $('.badge-notificacoes').removeClass('invisivel').addClass('animated bounceIn');
+            }
+        }
+    });
 });
