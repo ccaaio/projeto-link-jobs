@@ -17,12 +17,16 @@ $(document).ready(function () {
        var nomeAceitado = $(this).attr('data-nome-usuario-solicitante');
        var nomeUsuarioLogado = $('#nome-user-logado-titulo').text();
 
+        var item = $(this).parent().parent().parent().parent().parent().parent().addClass('animated fadeOut');
+
         $.ajax({
             url:"/principal/processaAceitacaoAmizade/",
             method:"POST",
             data:{idAceitado: idAceitado, nomeAceitado: nomeAceitado, idLogado: userLogado, nomeLogado: nomeUsuarioLogado},
             success:function(p){
-                alert('aceitado');
+                setTimeout(function () {
+                    $(item).remove();
+                },300);
             }
         });
     });
