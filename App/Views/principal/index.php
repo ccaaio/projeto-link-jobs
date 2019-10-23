@@ -41,8 +41,8 @@
                         </li>
 
                         <li>
-                            <div class="badge-notificacoes">
-                                <span class="badge badge-notificacoes-quantidade">3</span>
+                            <div class="badge-notificacoes invisivel">
+                                <span class="badge badge-notificacoes-quantidade"></span>
                             </div>
                             <a href="#" title="">
                                 <span><img src="/public/images/icon4.png" alt=""></span>
