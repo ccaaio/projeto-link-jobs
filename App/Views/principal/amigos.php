@@ -135,7 +135,7 @@
                                 <div class="posts-section">
                                     <div class="post-bar">
                                         <div class="companies-list">
-                                            <div class="row">
+                                            <div id="content-solicitacoes-amizade" class="row">
                                                 <div class="col-lg-4 col-md-4 col-sm-6 col-12">
                                                     <div class="company_profile_info">
                                                         <div class="company-up-info">

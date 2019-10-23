@@ -117,7 +117,38 @@ class PrincipalController extends Controller {
         self::setViewJs('/public/js/sweetalert2.all.min.js');
         self::setViewJs('/public/js/principal/principal.js');
         self::setViewJs('/public/js/funcoes/listagens/sugestoes.js');
+        self::setViewJs('/public/js/principal/amigos.js');
 
         $this->render('principal/amigos');
+    }
+
+    public function listagemSolicitacoesAmizade() {
+        if(isset($_POST['idProprio'])) {
+            $idLogado = $_POST['idProprio'];
+            $conn = mysqli_connect("remotemysql.com", "GQ4OpczpAV", "jt4ifMIloM", "GQ4OpczpAV");
+            $result = mysqli_query($conn, "SELECT * FROM amizade WHERE id_requisitado = '$idLogado'");
+
+            while($row = mysqli_fetch_assoc($result)) {
+                $row["listagem"] = '
+                <div class="col-lg-4 col-md-4 col-sm-6 col-12">
+                    <div class="company_profile_info">
+                        <div class="company-up-info">
+                            <img src="http://via.placeholder.com/91x91" alt="">
+                            <h3>'.$row['nome_solicitado'].'</h3>
+                            <h4>Profissão</h4>
+                            <ul>
+                                <li><a href="#" title="" class="follow aceitar-solicitacao"><i class="fa fa-check" aria-hidden="true"></i></a></li>
+                                <li><a href="#" title="" class="hire-us recusar-solicitacao"><i class="fa fa-times" aria-hidden="true""></i></a></li>
+                            </ul>
+                        </div>
+                        <a href="/principal/perfil/" title="" class="view-more-pro">Ver Perfil</a>
+                    </div>
+                </div>    
+                ';
+                ?>
+                <?php
+                echo $row["listagem"];
+            }
+        }
     }
 }
