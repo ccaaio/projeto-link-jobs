@@ -78,8 +78,8 @@ $(document).ready(function () {
                     url:"/principal/refreshListagemAmigos/",
                     method:"POST",
                     data:{idProprio: userLogado},
-                    success:function(r){
-                        $('#content-amigos').html(r);
+                    success:function(rn){
+                        $('#content-amigos').html(rn);
                     }
                 });
             }
