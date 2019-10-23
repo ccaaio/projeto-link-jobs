@@ -189,7 +189,7 @@ class PrincipalController extends Controller {
                     <div class="company_profile_info">
                         <div class="company-up-info">
                             <img src="/public/images/profile-default.png" alt="Foto do Usuário Solicitante">
-                            <h3>'.$row['nome_solicitado'].'</h3>
+                            <h3>'.$row['nome_solicitante'].'</h3>
                             <h4>Profissão</h4>
                             <ul>
                                 <li><a href="#" title="" class="follow aceitar-solicitacao" data-id-usuario-solicitante="'.$row['id_solicitante'].'" data-nome-usuario-solicitante="'.$row['nome_solicitante'].'"><i class="fa fa-check" aria-hidden="true"></i></a></li>
