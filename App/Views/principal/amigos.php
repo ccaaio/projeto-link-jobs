@@ -66,8 +66,8 @@
 
                         <h3>Configurações</h3>
                         <ul class="us-links">
-                            <li><a href="perfildousuario.html" title="">Meu Perfil</a></li>
-                            <li><a href="editar%20info.html" title="">Editar meu Perfil</a></li>
+                            <li><a href="/perfil/" title="">Meu Perfil</a></li>
+                            <li><a href="/perfil/editar" title="">Editar meu Perfil</a></li>
 
                         </ul>
                         <h3 class="tc"><a href="/login/sair" title=""><i class="la la-sign-out" style="color: #e44d3a;"></i> Sair</a></h3>
