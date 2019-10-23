@@ -67,3 +67,16 @@
     border-radius: 50% !important;
     width: 30px !important;
 }
+
+.badge-notificacoes{
+    position: absolute;
+    top: 3px;
+    right: 5px;
+}
+
+.badge-notificacoes-quantidade{
+    color: #fff;
+    background-color: #ffc107;
+    padding-bottom: 1em;
+    line-height: 0.59;
+}
