@@ -185,6 +185,7 @@ class PrincipalController extends Controller {
             $idLogado = $_POST['idLogado'];
 
             $result2 = mysqli_query($conn, "UPDATE amizade SET status = 1 WHERE id_solicitante = '$idLogado' AND id_requisitado = '$idAceitado'");
+            $result2 = mysqli_query($conn, "UPDATE amizade SET status = '1' WHERE id_solicitante = '$idAceitado' AND id_requisitado = '$idLogado'");
         }
     }
 
