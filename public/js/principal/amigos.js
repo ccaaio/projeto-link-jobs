@@ -38,7 +38,14 @@ $(document).ready(function () {
                             method:"POST",
                             data:{idAceitado: idAceitado, idLogado: userLogado2},
                             success:function(p){
-                                console.log('status atualizado!');
+                                $.ajax({
+                                    url:"/principal/refreshListagemAmigos/",
+                                    method:"POST",
+                                    data:{idProprio: userLogado},
+                                    success:function(r){
+                                        $('#content-amigos').html(r);
+                                    }
+                                });
                             }
                         });
                     },300);

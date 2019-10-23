@@ -136,25 +136,23 @@
                                     <div class="post-bar">
                                         <div class="companies-list">
                                             <div id="content-solicitacoes-amizade" class="row">
-                                                <div class="col-lg-4 col-md-4 col-sm-6 col-12">
-                                                    <div class="company_profile_info">
-                                                        <div class="company-up-info">
-                                                            <img src="http://via.placeholder.com/91x91" alt="">
-                                                            <h3>John Doe</h3>
-                                                            <h4>Designer Gráfico</h4>
-                                                            <ul>
-                                                                <li><a href="#" title="" class="follow aceitar-solicitacao"><i class="fa fa-check" aria-hidden="true"></i></a></li>
 
-                                                                <li><a href="#" title="" class="hire-us recusar-solicitacao"><i class="fa fa-times" aria-hidden="true""></i></a></li>
-                                                            </ul>
-                                                        </div>
-                                                        <a href="perfildousuario2.html" title="" class="view-more-pro">Ver Perfil</a>
-                                                    </div>
-                                                </div>
                                             </div>
                                         </div>
 
                                     </div>
+                                    <div class="post-topbar">
+                                        <h3>Amigos</h3>
+                                    </div>
+                                    <div class="post-bar">
+                                        <div class="companies-list">
+                                            <div id="content-amigos" class="row">
+
+                                            </div>
+                                        </div>
+
+                                    </div>
+
                                     <div class="top-profiles">
                                         <div class="pf-hd">
                                             <h3>Top Perfis</h3>

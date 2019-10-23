@@ -176,4 +176,34 @@ class PrincipalController extends Controller {
             $result2 = mysqli_query($conn, "UPDATE amizade SET status = 1 WHERE id_solicitante = '$idLogado' AND id_requisitado = '$idAceitado'");
         }
     }
+
+    public function refreshListagemAmigos() {
+        if(isset($_POST['idProprio'])) {
+            $idLogado = $_POST['idProprio'];
+            $conn = mysqli_connect("remotemysql.com", "GQ4OpczpAV", "jt4ifMIloM", "GQ4OpczpAV");
+            $result = mysqli_query($conn, "SELECT * FROM lista_amigos WHERE id_solicitante = '$idLogado'");
+
+            while($row = mysqli_fetch_assoc($result)) {
+                $row["listagem"] = '
+                <div class="col-lg-4 col-md-4 col-sm-6 col-12">
+                    <div class="company_profile_info">
+                        <div class="company-up-info">
+                            <img src="/public/images/profile-default.png" alt="Foto do Usuário Solicitante">
+                            <h3>'.$row['nome_solicitado'].'</h3>
+                            <h4>Profissão</h4>
+                            <ul>
+                                <li><a href="#" title="" class="follow aceitar-solicitacao" data-id-usuario-solicitante="'.$row['id_solicitante'].'" data-nome-usuario-solicitante="'.$row['nome_solicitado'].'"><i class="fa fa-check" aria-hidden="true"></i></a></li>
+                                <li><a href="#" title="" class="hire-us recusar-solicitacao"><i class="fa fa-times" aria-hidden="true""></i></a></li>
+                            </ul>
+                        </div>
+                        <a href="/principal/perfil/" title="" class="view-more-pro">Ver Perfil</a>
+                    </div>
+                </div>    
+                ';
+                ?>
+                <?php
+                echo $row["listagem"];
+            }
+        }
+    }
 }
