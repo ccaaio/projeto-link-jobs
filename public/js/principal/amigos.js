@@ -65,6 +65,24 @@ $(document).ready(function () {
 
     //ao clicar em recusar a  solicitação de amizade...
     $('.recusar-solicitacao').on('click', function () {
+        var idAceitado = $(this).attr('data-id-usuario-solicitante');
 
+        var item = $(this).parent().parent().parent().parent().parent().addClass('animated fadeOut');
+
+        $.ajax({
+            url:"/principal/atualizaStatusNegacaoAmizade/",
+            method:"POST",
+            data:{idAceitado: idAceitado, idLogado: userLogado2},
+            success:function(p){
+                $.ajax({
+                    url:"/principal/refreshListagemAmigos/",
+                    method:"POST",
+                    data:{idProprio: userLogado},
+                    success:function(r){
+                        $('#content-amigos').html(r);
+                    }
+                });
+            }
+        });
     });
 });
