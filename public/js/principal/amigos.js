@@ -72,7 +72,7 @@ $(document).ready(function () {
             var item2 = $(this).parent().parent().parent().parent().parent().addClass('animated fadeOut');
 
             $.ajax({
-                url:"/principal/atualizaStatusAceitacaoAmizade",
+                url:"/principal/atualizaStatusNegacaoAmizade",
                 method:"POST",
                 data:{idAceitado: idAceitadoR, idLogado: userLogado3},
                 success:function(rr){
