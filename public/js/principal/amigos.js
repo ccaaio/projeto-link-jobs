@@ -71,18 +71,11 @@ $(document).ready(function () {
             var item = $(this).parent().parent().parent().parent().parent().addClass('animated fadeOut');
 
             $.ajax({
-                url:"/principal/atualizaStatusNegacaoAmizade/",
+                url:"/principal/atualizaStatusAceitacaoAmizade/",
                 method:"POST",
                 data:{idAceitado: idAceitado, idLogado: userLogado2},
                 success:function(p){
-                    $.ajax({
-                        url:"/principal/refreshListagemAmigos/",
-                        method:"POST",
-                        data:{idProprio: userLogado},
-                        success:function(rn){
-                            $('#content-amigos').html(rn);
-                        }
-                    });
+
                 }
             });
         });
