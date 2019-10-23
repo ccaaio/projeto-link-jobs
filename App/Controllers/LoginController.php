@@ -85,7 +85,7 @@ class LoginController extends Controller
             $this->redirect('admin/');
         }
 
-        $this->redirect('admin/index');
+        $this->redirect('principal/index');
 
     }
 
