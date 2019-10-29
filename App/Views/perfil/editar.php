@@ -62,7 +62,7 @@
 
     <section class="cover-sec">
         <img src="http://via.placeholder.com/1600x400" alt="">
-        <input type="file"><i class="fa fa-camera"></i>Alterar Imagem</input>
+        <a type="file" href="#" title=""><i class="fa fa-camera"></i>Alterar Imagem</a>
     </section>
 
 
