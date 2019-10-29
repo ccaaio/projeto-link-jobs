@@ -31,7 +31,7 @@ class PrincipalController extends Controller {
         if(isset($_POST['idProprio'])) {
             $idLogado = $_POST['idProprio'];
             $conn = mysqli_connect("remotemysql.com", "GQ4OpczpAV", "jt4ifMIloM", "GQ4OpczpAV");
-            $result = mysqli_query($conn, "SELECT * FROM usuario u WHERE NOT EXISTS (SELECT * FROM lista_amigos amigos WHERE u.id = amigos.id_solicitante)");
+            $result = mysqli_query($conn, "SELECT * FROM usuario u WHERE NOT EXISTS (SELECT * FROM lista_amigos amigos WHERE u.id = amigos.id_solicitante) AND u.id != $idLogado");
 
             while($row = mysqli_fetch_assoc($result)) {
                 $row["listagem"] = "
