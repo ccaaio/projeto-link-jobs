@@ -31,7 +31,7 @@ class PrincipalController extends Controller {
         if(isset($_POST['idProprio'])) {
             $idLogado = $_POST['idProprio'];
             $conn = mysqli_connect("remotemysql.com", "GQ4OpczpAV", "jt4ifMIloM", "GQ4OpczpAV");
-            $result = mysqli_query($conn, "SELECT * FROM usuario WHERE NOT id = '$idLogado' LIMIT 20");
+            $result = mysqli_query($conn, "SELECT * FROM usuario u WHERE NOT EXISTS (SELECT * FROM lista_amigos amigos WHERE u.id = amigos.id_solicitante)");
 
             while($row = mysqli_fetch_assoc($result)) {
                 $row["listagem"] = "
@@ -205,7 +205,7 @@ class PrincipalController extends Controller {
                             <h3>'.$row['nome_solicitante'].'</h3>
                             <h4>Profissão</h4>
                         </div>
-                        <a href="/principal/perfil/" title="" class="view-more-pro">Ver Perfil</a>
+                        <a data-id-seguidor="'.$row['id_requisitado'].'" href="/principal/perfil/" title="" class="view-more-pro">Ver Perfil</a>
                     </div>
                 </div>    
                 ';
