@@ -4,11 +4,11 @@
         <div class="container">
             <div class="header-data">
                 <div class="logo">
-                    <a href="principal.html" title=""><img src="images/logo.png" alt=""></a>
+                    <a href="principal.html" title=""><img src="/public/images/logo.png" alt=""></a>
                 </div>
                 <div class="search-bar">
                     <form>
-                        <input type="text" name="search" placeholder="Pesquisar...">
+                        <input type="text" name="search" placeholder="Search...">
                         <button type="submit"><i class="la la-search"></i></button>
                     </form>
                 </div>
@@ -16,15 +16,17 @@
                     <ul>
                         <li>
                             <a href="/principal/" title="">
-                                <span><img src="images/icon1.png" alt=""></span>
+                                <span><img src="/public/images/icon1.png" alt=""></span>
                                 Home
                             </a>
                         </li>
 
                         <li>
-
+                            <div class="badge-notificacoes invisivel">
+                                <span class="badge badge-notificacoes-quantidade"></span>
+                            </div>
                             <a href="/principal/amigos" title="">
-                                <span><img src="images/icon4.png" alt=""></span>
+                                <span><img src="/public/images/icon4.png" alt=""></span>
                                 Amigos
                             </a>
 
@@ -36,8 +38,8 @@
                 </div>
                 <div class="user-account">
                     <div class="user-info">
-                        <img href="perfildousuario.html" src="http://via.placeholder.com/30x30" alt="">
-                        <a title="">John</a>
+                        <img class="foto-perfil-navbar" src="/public/images/perfil/profile-default.png" alt="">
+                        <a title=""><?php  echo \App\Lib\Auth::usuario()->usuario; ?></a>
                         <i class="la la-sort-down"></i>
                     </div>
                     <div class="user-account-settingss">
