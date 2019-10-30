@@ -77,7 +77,7 @@
 
 
 
-    <form class="form-upload-capa-perfil" method="post" action="/perfil/uploadCapaPerfil">
+    <form class="form-upload-capa-perfil" method="post" action="/perfil/uploadCapaPerfil" enctype="multipart/form-data">
         <section class="cover-sec">
             <input name="id_user" type="hidden" value="<?php  echo \App\Lib\Auth::usuario()->id; ?>">
             <img src="http://via.placeholder.com/1600x400" alt="">
