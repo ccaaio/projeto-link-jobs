@@ -2,7 +2,7 @@
 
         $('#upload-capa').on('change', function () {
             setTimeout(function () {
-                $('.form-upload-capa-perfil').submit();
+                //$('.form-upload-capa-perfil').submit();
                 $('#modal-capa').show();
             }, 500);
         });
