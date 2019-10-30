@@ -67,15 +67,13 @@ class PerfilController extends Controller {
     }
 
     public function getCapaPerfil() {
-        $this->existeLayout(false);
-
         if(isset($_POST['id_user'])) {
 
             $idUser = $_POST['id_user'];
 
             $conn = mysqli_connect("remotemysql.com", "GQ4OpczpAV", "jt4ifMIloM", "GQ4OpczpAV");
 
-            $result = mysqli_query($conn, "SELECT profile_image FROM capaPerfil WHERE id_usuario = '$idUser' ORDER BY id DESC LIMIT 1");
+            $result = mysqli_query($conn, "SELECT * FROM capaPerfil WHERE id_usuario = '$idUser' ORDER BY id DESC LIMIT 1");
 
             if (mysqli_num_rows($result) > 0) {
                 while($row = mysqli_fetch_assoc($result)) {
