@@ -77,12 +77,14 @@
 
 
 
-    <section class="cover-sec">
-        <img src="http://via.placeholder.com/1600x400" alt="">
-        <a href="#" title="" class="d-none"><i class="fa fa-camera"></i>Alterar Imagem</a>
-        <label for="upload-capa" class="upload-capa"><i class="fa fa-camera"></i>Alterar Imagem</label>
-        <input type="file" id="upload-capa" name="upload-capa" class="d-none">
-    </section>
+    <form class="form-upload-capa-perfil" method="post" action="/perfil/uploadCapaPerfil">
+        <section class="cover-sec">
+            <input name="id_user" type="hidden" value="<?php  echo \App\Lib\Auth::usuario()->id; ?>">
+            <img src="http://via.placeholder.com/1600x400" alt="">
+            <label for="upload-capa" class="upload-capa"><i class="fa fa-camera"></i>Alterar Imagem</label>
+            <input type="file" id="upload-capa" name="save-capa-user" class="d-none">
+        </section>
+    </form>
 
 
     <main>

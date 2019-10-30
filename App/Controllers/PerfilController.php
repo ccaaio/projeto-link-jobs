@@ -42,4 +42,25 @@ class PerfilController extends Controller {
         $this->render('perfil/editar');
 
     }
+
+    public function uploadCapaPerfil() {
+        if(isset($_POST['save-capa-user']) && isset($_POST['id_user'])) {
+            $id_user = $_POST['id_user'];
+            $nomeImagemUpload = time() . '_' . $_FILES['profileImage']['name'];
+
+            $target = 'public/uploads/perfil//' . $nomeImagemUpload;
+
+            if (move_uploaded_file($_FILES['profileImage']['tmp_name'], $target)) {
+                $conn = mysqli_connect("localhost", "servicon", "3Mv2J0bw2b", "servicon_servicosnaweb");
+                $sql = "INSERT INTO fotoPerfil (id_usuario, profile_image) VALUES ('$id_user', '$nomeImagemUpload')";
+
+                if(mysqli_query($conn, $sql)) {
+                    $this->redirect('principal/editar/');
+                }
+            } else {
+                $this->render('error/usuario');
+            }
+
+        }
+    }
 }
