@@ -182,9 +182,9 @@
                         <div class="col-lg-6">
                             <div class="main-ws-sec">
                                 <div class="user-tab-sec">
-                                    <h3>John Doe</h3>
+                                    <h3><?php  echo \App\Lib\Auth::usuario()->usuario; ?></h3>
                                     <div class="star-descp">
-                                        <span>Designer Gráfico</span>
+                                        <span><?php  echo \App\Lib\Auth::usuario()->profissao; ?></span>
                                         <ul>
                                             <li><i class="fa fa-star"></i></li>
                                             <li><i class="fa fa-star"></i></li>
