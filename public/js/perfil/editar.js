@@ -8,6 +8,7 @@ $(document).ready(function () {
             data:{id_user: idUserLogado},
             success: function (capa) {
                 $('#img-capa').attr('src', capa.src);
+                $('.loader-capa').remove();
             }
         }) ;
     },250);

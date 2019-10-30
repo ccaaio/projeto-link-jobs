@@ -79,7 +79,7 @@
 
     <form class="form-upload-capa-perfil" method="post" action="/perfil/uploadCapaPerfil" enctype="multipart/form-data">
         <section class="cover-sec">
-            <div class="lds-facebook" style="position: absolute;top: 0;z-index: 999 !important;bottom: 0;right: 0;left: 0;margin: auto;">
+            <div class="lds-facebook loader-capa" style="position: absolute;top: 0;z-index: 999 !important;bottom: 0;right: 0;left: 0;margin: auto;">
                 <div></div><div></div><div></div>
             </div>
             <input id="id_user" name="id_user" type="hidden" value="<?php  echo \App\Lib\Auth::usuario()->id; ?>">
