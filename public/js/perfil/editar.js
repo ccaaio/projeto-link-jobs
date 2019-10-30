@@ -1,16 +1,16 @@
     setTimeout(function () {
 
         $('#upload-capa').on('change', function () {
-            $('#btn-upload').removeClass('d-none');
+            $('.btn-upload').removeClass('d-none');
             setTimeout(function () {
                 Swal.fire({
-                    title: 'Foto selecionada! Clique em CLIQUE PARA CARREGAR A FOTO SELECIONADA para aplicar as alterações.',
+                    title: 'Foto selecionada. Vamos ao próximo passo....',
                     animation: false,
                     customClass: {
                         popup: 'animated tada'
                     }
                 });
-            }, 500);
+            }, 1000);
         });
 
         var idUsuario = $('#id_user').val();
