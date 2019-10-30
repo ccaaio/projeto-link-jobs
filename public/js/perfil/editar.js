@@ -70,8 +70,8 @@ setTimeout(function () {
             }).then(function(response){
                 $.ajax({
                     url:"/perfil/fotoPerfilUpload",
-                    type: "POST",
-                    data:{"image": response, "id_user": idUser},
+                    method: "POST",
+                    data:{image: response, id_user: idUser},
                     success:function(data) {
                         console.log(data);
                         $('#uploadimageModal').modal('hide');
