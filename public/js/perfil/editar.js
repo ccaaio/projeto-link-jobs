@@ -1,6 +1,7 @@
     setTimeout(function () {
 
         $('#upload-capa').on('change', function () {
+            $('#btn-upload').removeClass('d-none');
             setTimeout(function () {
                 Swal.fire({
                     title: 'Foto selecionada! Clique em CLIQUE PARA CARREGAR A FOTO SELECIONADA para aplicar as alterações.',

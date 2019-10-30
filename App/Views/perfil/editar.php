@@ -79,7 +79,7 @@
 
     <form class="form-upload-capa-perfil" method="post" action="/perfil/uploadCapaPerfil" enctype="multipart/form-data">
         <section class="cover-sec">
-            <button class="btn btn-lg btn-danger btn-block" name="save-capa" type="submit" style="position: absolute;top: 0;bottom: 0;left: 0;right: 0;margin: auto;height: 70px;cursor: alias;"><i class="la la-check" style="font-size: 1.2em;margin-right: 0.3em;"></i> CLIQUE PARA CARREGAR A FOTO SELECIONADA!</button>
+            <button class="btn btn-lg btn-danger btn-block btn-upload d-none" name="save-capa" type="submit" style="position: absolute;top: 0;bottom: 0;left: 0;right: 0;margin: auto;height: 70px;cursor: alias;"><i class="la la-check" style="font-size: 1.2em;margin-right: 0.3em;"></i> CLIQUE PARA CARREGAR A FOTO SELECIONADA!</button>
             <div class="lds-facebook loader-capa" style="position: absolute !important; top: 0 !important; z-index: 999 !important; bottom: 0 !important; right: 0 !important; left: 0 !important; margin: auto !important;">
                 <div></div><div></div><div></div>
             </div>
