@@ -1,10 +1,11 @@
     setTimeout(function () {
-        /*
+
         $('#upload-capa').on('change', function () {
-            $('.form-upload-capa-perfil').submit();
-            $('#modal-capa').show();
+            setTimeout(function () {
+                $('.form-upload-capa-perfil').submit();
+                $('#modal-capa').show();
+            }, 500);
         });
-         */
 
         var idUsuario = $('#id_user').val();
 
