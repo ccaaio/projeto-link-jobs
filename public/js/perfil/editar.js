@@ -7,7 +7,7 @@ $(document).ready(function () {
             method:"POST",
             data:{id_user: idUserLogado},
             success: function (capa) {
-                $('#img-capa').attr('src', '/public/uploads/capa/'+capa.src);
+                $('#img-capa').attr('src', '/public/uploads/capa/'+capa.src+'');
                 $('.loader-capa').remove();
             }
         });
