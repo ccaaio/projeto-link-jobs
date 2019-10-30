@@ -15,10 +15,12 @@
                 method:"POST",
                 data:{idUser: idUsuario},
                 success:function(c){
-                    $('.loader-capa').addClass('d-none');
                     var capa =c.src;
                     var trimCapa = $.trim(capa);
                     $('#img-capa').attr("src", "/public/uploads/capa/"+trimCapa+"");
+                    setTimeout(function () {
+                        $('.loader-capa').addClass('d-none');
+                    }, 1500);
                 }
             });
         },200);
