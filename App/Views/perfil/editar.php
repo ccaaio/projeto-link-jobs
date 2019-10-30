@@ -62,8 +62,9 @@
 
     <section class="cover-sec">
         <img src="http://via.placeholder.com/1600x400" alt="">
-        <label for="upload-capa"><i class="fa fa-camera"></i>Alterar Imagem</label>
-        <input type="file" id="upload-capa" name="upload-capa">
+        <a href="#" title=""><i class="fa fa-camera"></i>Alterar Imagem</a>
+        <label for="upload-capa" class="d-none-"><i class="fa fa-camera"></i>Alterar Imagem</label>
+        <input type="file" id="upload-capa" name="upload-capa" class="d-none">
     </section>
 
 
