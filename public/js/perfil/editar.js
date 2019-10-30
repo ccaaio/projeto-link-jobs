@@ -72,9 +72,9 @@ setTimeout(function () {
                     type: "POST",
                     data:{"image": response},
                     success:function(data) {
-                        console.log(data.src);
+                        console.log(data);
                         $('#uploadimageModal').modal('hide');
-                        $('#fp').attr('src', '/public/uploads/fotoPerfil/'+data.src+'');
+                        //$('#fp').attr('src',data.html_img);
                     }
                 });
             })
