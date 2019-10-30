@@ -1,4 +1,9 @@
     setTimeout(function () {
+
+        $('#upload-capa').on('change', function () {
+            console.log('ops, mudanças!');
+        });
+
         var idUsuario = $('#id_user').val();
 
         setTimeout(function () {
