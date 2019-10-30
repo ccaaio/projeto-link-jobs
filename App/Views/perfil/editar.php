@@ -22,7 +22,9 @@
     <div class="card-body" align="center">
         <input type="file" name="upload_image" id="upload_image" accept="image/*" />
         <br />
-        <div id="uploaded_image"></div>
+        <div id="uploaded_image">
+            <img class="img-thumbnail" id="fp">
+        </div>
     </div>
 </div>
 

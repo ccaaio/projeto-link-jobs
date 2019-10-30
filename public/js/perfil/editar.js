@@ -71,10 +71,9 @@ setTimeout(function () {
                     url:"perfil/fotoPerfiUpload",
                     type: "POST",
                     data:{"image": response},
-                    success:function(data)
-                    {
+                    success:function(data) {
                         $('#uploadimageModal').modal('hide');
-                        $('#uploaded_image').html(data.html_img);
+                        $('#fp').attr('src',data.html_img);
                     }
                 });
             })
