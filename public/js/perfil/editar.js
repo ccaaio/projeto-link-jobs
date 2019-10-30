@@ -1,15 +1,16 @@
 $(document).ready(function () {
-    setTimeout(function () {
-        var idUserLogado = $('#id_user').val();
+    var idUsuario = $('#id_user').val();
 
-        $.ajax({
-            url:"/perfil/getCapaPerfil/",
-            method:"POST",
-            data:{id_user: idUserLogado},
-            success: function (capa) {
-                $('#img-capa').attr('src', '/public/uploads/capa/'+capa.src+'');
-                $('.loader-capa').remove();
-            }
-        });
-    },250);
+    //obtem a lista de usuarios do bd e exibe em sugestoes
+    $.ajax({
+        url:"/perfil/getCapaPerfil/",
+        method:"POST",
+        data:{idUser: idUsuario},
+        success:function(c){
+            $('.loader-capa').addClass('d-none');
+            var capa =c.src;
+            var trimCapa = $.trim(capa);
+            $('#img-capa').attr("src", "/public/uploads/capa/"+trimCapa+"");
+        }
+    });
 });

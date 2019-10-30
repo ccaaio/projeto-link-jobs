@@ -67,9 +67,9 @@ class PerfilController extends Controller {
     }
 
     public function getCapaPerfil() {
-        if(isset($_POST['id_user'])) {
+        if(isset($_POST['idUser'])) {
 
-            $idUser = $_POST['id_user'];
+            $idUser = $_POST['idUser'];
 
             $conn = mysqli_connect("remotemysql.com", "GQ4OpczpAV", "jt4ifMIloM", "GQ4OpczpAV");
 
