@@ -79,9 +79,12 @@
 
     <form class="form-upload-capa-perfil" method="post" action="/perfil/uploadCapaPerfil" enctype="multipart/form-data">
         <section class="cover-sec">
-            <input name="id_user" type="hidden" value="<?php  echo \App\Lib\Auth::usuario()->id; ?>">
-            <img src="http://via.placeholder.com/1600x400" alt="">
-            <label for="upload-capa" class="upload-capa"><i class="fa fa-camera"></i>Alterar Imagem</label>
+            <div class="lds-facebook" style="position: absolute;top: 0;z-index: 999 !important;bottom: 0;right: 0;left: 0;margin: auto;">
+                <div></div><div></div><div></div>
+            </div>
+            <input id="id_user" name="id_user" type="hidden" value="<?php  echo \App\Lib\Auth::usuario()->id; ?>">
+            <img id="img-capa" src="/public/images/capa-default2.png" alt="CAPA DO PERFIL DO USUÁRIO" title="CAPA DO PERFIL DO USUÁRIO" style="width: 1600px !important; max-width: 1600px !important; height: 400px !important; max-height: 400px !important;">
+            <label for="upload-capa" class="upload-capa"><i class="fa fa-camera" style="margin-right: 0.3em;"></i>Alterar Imagem</label>
             <input type="file" id="upload-capa" name="save-capa-user" class="d-none">
             <button name="save-capa" type="submit"><i class="la la-check"></i></button>
         </section>
