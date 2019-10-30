@@ -3,7 +3,7 @@ $(document).ready(function () {
         var idUserLogado = $('#id_user').val();
 
         $.ajax({
-            url:"/perfil/getCapaPerfil",
+            url:"/perfil/getCapaPerfil/",
             method:"POST",
             data:{id_user: idUserLogado},
             success: function (capa) {
