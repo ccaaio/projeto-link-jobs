@@ -37,10 +37,11 @@ class PerfilController extends Controller {
         self::setViewCss('/public/css/croppie.css');
 
         self::setViewJs('/public/js/sweetalert2.all.min.js');
-        self::setViewJs('/public/js/croppie.min.js');
         self::setViewJs('/public/js/principal/principal.js');
         self::setViewJs('/public/js/funcoes/listagens/sugestoes.js');
         self::setViewJs('/public/js/perfil/editar.js');
+        self::setViewJs('/public/js/croppie.min.js');
+        self::setViewJs('/public/js/exif.js');
 
         $this->render('perfil/editar');
 
