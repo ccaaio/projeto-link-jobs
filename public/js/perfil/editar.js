@@ -68,13 +68,13 @@ setTimeout(function () {
                 size: 'viewport'
             }).then(function(response){
                 $.ajax({
-                    url:"perfil/fotoPerfiUpload",
+                    url:"perfil/fotoPerfilUpload",
                     type: "POST",
                     data:{"image": response},
                     success:function(data) {
                         console.log(data);
                         $('#uploadimageModal').modal('hide');
-                        $('#fp').attr('src',data.html_img);
+                        //$('#fp').attr('src',data.html_img);
                     }
                 });
             })

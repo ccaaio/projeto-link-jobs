@@ -92,7 +92,7 @@ class PerfilController extends Controller {
         }
     }
 
-    public function fotoPerfiUpload() {
+    public function fotoPerfilUpload() {
         if(isset($_POST["image"])) {
             $data = $_POST["image"];
 
