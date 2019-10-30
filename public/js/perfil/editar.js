@@ -10,6 +10,6 @@ $(document).ready(function () {
                 $('#img-capa').attr('src', capa.src);
                 $('.loader-capa').remove();
             }
-        }) ;
+        });
     },250);
 });
