@@ -105,9 +105,7 @@ class PerfilController extends Controller {
             $imageName = time() . '.png';
 
             file_put_contents($imageName, $data);
-
-            header('Content-Type: application/json');
-            echo json_encode(array('html_img' =>'<img src="'.$imageName.'" class="img-thumbnail"'));
+            echo $imageName;
         }
     }
 }
