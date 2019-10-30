@@ -34,7 +34,6 @@
     },1000);
 
 setTimeout(function () {
-    var idUser = $('#id_user').val();
     $(document).ready(function(){
 
         $image_crop = $('#image_demo').croppie({
@@ -70,22 +69,12 @@ setTimeout(function () {
             }).then(function(response){
                 $.ajax({
                     url:"/perfil/fotoPerfilUpload",
-                    method: "POST",
-                    data:{image: response, id_user: idUser},
+                    type: "POST",
+                    data:{"image": response},
                     success:function(data) {
-                        console.log(data);
+                        console.log(data.src);
                         $('#uploadimageModal').modal('hide');
-
-                        if(data.src == 'profile-default.png') {
-                            data.src = '/public/images/profile-default.png';
-                            setTimeout(function () {
-                                $('#img-usuario-foto-perfil').attr('src', data.src);
-                            },100);
-                        } else {
-                            $('#img-usuario-foto-perfil').attr('src', data.src);
-                        }
-
-                        $('#fp').attr('src',+data);
+                        $('#fp').attr('src', '/public/uploads/fotoPerfil/'+data.src+'');
                     }
                 });
             })
