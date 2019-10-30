@@ -52,7 +52,7 @@ class PerfilController extends Controller {
 
             if (move_uploaded_file($_FILES['profileImage']['tmp_name'], $target)) {
                 $conn = mysqli_connect("localhost", "servicon", "3Mv2J0bw2b", "servicon_servicosnaweb");
-                $sql = "INSERT INTO fotoPerfil (id_usuario, profile_image) VALUES ('$id_user', '$nomeImagemUpload')";
+                $sql = "INSERT INTO capaPerfil (id_usuario, profile_image) VALUES ('$id_user', '$nomeImagemUpload')";
 
                 if(mysqli_query($conn, $sql)) {
                     $this->redirect('principal/editar/');
