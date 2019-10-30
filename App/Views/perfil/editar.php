@@ -1090,4 +1090,19 @@
     </div>
 
 </div>
+
+<!-- Modal -->
+<div class="modal fade" id="modal-capa" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Carregando a foto da Capa...</h5>
+            </div>
+            <div class="modal-body">
+                Estamos quase lá, aguarde o término do carregamento... a foto será carreganda em instantes!
+            </div>
+        </div>
+    </div>
+</div>
+
 </body>
