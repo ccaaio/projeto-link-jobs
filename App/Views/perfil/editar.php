@@ -1,3 +1,19 @@
+<style>
+    .cover-sec > label.upload-capa {
+        display: inline-block;
+        color: #e44d3a;
+        font-size: 16px;
+        background-color: #fff;
+        border: 1px solid #e44d3a;
+        position: absolute;
+        top: 30px;
+        right: 0;
+        padding: 10px 15px;
+        font-weight: 600;
+        margin-right: 15px;
+    }
+</style>
+
 <body>
 <div class="wrapper">
     <header>
@@ -62,8 +78,8 @@
 
     <section class="cover-sec">
         <img src="http://via.placeholder.com/1600x400" alt="">
-        <a href="#" title=""><i class="fa fa-camera"></i>Alterar Imagem</a>
-        <label for="upload-capa" class="d-none-"><i class="fa fa-camera"></i>Alterar Imagem</label>
+        <a href="#" title="" class="d-none"><i class="fa fa-camera"></i>Alterar Imagem</a>
+        <label for="upload-capa" class="upload-capa"><i class="fa fa-camera"></i>Alterar Imagem</label>
         <input type="file" id="upload-capa" name="upload-capa" class="d-none">
     </section>
 
