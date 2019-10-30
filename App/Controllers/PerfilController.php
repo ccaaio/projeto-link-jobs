@@ -80,7 +80,7 @@ class PerfilController extends Controller {
             if (mysqli_num_rows($result) > 0) {
                 while($row = mysqli_fetch_assoc($result)) {
                     header('Content-Type: application/json');
-                    echo json_encode(array('src'=>$row['profile_image']));
+                    echo json_encode(array('src'=> $row['profile_image']));
                 }
             } else {
                 header('Content-Type: application/json');
