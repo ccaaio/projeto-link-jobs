@@ -2,8 +2,13 @@
 
         $('#upload-capa').on('change', function () {
             setTimeout(function () {
-                //$('.form-upload-capa-perfil').submit();
-                $('#modal-capa').show();
+                Swal.fire({
+                    title: 'Foto selecionada! Clique em CLIQUE PARA CARREGAR A FOTO SELECIONADA para aplicar as alterações.',
+                    animation: false,
+                    customClass: {
+                        popup: 'animated tada'
+                    }
+                });
             }, 500);
         });
 

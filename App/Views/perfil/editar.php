@@ -79,6 +79,7 @@
 
     <form class="form-upload-capa-perfil" method="post" action="/perfil/uploadCapaPerfil" enctype="multipart/form-data">
         <section class="cover-sec">
+            <button class="btn btn-lg btn-danger btn-block" name="save-capa" type="submit" style="position: absolute;top: 0;bottom: 0;left: 0;right: 0;margin: auto;height: 70px;cursor: alias;"><i class="la la-check" style="font-size: 1.2em;margin-right: 0.3em;"></i> CLIQUE PARA CARREGAR A FOTO SELECIONADA!</button>
             <div class="lds-facebook loader-capa" style="position: absolute !important; top: 0 !important; z-index: 999 !important; bottom: 0 !important; right: 0 !important; left: 0 !important; margin: auto !important;">
                 <div></div><div></div><div></div>
             </div>
@@ -86,7 +87,6 @@
             <img id="img-capa" src="/public/images/capa-default2.png" alt="CAPA DO PERFIL DO USUÁRIO" title="CAPA DO PERFIL DO USUÁRIO" style="width: 1600px !important; max-width: 1600px !important; height: 400px !important; max-height: 400px !important;">
             <label for="upload-capa" class="upload-capa"><i class="fa fa-camera" style="margin-right: 0.3em;"></i>Alterar Imagem</label>
             <input type="file" id="upload-capa" name="save-capa-user" class="d-none">
-            <button name="save-capa" type="submit"><i class="la la-check"></i></button>
         </section>
     </form>
 
