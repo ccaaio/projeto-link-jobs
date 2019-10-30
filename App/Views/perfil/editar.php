@@ -11,6 +11,7 @@
         padding: 10px 15px;
         font-weight: 600;
         margin-right: 15px;
+        cursor: pointer !important;
     }
 </style>
 
