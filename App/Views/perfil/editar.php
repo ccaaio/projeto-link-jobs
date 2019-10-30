@@ -139,7 +139,7 @@
                             <div class="main-left-sidebar">
                                 <div class="user_profile">
                                     <div class="user-pro-img">
-                                        <img src="http://via.placeholder.com/170x170" alt="">
+                                        <img id="img-usuario-foto-perfil" src="http://via.placeholder.com/170x170" alt="">
                                         <a href="#" title=""><i class="fa fa-camera"></i></a>
                                     </div>
                                     <div class="user_pro_status">

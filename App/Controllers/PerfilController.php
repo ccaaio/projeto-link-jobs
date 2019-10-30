@@ -93,19 +93,35 @@ class PerfilController extends Controller {
     }
 
     public function fotoPerfilUpload() {
-        if(isset($_POST["image"])) {
-            $data = $_POST["image"];
+        if(isset($_POST['image'])) {
+            $id_user = $_POST['id_user'];
+            $nomeImagemUpload = time() . '_' . $_FILES['image']['name'];
 
-            $image_array_1 = explode(";", $data);
+            $target = 'public/uploads/fotoPerfil//'.$nomeImagemUpload;
 
-            $image_array_2 = explode(",", $image_array_1[1]);
+            if (move_uploaded_file($_FILES['image']['tmp_name'], $target)) {
+                $conn = mysqli_connect("remotemysql.com", "GQ4OpczpAV", "jt4ifMIloM", "GQ4OpczpAV");
+                $sql = "INSERT INTO fotoPerfil (id_usuario, imagem) VALUES ('$id_user', '$nomeImagemUpload')";
 
-            $data = base64_decode($image_array_2[1]);
+                if(mysqli_query($conn, $sql)) {
+                    //$this->redirect('perfil/editar/');
 
-            $imageName = time() . '.png';
+                    $resultado = mysqli_query($conn, "SELECT * FROM fotoPerfil WHERE id_usuario = '$id_user' ORDER BY id DESC LIMIT 1");
 
-            file_put_contents($imageName, $data);
-            echo $imageName;
+                    if (mysqli_num_rows($resultado) > 0) {
+                        while($row = mysqli_fetch_assoc($resultado)) {
+                            header('Content-Type: application/json');
+                            echo json_encode(array('src'=> $row['imagem']));
+                        }
+                    } else {
+                        header('Content-Type: application/json');
+                        echo json_encode(array('src' => 'profile-default.png'));
+                    }
+                }
+            } else {
+                $this->render('error/usuario');
+            }
+
         }
     }
 }
