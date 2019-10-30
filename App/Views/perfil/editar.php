@@ -16,6 +16,25 @@
 </style>
 
 <body>
+
+<div id="response"></div>
+
+<div class="demo-wrap upload-demo">
+    <div class="upload-demo-wrap">
+        <div class="croppie-container" id="upload-demo"></div>
+    </div>
+</div>
+
+<form method="post" id="img-upload" enctype="multipart/form-data">
+    <label>Nome da imagem:(opcional)</label>
+    <input type="text" name="name-img" class="form-vertical">
+    <label>Imagem para recortar:</label>
+    <input type="file" accept="image/*" id="img" class="form-vertical">
+    <input type="submit" class="form-vertical">
+</form>
+<img id="img-preview" src="" alt="preview">
+
+
 <div class="wrapper">
     <header>
         <div class="container">
@@ -120,7 +139,7 @@
                                 </div>
                                 <div class="suggestions full-width">
                                     <div class="sd-title">
-                                        <h3>Pessoas que visualizaram seu perfil</h3>
+                                        <h3>Visualizações do seu perfil</h3>
                                         <i class="la la-ellipsis-v"></i>
                                     </div>
                                     <div class="suggestions-list">

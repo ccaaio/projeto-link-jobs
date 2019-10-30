@@ -34,8 +34,10 @@ class PerfilController extends Controller {
 
         self::setViewCss('/public/css/sweetalert2.min.css');
         self::setViewCss('/public/css/pages/principal/principal.css');
+        self::setViewCss('/public/css/croppie.css');
 
         self::setViewJs('/public/js/sweetalert2.all.min.js');
+        self::setViewJs('/public/js/croppie.min.js');
         self::setViewJs('/public/js/principal/principal.js');
         self::setViewJs('/public/js/funcoes/listagens/sugestoes.js');
         self::setViewJs('/public/js/perfil/editar.js');
@@ -87,5 +89,20 @@ class PerfilController extends Controller {
         } else {
             $this->render('error/usuario');
         }
+    }
+
+    public function fotoPerfiUpload() {
+        echo $_POST['name-img'] . '<br><br>';
+        if(isset($_FILES['img-h'])){
+            $dir = 'public/uploads/fotoPerfil//';
+            $file_path = $dir . uniqid() . '.png';
+            if(move_uploaded_file($_FILES['img-h']['tmp_name'], $file_path)){
+                echo "Sucesso: imagem cortada e salva com sucesso";
+            }
+            else{
+                echo "Erro: imagem cortada e não salva";
+            }
+        }
+
     }
 }
