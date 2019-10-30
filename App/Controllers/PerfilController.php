@@ -48,7 +48,7 @@ class PerfilController extends Controller {
             $id_user = $_POST['id_user'];
             $nomeImagemUpload = time() . '_' . $_FILES['profileImage']['name'];
 
-            $target = 'public/uploads/perfil//' . $nomeImagemUpload;
+            $target = 'public/uploads/capa//' . $nomeImagemUpload;
 
             if (move_uploaded_file($_FILES['profileImage']['tmp_name'], $target)) {
                 $conn = mysqli_connect("localhost", "servicon", "3Mv2J0bw2b", "servicon_servicosnaweb");
