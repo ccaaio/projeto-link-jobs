@@ -38,6 +38,7 @@ class PerfilController extends Controller {
         self::setViewJs('/public/js/sweetalert2.all.min.js');
         self::setViewJs('/public/js/principal/principal.js');
         self::setViewJs('/public/js/funcoes/listagens/sugestoes.js');
+        self::setViewJs('/public/js/login/login.js');
 
         $this->render('perfil/editar');
 
@@ -65,6 +66,26 @@ class PerfilController extends Controller {
     }
 
     public function getCapaPerfil() {
+        if(isset($_POST['idUser'])) {
 
+            $idUser = $_POST['idUser'];
+
+            $conn = mysqli_connect("remotemysql.com", "GQ4OpczpAV", "jt4ifMIloM", "GQ4OpczpAV");
+
+            $result = mysqli_query($conn, "SELECT * FROM capaPerfil WHERE id_usuario = '$idUser' ORDER BY id DESC LIMIT 1");
+
+            if (mysqli_num_rows($result) > 0) {
+                while($row = mysqli_fetch_assoc($result)) {
+                    header('Content-Type: application/json');
+                    echo json_encode(array('src'=> $row['profile_image']));
+                }
+            } else {
+                header('Content-Type: application/json');
+                echo json_encode(array('src' => 'capa-default.png'));
+            }
+
+        } else {
+            $this->render('error/usuario');
+        }
     }
 }
