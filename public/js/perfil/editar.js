@@ -34,77 +34,51 @@
     },1000);
 
 setTimeout(function () {
-    function CropUpload() {
-        var $uploadCrop;
-        var blob;
-        function readFile(input) {
-            if (input.files && input.files[0]) {
-                var reader = new FileReader();
-                reader.onload = function (e) {
-                    $('.upload-demo').addClass('ready');
-                    $uploadCrop.croppie('bind', {
-                        url: e.target.result
-                    }).then(function(){
-                        console.log('Imagem lida com sucesso');
-                    });
-                }
-                reader.readAsDataURL(input.files[0]);
-            }
-            else {
-                swal("Seu navegador não suporta o FileReader API");
-            }
-        }
-        $uploadCrop = $('#upload-demo').croppie({
+    $(document).ready(function(){
+
+        $image_crop = $('#image_demo').croppie({
+            enableExif: true,
             viewport: {
-                width: 450,
-                height: 400,
-                type: 'square'
+                width:200,
+                height:200,
+                type:'square' //circle
             },
-            boundary: {
-                width: 550,
-                height: 400
-            },
-            update: function(resp){
-                $uploadCrop.croppie('result', {
-                    type: 'canvas'
-                }).then(function (resp) {
-                    $('#img-preview').attr('src', resp);
+            boundary:{
+                width:300,
+                height:300
+            }
+        });
+
+        $('#upload_image').on('change', function(){
+            var reader = new FileReader();
+            reader.onload = function (event) {
+                $image_crop.croppie('bind', {
+                    url: event.target.result
+                }).then(function(){
+                    console.log('jQuery bind complete');
                 });
-                $uploadCrop.croppie('result', {
-                    type: 'blob'
-                }).then(function (resp) {
-                    blob = resp;
+            }
+            reader.readAsDataURL(this.files[0]);
+            $('#uploadimageModal').modal('show');
+        });
+
+        $('.crop_image').click(function(event){
+            $image_crop.croppie('result', {
+                type: 'canvas',
+                size: 'viewport'
+            }).then(function(response){
+                $.ajax({
+                    url:"perfil/fotoPerfiUpload",
+                    type: "POST",
+                    data:{"image": response},
+                    success:function(data)
+                    {
+                        $('#uploadimageModal').modal('hide');
+                        $('#uploaded_image').html(data.html_img);
+                    }
                 });
-            },
-            enableExif: true
-        });
-        $('#img').on('change', function () {
-            readFile(this);
+            })
         });
 
-        $('form#img-upload').submit(function (ev) {
-            ev.preventDefault();
-            var data = new FormData(this);
-
-            data.append('img-h', blob);
-            $.ajax({
-                type: "POST",
-                enctype: 'multipart/form-data',
-                url: "perfil/fotoPerfilUpload",
-                data: data,
-                processData: false,
-                contentType: false,
-                success: function (data) {
-                    $("#response").html(data);
-                    console.log(data);
-                },
-                error: function (ev) {
-                    $("#response").text(ev.responseText);
-                    console.log(ev);
-                }
-            });
-        });
-    }
-    CropUpload();
-
+    });
 },7000);

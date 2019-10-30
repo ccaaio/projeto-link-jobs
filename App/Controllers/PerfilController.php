@@ -93,17 +93,21 @@ class PerfilController extends Controller {
     }
 
     public function fotoPerfiUpload() {
-        echo $_POST['name-img'] . '<br><br>';
-        if(isset($_FILES['img-h'])){
-            $dir = 'public/uploads/fotoPerfil//';
-            $file_path = $dir . uniqid() . '.png';
-            if(move_uploaded_file($_FILES['img-h']['tmp_name'], $file_path)){
-                echo "Sucesso: imagem cortada e salva com sucesso";
-            }
-            else{
-                echo "Erro: imagem cortada e não salva";
-            }
-        }
+        if(isset($_POST["image"])) {
+            $data = $_POST["image"];
 
+            $image_array_1 = explode(";", $data);
+
+            $image_array_2 = explode(",", $image_array_1[1]);
+
+            $data = base64_decode($image_array_2[1]);
+
+            $imageName = time() . '.png';
+
+            file_put_contents($imageName, $data);
+
+            header('Content-Type: application/json');
+            echo json_encode(array('html_img' =>'<img src="'.$imageName.'" class="img-thumbnail"'));
+        }
     }
 }
