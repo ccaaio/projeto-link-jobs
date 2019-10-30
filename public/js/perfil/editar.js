@@ -72,6 +72,7 @@ setTimeout(function () {
                     type: "POST",
                     data:{"image": response},
                     success:function(data) {
+                        console.log(data);
                         $('#uploadimageModal').modal('hide');
                         $('#fp').attr('src',data.html_img);
                     }
