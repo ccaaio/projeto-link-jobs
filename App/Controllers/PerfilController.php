@@ -35,10 +35,8 @@ class PerfilController extends Controller {
         self::setViewCss('/public/css/sweetalert2.min.css');
         self::setViewCss('/public/css/pages/principal/principal.css');
 
-        self::setViewJs('/public/js/jquery.mask.min.js');
         self::setViewJs('/public/js/sweetalert2.all.min.js');
         self::setViewJs('/public/js/principal/principal.js');
-        self::setViewJs('/public/js/login/editar.js');
         self::setViewJs('/public/js/funcoes/listagens/sugestoes.js');
 
         $this->render('perfil/editar');
