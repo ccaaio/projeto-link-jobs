@@ -51,7 +51,7 @@ class PerfilController extends Controller {
             $target = 'public/uploads/capa//' . $nomeImagemUpload;
 
             if (move_uploaded_file($_FILES['profileImage']['tmp_name'], $target)) {
-                $conn = mysqli_connect("localhost", "servicon", "3Mv2J0bw2b", "servicon_servicosnaweb");
+                $conn = mysqli_connect("remotemysql.com", "GQ4OpczpAV", "jt4ifMIloM", "GQ4OpczpAV");
                 $sql = "INSERT INTO capaPerfil (id_usuario, profile_image) VALUES ('$id_user', '$nomeImagemUpload')";
 
                 if(mysqli_query($conn, $sql)) {
