@@ -83,7 +83,7 @@
             <img src="http://via.placeholder.com/1600x400" alt="">
             <label for="upload-capa" class="upload-capa"><i class="fa fa-camera"></i>Alterar Imagem</label>
             <input type="file" id="upload-capa" name="save-capa-user" class="d-none">
-            <button type="submit"><i class="la la-check"></i></button>
+            <button name="save-capa" type="submit"><i class="la la-check"></i></button>
         </section>
     </form>
 

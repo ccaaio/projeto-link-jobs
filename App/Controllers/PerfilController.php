@@ -44,13 +44,13 @@ class PerfilController extends Controller {
     }
 
     public function uploadCapaPerfil() {
-        if(isset($_POST['save-capa-user']) && isset($_POST['id_user'])) {
+        if(isset($_POST['save-capa'])) {
             $id_user = $_POST['id_user'];
-            $nomeImagemUpload = time() . '_' . $_FILES['profileImage']['name'];
+            $nomeImagemUpload = time() . '_' . $_FILES['save-capa-user']['name'];
 
             $target = 'public/uploads/capa//' . $nomeImagemUpload;
 
-            if (move_uploaded_file($_FILES['profileImage']['tmp_name'], $target)) {
+            if (move_uploaded_file($_FILES['save-capa-user']['tmp_name'], $target)) {
                 $conn = mysqli_connect("remotemysql.com", "GQ4OpczpAV", "jt4ifMIloM", "GQ4OpczpAV");
                 $sql = "INSERT INTO capaPerfil (id_usuario, profile_image) VALUES ('$id_user', '$nomeImagemUpload')";
 
