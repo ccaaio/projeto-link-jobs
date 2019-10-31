@@ -133,7 +133,7 @@ class PerfilController extends Controller {
             foreach($result as $row) {
                 $output .= '
                   <div class="col-md-2" style="margin-bottom:16px;">
-                   <img src="data:image/png;base64,'.base64_encode($row['images']).'" class="img-thumbnail" />
+                   <img src="data:image/png;base64,'.base64_encode($row['imagem']).'" class="img-thumbnail" />
                   </div>
                 ';
             }
