@@ -109,18 +109,16 @@ class PerfilController extends Controller {
 
             $image_file = addslashes(file_get_contents($imageName));
 
-            $query = "INSERT INTO fotoPerfil (id_usuario, imagem) VALUES ('".$idUser.", ".$image_file."')";
+            $query = "INSERT INTO fotoPerfil (id_usuario, imagem) VALUES ('13, ".$image_file."')";
 
             $connect = new PDO("mysql:host=remotemysql.com;dbname=GQ4OpczpAV", "GQ4OpczpAV", "jt4ifMIloM");
 
             $statement = $connect->prepare($query);
 
-            if($statement->execute())
-            {
+            if($statement->execute()) {
                 echo 'Image save into database';
                 unlink($imageName);
             }
-
         }
     }
 
@@ -132,7 +130,7 @@ class PerfilController extends Controller {
 
         $statement = $connect->prepare($query);
 
-        $output = "";
+        $output = '<div class="row">';
 
         if($statement->execute())
         {
@@ -140,11 +138,15 @@ class PerfilController extends Controller {
 
             foreach($result as $row)
             {
-                $output .= 'data:image/png;base64,'.base64_encode($row['images']).'';
+                $output .= '
+  <div class="col-md-2" style="margin-bottom:16px;">
+   <img src="data:image/png;base64,'.base64_encode($row['images']).'" class="img-thumbnail" />
+  </div>
+  ';
             }
         }
 
-        $output .= '';
+        $output .= '</div>';
 
         echo $output;
 
