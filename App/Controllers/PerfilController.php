@@ -109,46 +109,39 @@ class PerfilController extends Controller {
 
             $image_file = addslashes(file_get_contents($imageName));
 
-            $query = "INSERT INTO fotoPerfil (id_usuario, imagem) VALUES ('13, ".$image_file."')";
+            $conn = mysqli_connect("remotemysql.com", "GQ4OpczpAV", "jt4ifMIloM", "GQ4OpczpAV");
+            $sql = "INSERT INTO fotoPerfil (id_usuario, imagem) VALUES ('13', '$image_file')";
 
-            $connect = new PDO("mysql:host=remotemysql.com;dbname=GQ4OpczpAV", "GQ4OpczpAV", "jt4ifMIloM");
-
-            $statement = $connect->prepare($query);
-
-            if($statement->execute()) {
+            if(mysqli_query($conn, $sql)) {
                 echo 'Image save into database';
                 unlink($imageName);
             }
+        } else {
+            $this->render('error/usuario');
         }
     }
 
     public function getFotoPerfilUsuario() {
         $idUser = 13;
 
-        $connect = new PDO("mysql:host=remotemysql.com;dbname=GQ4OpczpAV", "GQ4OpczpAV", "jt4ifMIloM");
-        $query = "SELECT * FROM fotoPerfil WHERE id_usuario = '$idUser' ORDER BY id DESC LIMIT 1";
-
-        $statement = $connect->prepare($query);
+        $conn = mysqli_connect("remotemysql.com", "GQ4OpczpAV", "jt4ifMIloM", "GQ4OpczpAV");
+        $result = mysqli_query($conn, "SELECT * FROM fotoPerfil WHERE id_usuario = '13' ORDER BY id DESC LIMIT 1");
 
         $output = '<div class="row">';
 
-        if($statement->execute())
-        {
-            $result = $statement->fetchAll();
-
-            foreach($result as $row)
-            {
+        if (mysqli_num_rows($result) > 0) {
+            foreach($result as $row) {
                 $output .= '
-  <div class="col-md-2" style="margin-bottom:16px;">
-   <img src="data:image/png;base64,'.base64_encode($row['images']).'" class="img-thumbnail" />
-  </div>
-  ';
+                  <div class="col-md-2" style="margin-bottom:16px;">
+                   <img src="data:image/png;base64,'.base64_encode($row['images']).'" class="img-thumbnail" />
+                  </div>
+                ';
             }
+            $output .= '</div>';
+
+            echo $output;
+        } else {
+           echo 'erro!';
         }
-
-        $output .= '</div>';
-
-        echo $output;
-
     }
 }
