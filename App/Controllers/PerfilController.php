@@ -95,7 +95,7 @@ class PerfilController extends Controller {
     public function fotoPerfilUpload() {
         if(isset($_POST["image"])) {
             $data = $_POST["image"];
-            $idUser = $_POST['id_user'];
+            $idUser = 13;
 
             $image_array_1 = explode(";", $data);
 
@@ -125,7 +125,7 @@ class PerfilController extends Controller {
     }
 
     public function getFotoPerfilUsuario() {
-        $idUser = $_POST['id_user'];
+        $idUser = 13;
 
         $connect = new PDO("mysql:host=remotemysql.com;dbname=GQ4OpczpAV", "GQ4OpczpAV", "jt4ifMIloM");
         $query = "SELECT * FROM fotoPerfil WHERE id_usuario = '$idUser' ORDER BY id DESC LIMIT 1";
