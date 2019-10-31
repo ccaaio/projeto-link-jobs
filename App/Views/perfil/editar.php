@@ -20,7 +20,7 @@
 <div class="card">
     <div class="card-header">Select Profile Image</div>
     <div class="card-body" align="center">
-        <input type="file" name="upload_image" id="upload_image" accept="image/*" />
+        <input type="file" name="insert_image" id="insert_image" accept="image/*" />
         <br />
         <div id="uploaded_image">
             <img class="img-thumbnail" id="fp">

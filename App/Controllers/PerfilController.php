@@ -95,6 +95,7 @@ class PerfilController extends Controller {
     public function fotoPerfilUpload() {
         if(isset($_POST["image"])) {
             $data = $_POST["image"];
+            $idUser = $_POST['id_user'];
 
             $image_array_1 = explode(";", $data);
 
@@ -106,7 +107,46 @@ class PerfilController extends Controller {
 
             file_put_contents($imageName, $data);
 
-            echo $imageName;
+            $image_file = addslashes(file_get_contents($imageName));
+
+            $query = "INSERT INTO fotoPerfil (id_usuario, imagem) VALUES ('".$idUser.", ".$image_file."')";
+
+            $connect = new PDO("mysql:host=remotemysql.com;dbname=GQ4OpczpAV", "GQ4OpczpAV", "jt4ifMIloM");
+
+            $statement = $connect->prepare($query);
+
+            if($statement->execute())
+            {
+                echo 'Image save into database';
+                unlink($imageName);
+            }
+
         }
+    }
+
+    public function getFotoPerfilUsuario() {
+        $idUser = $_POST['id_user'];
+
+        $connect = new PDO("mysql:host=remotemysql.com;dbname=GQ4OpczpAV", "GQ4OpczpAV", "jt4ifMIloM");
+        $query = "SELECT * FROM fotoPerfil WHERE id_usuario = '$idUser' ORDER BY id DESC LIMIT 1";
+
+        $statement = $connect->prepare($query);
+
+        $output = "";
+
+        if($statement->execute())
+        {
+            $result = $statement->fetchAll();
+
+            foreach($result as $row)
+            {
+                $output .= 'data:image/png;base64,'.base64_encode($row['images']).'';
+            }
+        }
+
+        $output .= '';
+
+        echo $output;
+
     }
 }

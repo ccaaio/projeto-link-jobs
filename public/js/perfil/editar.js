@@ -35,21 +35,22 @@
 
 setTimeout(function () {
     $(document).ready(function(){
+        var idUser = $('#id_user').val();
 
         $image_crop = $('#image_demo').croppie({
             enableExif: true,
             viewport: {
-                width:200,
-                height:200,
-                type:'square' //circle
+                width:170,
+                height:170,
+                type:'circle' //circle
             },
             boundary:{
-                width:300,
-                height:300
+                width:250,
+                height:250
             }
         });
 
-        $('#upload_image').on('change', function(){
+        $('#insert_image').on('change', function(){
             var reader = new FileReader();
             reader.onload = function (event) {
                 $image_crop.croppie('bind', {
@@ -59,7 +60,7 @@ setTimeout(function () {
                 });
             }
             reader.readAsDataURL(this.files[0]);
-            $('#uploadimageModal').modal('show');
+            $('#insertimageModal').modal('show');
         });
 
         $('.crop_image').click(function(event){
@@ -68,17 +69,32 @@ setTimeout(function () {
                 size: 'viewport'
             }).then(function(response){
                 $.ajax({
-                    url:"/perfil/fotoPerfilUpload",
-                    type: "POST",
-                    data:{"image": response},
-                    success:function(data) {
-                        console.log(data);
-                        $('#uploadimageModal').modal('hide');
-                        //$('#fp').attr('src',data.html_img);
+                    url:'/perfil/fotoPerfilUpload',
+                    type:'POST',
+                    data:{"image":response, "idUser": idUser},
+                    success:function(data){
+                        $('#insertimageModal').modal('hide');
+                        load_images();
+                        alert(data);
                     }
-                });
-            })
+                })
+            });
         });
 
+        load_images();
+
+        function load_images()
+        {
+            $.ajax({
+                url:"/perfil/getFotoPerfilUsuario",
+                method: "POST",
+                data:{id_user: idUser},
+                success:function(data) {
+                    console.log(data);
+                    $('#img-usuario-foto-perfil').attr('src', data);
+                }
+            })
+        }
+
     });
-},7000);
+},3500);
