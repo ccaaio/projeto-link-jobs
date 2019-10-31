@@ -71,7 +71,7 @@ setTimeout(function () {
                 $.ajax({
                     url:'/perfil/fotoPerfilUpload',
                     type:'POST',
-                    data:{"image":response, "idUser": idUser},
+                    data:{"image":response},
                     success:function(data){
                         $('#insertimageModal').modal('hide');
                         load_images();
@@ -87,8 +87,6 @@ setTimeout(function () {
         {
             $.ajax({
                 url:"/perfil/getFotoPerfilUsuario",
-                method: "POST",
-                data:{id_user: idUser},
                 success:function(data) {
                     console.log(data);
                     $('#img-usuario-foto-perfil').attr('src', data);
