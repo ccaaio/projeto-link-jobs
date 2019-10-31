@@ -22,18 +22,16 @@
     <div class="card-body" align="center">
         <input type="file" name="insert_image" id="insert_image" accept="image/*" />
         <br />
-        <div id="uploaded_image">
-            <img class="img-thumbnail" id="fp">
-        </div>
+        <div id="store_image"></div>
     </div>
 </div>
 
-<div id="uploadimageModal" class="modal" role="dialog">
+<div id="insertimageModal" class="modal" role="dialog">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title">Upload & Crop Image</h4>
+                <h4 class="modal-title">Crop & Insert Image</h4>
             </div>
             <div class="modal-body">
                 <div class="row">
@@ -44,7 +42,7 @@
                         <br />
                         <br />
                         <br/>
-                        <button class="btn btn-success crop_image">Crop & Upload Image</button>
+                        <button class="btn btn-success crop_image">Crop & Insert Image</button>
                     </div>
                 </div>
             </div>
