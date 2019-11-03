@@ -101,35 +101,11 @@ class PerfilController extends Controller {
                 $sql = "INSERT INTO fotoPerfil (id_usuario, imagem) VALUES ('$id_user', '$nomeImagemUpload')";
 
                 if(mysqli_query($conn, $sql)) {
-                    $this->redirect('perfil/editar');
+                    $this->render('perfil/editar');
                 }
             } else {
                 $this->render('error/usuario');
             }
-        }
-    }
-
-    public function getFotoPerfilUsuario() {
-        $idUser = 13;
-
-        $conn = mysqli_connect("remotemysql.com", "GQ4OpczpAV", "jt4ifMIloM", "GQ4OpczpAV");
-        $result = mysqli_query($conn, "SELECT * FROM fotoPerfil WHERE id_usuario = '13' ORDER BY id DESC LIMIT 1");
-
-        $output = '<div class="row">';
-
-        if (mysqli_num_rows($result) > 0) {
-            foreach($result as $row) {
-                $output .= '
-                  <div class="col-md-2" style="margin-bottom:16px;">
-                   <img src="data:image/png;base64,'.base64_encode($row['imagem']).'" class="img-thumbnail" />
-                  </div>
-                ';
-            }
-            $output .= '</div>';
-
-            echo $output;
-        } else {
-           echo 'erro!';
         }
     }
 }
