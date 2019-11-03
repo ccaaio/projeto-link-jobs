@@ -92,7 +92,8 @@ class PerfilController extends Controller {
 
 
     public function fotoPerfilUpload() {
-            echo 'teste';
+        $idUser = $_POST['usuario'];
+            echo $idUser;
             /*
             $id_user = $_POST['id_user'];
             $nomeImagemUpload = time() . '_' . $_FILES['profileImage']['name'];
