@@ -83,7 +83,7 @@ class PerfilController extends Controller {
                 header('Content-Type: application/json');
                 echo json_encode(array('src' => 'capa-default.png'));
             }
-
+ //dadasda
         } else {
             $this->render('error/usuario');
         }

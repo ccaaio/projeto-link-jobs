@@ -31,10 +31,3 @@
             });
         },200);
     },1000);
-
-setTimeout(function () {
-    $(document).ready(function(){
-        var idUser = $('#id_user').val();
-
-    });
-},3500);
