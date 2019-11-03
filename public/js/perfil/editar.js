@@ -54,6 +54,7 @@ setTimeout(function () {
             },
             success:function(c){
                 alert('enviado');
+                console.log(c);
             }
         });
     });
