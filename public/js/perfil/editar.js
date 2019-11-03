@@ -42,7 +42,7 @@ setTimeout(function () {
     $('#uploadPerfil').on('click', function () {
         var idUser = $('#hidden-id-user').val();
         $.ajax({
-            url:"/perfil/fotoPerfilUpload",
+            url:"/perfil/fotoPerfilUpload/",
             cache: false,
             contentType: false,
             processData: false,
