@@ -97,7 +97,7 @@ class PerfilController extends Controller {
 
             $target = 'public/uploads/perfil//'.$nomeImagemUpload;
 
-            if (move_uploaded_file($_FILES['save-capa-user']['tmp_name'], $target)) {
+            if (move_uploaded_file($_FILES['save-foto-user']['tmp_name'], $target)) {
                 $conn = mysqli_connect("remotemysql.com", "GQ4OpczpAV", "jt4ifMIloM", "GQ4OpczpAV");
                 $sql = "INSERT INTO imgPerfil (usuario, img) VALUES ('$id_user', '$nomeImagemUpload')";
 
