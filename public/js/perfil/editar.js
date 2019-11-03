@@ -35,12 +35,23 @@
     },1000);
 
 setTimeout(function () {
+    var data = new FormData();
+    $.each(jQuery('#profileImage')[0].files, function(i, file) {
+        data.append('file-'+i, file);
+    });
     $('#uploadPerfil').on('click', function () {
         var idUser = $('#hidden-id-user').val();
         $.ajax({
             url:"/perfil/fotoPerfilUpload/",
-            method:"POST",
-            data:{id_user: idUser, profileImage: $('#profileImage').val()},
+            cache: false,
+            contentType: false,
+            processData: false,
+            method: 'POST',
+            type: 'POST', // For jQuery < 1.9
+            data:{id_user: idUser, profileImage: data},
+            beforeSend: function() {
+                alert('antes de enviar');
+            },
             success:function(c){
                 alert('enviado');
             }
