@@ -38,7 +38,7 @@ setTimeout(function () {
         $.ajax({
             url:"/perfil/fotoPerfilUpload/",
             method:"POST",
-            data:{idUser: idUser, profileImage: $('#profileImage').val()},
+            data:{id_user: idUser, profileImage: $('#profileImage').val()},
             success:function(c){
                 alert('enviado');
             }
