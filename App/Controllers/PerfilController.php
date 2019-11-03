@@ -90,21 +90,16 @@ class PerfilController extends Controller {
 
 
 
-    public function fotoPerfilUpload() {
-        if(isset($_POST['save-user'])) {
+    public function uploadFoto() {
+        if(isset($_POST['save-capa'])) {
+            $id_user = $_POST['id_user'];
+            $nomeImagemUpload = time() . '_' . $_FILES['save-capa-user']['name'];
 
+            $target = 'public/uploads/perfil//'.$nomeImagemUpload;
 
-        $idUser = $_POST['usuario'];
-            //echo $idUser;
-
-            $id_user = $idUser;
-            $nomeImagemUpload2 = time() . '_' . $_FILES['imgPerfil']['name'];
-
-            $target = 'public/uploads/perfil//'.$nomeImagemUpload2;
-
-            if (move_uploaded_file($_FILES['imgPerfil']['tmp_name'], $target)) {
+            if (move_uploaded_file($_FILES['save-capa-user']['tmp_name'], $target)) {
                 $conn = mysqli_connect("remotemysql.com", "GQ4OpczpAV", "jt4ifMIloM", "GQ4OpczpAV");
-                $sql = "INSERT INTO imgPerfil (usuario, img) VALUES ('$idUser', '$nomeImagemUpload2')";
+                $sql = "INSERT INTO imgPerfil (usuario, img) VALUES ('$id_user', '$nomeImagemUpload')";
 
                 if(mysqli_query($conn, $sql)) {
                     $this->redirect('perfil/editar/');
@@ -112,6 +107,7 @@ class PerfilController extends Controller {
             } else {
                 $this->render('error/usuario');
             }
+
         }
     }
 }

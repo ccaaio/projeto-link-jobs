@@ -27,18 +27,11 @@
                 </button>
             </div>
             <div class="modal-body">
-                <form action="/perfil/fotoPerfilUpload" method="post" enctype="multipart/form-data">
-                    <h3 class="text-center text-muted">Foto de Perfil</h3>
-                    <div>
-                        <label for="profileImage">Imagem de Perfil</label>
-                        <input type="file" name="imgPerfil" id="profileImageasd" class="btn btn-default">
-                    </div>
-                    <div class="form-group">
-                        <input id="hidden-id-user" class="hidden" type="text" name="usuario" value="<?php  echo \App\Lib\Auth::usuario()->id; ?>">
-                        <button id="uploadPerfil" type="submit" name="save-user" class="btn btn-primary btn-block">
-                            Aplicar Alterações
-                        </button>
-                    </div>
+                <form class="" method="post" action="/perfil/uploadFoto" enctype="multipart/form-data">
+
+                        <button class="btn btn-lg btn-danger btn-block btn-upload" name="save-capa" type="submit" style="position: absolute;top: 0;bottom: 0;left: 0;right: 0;margin: auto;height: 70px;cursor: alias;"><i class="la la-check" style="font-size: 1.2em;margin-right: 0.3em;"></i> CLIQUE PARA CARREGAR A FOTO SELECIONADA!</button>
+                        <input id="id_user" name="id_user" type="hidden" value="<?php  echo \App\Lib\Auth::usuario()->id; ?>">
+                        <input type="file" id="upload-capa" name="save-capa-user" class="d-none">
                 </form>
             </div>
             <div class="modal-footer">
