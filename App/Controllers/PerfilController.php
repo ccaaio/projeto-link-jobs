@@ -83,7 +83,6 @@ class PerfilController extends Controller {
                 header('Content-Type: application/json');
                 echo json_encode(array('src' => 'capa-default.png'));
             }
- //dadasda
         } else {
             $this->render('error/usuario');
         }
@@ -92,13 +91,16 @@ class PerfilController extends Controller {
 
 
     public function fotoPerfilUpload() {
+        if(isset($_POST['save-user'])) {
+
+
         $idUser = $_POST['usuario'];
             //echo $idUser;
 
             $id_user = $idUser;
             $nomeImagemUpload = time() . '_' . $_FILES['imgPerfil']['name'];
 
-            $target = 'public/uploads/fotoPerfil//' . $nomeImagemUpload;
+            $target = 'public/uploads/perfil//'.$nomeImagemUpload;
 
             if (move_uploaded_file($_FILES['imgPerfil']['tmp_name'], $target)) {
                 $conn = mysqli_connect("remotemysql.com", "GQ4OpczpAV", "jt4ifMIloM", "GQ4OpczpAV");
@@ -111,4 +113,5 @@ class PerfilController extends Controller {
                 $this->render('error/usuario');
             }
         }
+    }
 }

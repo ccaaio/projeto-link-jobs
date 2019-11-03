@@ -27,7 +27,7 @@
                 </button>
             </div>
             <div class="modal-body">
-                <form id="form" action="/perfil/fotoPerfilUpload" method="post" enctype="multipart/form-data">
+                <form action="/perfil/fotoPerfilUpload" method="post" enctype="multipart/form-data">
                     <h3 class="text-center text-muted">Foto de Perfil</h3>
                     <div>
                         <label for="profileImage">Imagem de Perfil</label>
