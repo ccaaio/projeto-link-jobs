@@ -17,6 +17,37 @@
 
 <body>
 
+<div id="chama-modal-upload-foto-perfil" class="modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Alterar Foto de Perfil</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form action="/perfil/fotoPerfilUpload" method="post" enctype="multipart/form-data">
+                    <h3 class="text-center text-muted">Foto de Perfil</h3>
+                    <div>
+                        <label for="profileImage">Imagem de Perfil</label>
+                        <input type="file" name="profileImage" id="profileImage" class="btn btn-default">
+                    </div>
+                    <div class="form-group">
+                        <input class="hidden" type="hidden" name="id_user" value="<?php  echo \App\Lib\Auth::usuario()->id; ?>">
+                        <button type="submit" name="save-user" class="btn btn-primary btn-block">
+                            Aplicar Alterações
+                        </button>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 <div class="card">
     <div class="card-header">Select Profile Image</div>
     <div class="card-body" align="center">
@@ -136,7 +167,7 @@
                         <div class="col-lg-3">
                             <div class="main-left-sidebar">
                                 <div class="user_profile">
-                                    <div class="user-pro-img">
+                                    <div class="user-pro-img chama-modal-upload-foto-perfil" data-toggle="modal" data-target="#chama-modal-upload-foto-perfil">
                                         <img id="img-usuario-foto-perfil" src="http://via.placeholder.com/170x170" alt="">
                                         <a href="#" title=""><i class="fa fa-camera"></i></a>
                                     </div>

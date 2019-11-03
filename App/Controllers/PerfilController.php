@@ -34,14 +34,11 @@ class PerfilController extends Controller {
 
         self::setViewCss('/public/css/sweetalert2.min.css');
         self::setViewCss('/public/css/pages/principal/principal.css');
-        self::setViewCss('/public/css/croppie.css');
 
         self::setViewJs('/public/js/sweetalert2.all.min.js');
         self::setViewJs('/public/js/principal/principal.js');
         self::setViewJs('/public/js/funcoes/listagens/sugestoes.js');
         self::setViewJs('/public/js/perfil/editar.js');
-        self::setViewJs('/public/js/croppie.min.js');
-        self::setViewJs('/public/js/exif.js');
 
         $this->render('perfil/editar');
 
@@ -93,31 +90,23 @@ class PerfilController extends Controller {
     }
 
     public function fotoPerfilUpload() {
-        if(isset($_POST["image"])) {
-            $data = $_POST["image"];
-            $idUser = 13;
+        if(isset($_POST['save-user'])) {
+            $id_user = $_POST['id_user'];
+            $nomeImagemUpload = time() . '_' . $_FILES['profileImage']['name'];
 
-            $image_array_1 = explode(";", $data);
+            $target = 'public/uploads/fotoPerfil//' . $nomeImagemUpload;
 
-            $image_array_2 = explode(",", $image_array_1[1]);
+            if (move_uploaded_file($_FILES['profileImage']['tmp_name'], $target)) {
+                $conn = mysqli_connect("remotemysql.com", "GQ4OpczpAV", "jt4ifMIloM", "GQ4OpczpAV");
+                $sql = "INSERT INTO fotoPerfil (id_usuario, profile_image) VALUES ('$id_user', '$nomeImagemUpload')";
 
-            $data = base64_decode($image_array_2[1]);
-
-            $imageName = time() . '.png';
-
-            file_put_contents($imageName, $data);
-
-            $image_file = addslashes(file_get_contents($imageName));
-
-            $conn = mysqli_connect("remotemysql.com", "GQ4OpczpAV", "jt4ifMIloM", "GQ4OpczpAV");
-            $sql = "INSERT INTO fotoPerfil (id_usuario, imagem) VALUES ('13', '$image_file')";
-
-            if(mysqli_query($conn, $sql)) {
-                echo 'Image save into database';
-                unlink($imageName);
+                if(mysqli_query($conn, $sql)) {
+                    $this->redirect('principal/');
+                }
+            } else {
+                $this->render('error/usuario');
             }
-        } else {
-            $this->render('error/usuario');
+
         }
     }
 
