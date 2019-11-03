@@ -39,8 +39,8 @@ setTimeout(function () {
     $.each(jQuery('#profileImage')[0].files, function(i, file) {
         data.append('file-'+i, file);
     });
+    var idUser = $('#hidden-id-user').val();
     $('#uploadPerfil').on('click', function () {
-        var idUser = $('#hidden-id-user').val();
         $.ajax({
             url:"/perfil/fotoPerfilUpload/",
             cache: false,
