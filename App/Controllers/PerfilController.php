@@ -90,7 +90,7 @@ class PerfilController extends Controller {
     }
 
     public function fotoPerfilUpload() {
-        if(isset($_POST['save-user'])) {
+        if(isset($_POST['id_user'])) {
             $id_user = $_POST['id_user'];
             $nomeImagemUpload = time() . '_' . $_FILES['profileImage']['name'];
 
