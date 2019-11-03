@@ -93,9 +93,9 @@ class PerfilController extends Controller {
 
     public function fotoPerfilUpload() {
         $idUser = $_POST['usuario'];
-            echo $idUser;
-            /*
-            $id_user = $_POST['id_user'];
+            //echo $idUser;
+
+            $id_user = $idUser;
             $nomeImagemUpload = time() . '_' . $_FILES['profileImage']['name'];
 
             $target = 'public/uploads/fotoPerfil//' . $nomeImagemUpload;
@@ -110,6 +110,5 @@ class PerfilController extends Controller {
             } else {
                 $this->render('error/usuario');
             }
-            */
         }
 }
