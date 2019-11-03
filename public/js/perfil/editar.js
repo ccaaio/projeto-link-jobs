@@ -34,6 +34,7 @@
         },200);
     },1000);
 
+/*
 setTimeout(function () {
     var data = new FormData();
     $.each(jQuery('#profileImage')[0].files, function(i, file) {
@@ -58,9 +59,4 @@ setTimeout(function () {
         });
     });
 },1000);
-
-
-
-
-
-
+*/
