@@ -12,6 +12,8 @@
             }, 1000);
         });
 
+
+
         var idUsuario = $('#id_user').val();
 
         setTimeout(function () {
