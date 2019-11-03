@@ -35,14 +35,14 @@
                     </div>
                     <div class="form-group">
                         <input id="hidden-id-user" class="hidden" type="hidden" name="id_user" value="<?php  echo \App\Lib\Auth::usuario()->id; ?>">
-                        <button type="button" name="save-user" class="btn btn-primary btn-block">
+                        <button id="uploadPerfil" type="button" name="save-user" class="btn btn-primary btn-block">
                             Aplicar Alterações
                         </button>
                     </div>
                 </form>
             </div>
             <div class="modal-footer">
-                <button id="uploadPerfil" type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
             </div>
         </div>
     </div>
