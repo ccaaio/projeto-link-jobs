@@ -92,7 +92,7 @@ class PerfilController extends Controller {
 
 
     public function fotoPerfilUpload() {
-        if(isset($_POST['id_user'])) {
+        if(isset($_POST['usuario'])) {
             echo 'teste';
             /*
             $id_user = $_POST['id_user'];

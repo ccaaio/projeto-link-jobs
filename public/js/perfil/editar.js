@@ -42,18 +42,17 @@ setTimeout(function () {
     $('#uploadPerfil').on('click', function () {
         var idUser = $('#hidden-id-user').val();
         $.ajax({
-            url:"/perfil/fotoPerfilUpload/",
+            url:"/perfil/fotoPerfilUpload",
             cache: false,
             contentType: false,
             processData: false,
             method: 'POST',
             type: 'POST', // For jQuery < 1.9
-            data:{id_user: idUser, profileImage: data},
-            beforeSend: function() {
+            data:{usuario: idUser, profileImage: data},
+            beforeSend: function(a) {
                 alert('antes de enviar');
             },
             success:function(c){
-                alert('enviado');
                 console.log(c);
             }
         });
