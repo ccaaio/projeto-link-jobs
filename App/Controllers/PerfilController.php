@@ -99,7 +99,7 @@ class PerfilController extends Controller {
 
             if (move_uploaded_file($_FILES['save-foto-user']['tmp_name'], $target)) {
                 $conn = mysqli_connect("remotemysql.com", "GQ4OpczpAV", "jt4ifMIloM", "GQ4OpczpAV");
-                $sql = "INSERT INTO imgPerfil (usuario, img) VALUES ('$id_user', '$nomeImagemUpload')";
+                $sql = "INSERT INTO imgPerfil (usuario, img) VALUES ('13', '$nomeImagemUpload')";
 
                 if(mysqli_query($conn, $sql)) {
                     $this->redirect('perfil/editar/');
