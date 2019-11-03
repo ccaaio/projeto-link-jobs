@@ -26,17 +26,17 @@
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
+            <form class="" method="post" action="/perfil/uploadFoto" enctype="multipart/form-data">
             <div class="modal-body">
-                <form class="" method="post" action="/perfil/uploadFoto" enctype="multipart/form-data">
+                        <input id="id_user2" name="usuario" type="hidden" value="<?php  echo \App\Lib\Auth::usuario()->id; ?>">
+                        <input type="file" id="upload-" name="save-foto-user" class="">
 
-                        <button class="btn btn-lg btn-danger btn-block btn-upload" name="save-capa" type="submit" style="position: absolute;top: 0;bottom: 0;left: 0;right: 0;margin: auto;height: 70px;cursor: alias;"><i class="la la-check" style="font-size: 1.2em;margin-right: 0.3em;"></i> CLIQUE PARA CARREGAR A FOTO SELECIONADA!</button>
-                        <input id="id_user" name="id_user" type="hidden" value="<?php  echo \App\Lib\Auth::usuario()->id; ?>">
-                        <input type="file" id="upload-capa" name="save-capa-user" class="">
-                </form>
             </div>
             <div class="modal-footer">
+                <button type="submit" class="btn btn-primary" name="save-foto">Salvar Foto</button>
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
             </div>
+            </form>
         </div>
     </div>
 </div>
