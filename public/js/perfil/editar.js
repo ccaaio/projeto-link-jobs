@@ -1,5 +1,4 @@
     setTimeout(function () {
-
         $('#upload-capa').on('change', function () {
             $('.btn-upload').removeClass('d-none');
             setTimeout(function () {

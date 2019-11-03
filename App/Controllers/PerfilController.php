@@ -106,7 +106,6 @@ class PerfilController extends Controller {
             } else {
                 $this->render('error/usuario');
             }
-
         }
     }
 
