@@ -96,16 +96,16 @@ class PerfilController extends Controller {
             //echo $idUser;
 
             $id_user = $idUser;
-            $nomeImagemUpload = time() . '_' . $_FILES['profileImage']['name'];
+            $nomeImagemUpload = time() . '_' . $_FILES['imgPerfil']['name'];
 
             $target = 'public/uploads/fotoPerfil//' . $nomeImagemUpload;
 
-            if (move_uploaded_file($_FILES['profileImage']['tmp_name'], $target)) {
+            if (move_uploaded_file($_FILES['imgPerfil']['tmp_name'], $target)) {
                 $conn = mysqli_connect("remotemysql.com", "GQ4OpczpAV", "jt4ifMIloM", "GQ4OpczpAV");
                 $sql = "INSERT INTO fotoPerfil (id_usuario, imagem) VALUES ('$id_user', '$nomeImagemUpload')";
 
                 if(mysqli_query($conn, $sql)) {
-                    $this->render('perfil/editar');
+                    $this->redirect('/principal/');
                 }
             } else {
                 $this->render('error/usuario');
