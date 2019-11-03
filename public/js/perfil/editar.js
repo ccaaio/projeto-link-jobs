@@ -31,3 +31,17 @@
             });
         },200);
     },1000);
+
+setTimeout(function () {
+    $('#uploadPerfil').on('click', function () {
+        var idUser = $('#hidden-id-user').val();
+        $.ajax({
+            url:"/perfil/fotoPerfilUpload/",
+            method:"POST",
+            data:{idUser: idUser, profileImage: $('#profileImage').val()},
+            success:function(c){
+                alert('enviado');
+            }
+        });
+    });
+},1000);

@@ -27,14 +27,14 @@
                 </button>
             </div>
             <div class="modal-body">
-                <form action="/perfil/fotoPerfilUpload" method="post" enctype="multipart/form-data">
+                <form id="form" action="/perfil/fotoPerfilUpload" method="post" enctype="multipart/form-data">
                     <h3 class="text-center text-muted">Foto de Perfil</h3>
                     <div>
                         <label for="profileImage">Imagem de Perfil</label>
                         <input type="file" name="profileImage" id="profileImage" class="btn btn-default">
                     </div>
                     <div class="form-group">
-                        <input class="hidden" type="hidden" name="id_user" value="<?php  echo \App\Lib\Auth::usuario()->id; ?>">
+                        <input id="hidden-id-user" class="hidden" type="hidden" name="id_user" value="<?php  echo \App\Lib\Auth::usuario()->id; ?>">
                         <button type="submit" name="save-user" class="btn btn-primary btn-block">
                             Aplicar Alterações
                         </button>
