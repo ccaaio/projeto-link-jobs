@@ -35,7 +35,7 @@
                     </div>
                     <div class="form-group">
                         <input id="hidden-id-user" class="hidden" type="hidden" name="id_user" value="<?php  echo \App\Lib\Auth::usuario()->id; ?>">
-                        <button type="submit" name="save-user" class="btn btn-primary btn-block">
+                        <button type="button" name="save-user" class="btn btn-primary btn-block">
                             Aplicar Alterações
                         </button>
                     </div>
