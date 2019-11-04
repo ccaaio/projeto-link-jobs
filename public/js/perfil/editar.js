@@ -129,11 +129,12 @@ $(document).ready(function () {
 
         $('#btn-salvar-visao-geral').on('click', function () {
             var textAreaVisao = $('#edit-visao-geral').val();
+            textAreaVisao = $('#edit-visao-geral').text(textAreaVisao);
             setTimeout(function () {
                 $.ajax({
                     url: 'perfil/inserirVisaoGeral',
                     method: 'POST',
-                    data: {idUser: idUsuario, visao: textAreaVisao},
+                    data: {idUser: idUsuario, textar: textAreaVisao},
                     success: function (e) {
                         Swal.fire({
                             position: 'top-end',
