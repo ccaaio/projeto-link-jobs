@@ -60,15 +60,17 @@
             var nomeSobrenome = $('#nome-sobrenome').val();
             var profissao = $('#edit-profissao').val();
 
-            setTimeout(function () {
-                $.ajax({
-                    url: '/perfil/atualizarInformacoes',
-                    method: 'POST',
-                    data: {idUser: idUsuario, nome: nomeSobrenome, profissao: profissao},
-                    success: function (get) {
-                        alert('Informações atualizadas!');
-                    }
-                });
-            },300);
+            $('#btn-atualizarInformacoes').on('click', function () {
+                setTimeout(function () {
+                    $.ajax({
+                        url: '/perfil/atualizarInformacoes',
+                        method: 'POST',
+                        data: {idUser: idUsuario, nome: nomeSobrenome, profissao: profissao},
+                        success: function (get) {
+                            alert('Informações atualizadas!');
+                        }
+                    });
+                },300);
+            });
         });
     },1000);
