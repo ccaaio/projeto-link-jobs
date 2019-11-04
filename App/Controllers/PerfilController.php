@@ -32,8 +32,8 @@ class PerfilController extends Controller {
         self::setViewParam('nameController',$this->app->getNameController());
 
 
-        self::setViewCss('/public/css/sweetalert2.min.css');
         self::setViewCss('/public/css/pages/principal/principal.css');
+        self::setViewCss('/public/css/sweetalert2.min.css');
 
         self::setViewJs('/public/js/sweetalert2.all.min.js');
         self::setViewJs('/public/js/principal/principal.js');
