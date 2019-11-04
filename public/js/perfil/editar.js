@@ -60,6 +60,8 @@
             var nomeSobrenome = $('#nome-sobrenome').val();
             var profissao = $('#edit-profissao').val();
 
+            $('#modal-edit-nome-profissao').modal('show');
+
             $('#btn-atualizarInformacoes').on('click', function () {
                 setTimeout(function () {
                     $.ajax({
