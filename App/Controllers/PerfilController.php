@@ -165,11 +165,17 @@ class PerfilController extends Controller {
     }
 
     public function inserirVisaoGeral() {
-        $visao = 'aaaa';
-        $idUser = 13;
+        $visao = $_POST['textar'];
+        $idUser = $_POST['idUser'];
 
         $conn = mysqli_connect("remotemysql.com", "GQ4OpczpAV", "jt4ifMIloM", "GQ4OpczpAV");
-        mysqli_query($conn, "INSERT INTO visaoGeral (id_usuario, visao) VALUES ('$idUser', '$visao'");
+
+        $sql = "INSERT INTO visaoGeral (id_usuario, visao) VALUES ('$idUser', '$visao')";
+        if(mysqli_query($conn, $sql)) {
+            $this->redirect('perfil/editar/');
+        } else {
+            $this->render('error/usuario');
+        }
     }
 
     public function getVisao() {
