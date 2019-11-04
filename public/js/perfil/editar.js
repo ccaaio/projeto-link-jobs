@@ -18,7 +18,9 @@ var getInfosPerfil = function () {
 
 $(document).ready(function () {
     getInfosPerfil();
-    $('li[data-tab="info-dd"]').trigger('click');
+    setTimeout(function () {
+        $('li[data-tab="info-dd"]').trigger('click');
+    },250);
 
     setTimeout(function () {
         $('#upload-capa').on('change', function () {
