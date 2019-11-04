@@ -95,7 +95,7 @@ class PerfilController extends Controller {
             $id_user = $_POST['usuario'];
             $nomeImagemUpload = time() . '_' . $_FILES['save-foto-user']['name'];
 
-            $target = 'public/uploads/perfil//'.$nomeImagemUpload;
+            $target = 'public/uploads/fotoPerfil//'.$nomeImagemUpload;
 
             if (move_uploaded_file($_FILES['save-foto-user']['tmp_name'], $target)) {
                 $conn = mysqli_connect("remotemysql.com", "GQ4OpczpAV", "jt4ifMIloM", "GQ4OpczpAV");
