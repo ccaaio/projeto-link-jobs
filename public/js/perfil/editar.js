@@ -124,7 +124,7 @@ $(document).ready(function () {
     /* EDITAR VISAO GERAL */
     $('.link-visao-geral').on('click', function () {
         var get = $('#content-visao-geral').text();
-        var insertCampo = $('#edit-visao-geral').val(get);
+        var insertCampo = $('#edit-visao-geral').text($('#content-visao-geral').text());
     });
     $('#btn-salvar-visao-geral').on('click', function () {
 
