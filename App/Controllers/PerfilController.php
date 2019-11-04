@@ -169,7 +169,7 @@ class PerfilController extends Controller {
         $idUser = 13;
 
         $conn = mysqli_connect("remotemysql.com", "GQ4OpczpAV", "jt4ifMIloM", "GQ4OpczpAV");
-        $sql = "INSERT INTO visaoGeral (id_usuario, visao) VALUES ('$idUser', '$visao')";
+        mysqli_query($conn, "INSERT INTO visaoGeral (id_usuario, visao) VALUES ('$idUser', '$visao'");
     }
 
     public function getVisao() {
