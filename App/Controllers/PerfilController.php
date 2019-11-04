@@ -146,4 +146,26 @@ class PerfilController extends Controller {
             $this->render('error/usuario');
         }
     }
+
+    public function getInformacoesPerfil() {
+        if(isset($_POST['idUser'])) {
+
+            $idUser = $_POST['idUser'];
+
+            $conn = mysqli_connect("remotemysql.com", "GQ4OpczpAV", "jt4ifMIloM", "GQ4OpczpAV");
+
+            $result = mysqli_query($conn, "SELECT titulo,profissao FROM usuario WHERE id = '$idUser' ORDER BY id DESC LIMIT 1");
+
+            if (mysqli_num_rows($result) > 0) {
+                while($row = mysqli_fetch_assoc($result)) {
+                    header('Content-Type: application/json');
+                    echo json_encode(array('titulo'=> $row['titulo'], 'profissao'=> $row['profissao']));
+                }
+            } else {
+                $this->render('error/usuario');
+            }
+        } else {
+            $this->render('error/usuario');
+        }
+    }
 }

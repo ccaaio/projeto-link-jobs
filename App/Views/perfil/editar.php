@@ -113,7 +113,7 @@
                 <div class="user-account">
                     <div class="user-info">
                         <img class="foto-perfil-navbar" src="/public/images/perfil/profile-default.png" alt="">
-                        <a id="nomeUser" title=""><?php  echo \App\Lib\Auth::usuario()->usuario; ?></a>
+                        <a class="nomeUser" id="nomeUser" title=""></a>
                         <i class="la la-sort-down"></i>
                     </div>
                     <div class="user-account-settingss">
@@ -239,9 +239,9 @@
                         <div class="col-lg-6">
                             <div class="main-ws-sec">
                                 <div class="user-tab-sec">
-                                    <h3><?php  echo \App\Lib\Auth::usuario()->usuario; ?> <span class="badge badge-danger chama-modal-editar-nome" style="cursor: pointer;font-size: 15px;"><i class="fa fa-pencil"></i></span></h3>
+                                    <h3 class="nomeUser"> <span class="badge badge-danger chama-modal-editar-nome" style="cursor: pointer;font-size: 15px;"><i class="fa fa-pencil"></i></span></h3>
                                     <div class="star-descp">
-                                        <span id="profissaoUser"><?php  echo \App\Lib\Auth::usuario()->profissao; ?></span>
+                                        <span id="profissaoUser"></span>
                                         <ul>
                                             <li><i class="fa fa-star"></i></li>
                                             <li><i class="fa fa-star"></i></li>

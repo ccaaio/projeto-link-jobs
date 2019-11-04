@@ -1,3 +1,24 @@
+var idUsuario = $('#id_user').val();
+
+/* CARREGA INFORMACOES DE NOME E PROFISSAO DO USUARIO */
+
+var getInfosPerfil = function () {
+    $.ajax({
+       url: '/perfil/getInformacoesPerfil',
+       method: 'POST',
+       data: {idUser: idUsuario},
+       success: function (i) {
+           setTimeout(function () {
+               $('.nomeUser').text(i.titulo);
+               $('#profissaoUser').text(i.profissao);
+           },100);
+       }
+    });
+}
+
+$(document).ready(function () {
+    getInfosPerfil();
+
     setTimeout(function () {
         $('#upload-capa').on('change', function () {
             $('.btn-upload').removeClass('d-none');
@@ -12,9 +33,6 @@
             }, 1000);
         });
 
-
-
-        var idUsuario = $('#id_user').val();
 
         setTimeout(function () {
             //obtem a lista de usuarios do bd e exibe em sugestoes
@@ -72,6 +90,7 @@
                         method: 'POST',
                         data: {idUser: idUsuario, nome: nomeSobrenome, profissao: profissao},
                         success: function (get) {
+                            getInfosPerfil();
                             alert('Informações atualizadas!');
                         }
                     });
@@ -79,3 +98,5 @@
             });
         });
     },1000);
+
+});
