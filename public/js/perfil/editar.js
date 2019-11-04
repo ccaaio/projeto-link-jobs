@@ -92,10 +92,9 @@ $(document).ready(function () {
                         data: {idUser: idUsuario, nome: nomeSobrenome, profissao: profissao},
                         success: function (get) {
                             getInfosPerfil();
-                            $('#modal-edit-nome-profissao').modal('hide');
                             Swal.fire({
                                 position: 'top-end',
-                                type: 'Maravilha!',
+                                type: 'success',
                                 title: 'Informações atualizadas!',
                                 showConfirmButton: false,
                                 timer: 2000
