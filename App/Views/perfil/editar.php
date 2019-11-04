@@ -17,6 +17,7 @@
 
 <body>
 
+<!-- MODAL UPLOAD FOTO DE PERFIL -->
 <div id="chama-modal-upload-foto-perfil" class="modal" tabindex="-1" role="dialog">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -40,6 +41,37 @@
         </div>
     </div>
 </div>
+
+<!-- MODAL EDITAR NOME & PROFISSAO -->
+<div id="modal-edit-nome-profissao" class="modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Atualizar Informações Pessoais</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="nome-sobrenome" class="col-form-label">Nome e Sobrenome:</label>
+                        <input type="text" class="form-control" id="nome-sobrenome">
+                    </div>
+                    <div class="form-group">
+                        <label for="edit-profissao" class="col-form-label">Profissão:</label>
+                        <input type="text" class="form-control" id="edit-profissao">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-primary">Atualizar Informações</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 
 <div class="wrapper">
     <header>
@@ -81,7 +113,7 @@
                 <div class="user-account">
                     <div class="user-info">
                         <img class="foto-perfil-navbar" src="/public/images/perfil/profile-default.png" alt="">
-                        <a title=""><?php  echo \App\Lib\Auth::usuario()->usuario; ?></a>
+                        <a id="nomeUser" title=""><?php  echo \App\Lib\Auth::usuario()->usuario; ?></a>
                         <i class="la la-sort-down"></i>
                     </div>
                     <div class="user-account-settingss">
@@ -207,9 +239,9 @@
                         <div class="col-lg-6">
                             <div class="main-ws-sec">
                                 <div class="user-tab-sec">
-                                    <h3><?php  echo \App\Lib\Auth::usuario()->usuario; ?> <span class="badge badge-danger" style="cursor: pointer;font-size: 15px;"><i class="fa fa-pencil"></i></span></h3>
+                                    <h3><?php  echo \App\Lib\Auth::usuario()->usuario; ?> <span class="badge badge-danger chama-modal-editar-nome" style="cursor: pointer;font-size: 15px;"><i class="fa fa-pencil"></i></span></h3>
                                     <div class="star-descp">
-                                        <span><?php  echo \App\Lib\Auth::usuario()->profissao; ?></span>
+                                        <span id="profissaoUser"><?php  echo \App\Lib\Auth::usuario()->profissao; ?></span>
                                         <ul>
                                             <li><i class="fa fa-star"></i></li>
                                             <li><i class="fa fa-star"></i></li>

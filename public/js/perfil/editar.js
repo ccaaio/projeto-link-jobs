@@ -49,31 +49,26 @@
                 }
             });
         },200);
-    },1000);
 
-/*
-setTimeout(function () {
-    var data = new FormData();
-    $.each(jQuery('#profileImage')[0].files, function(i, file) {
-        data.append('file-'+i, file);
-    });
-    var idUser = $('#hidden-id-user').val();
-    $('#uploadPerfil').on('click', function () {
-        $.ajax({
-            url:"/perfil/fotoPerfilUpload/",
-            cache: false,
-            contentType: false,
-            processData: false,
-            method: 'POST',
-            type: 'POST', // For jQuery < 1.9
-            data:{usuario: idUser, profileImage: data},
-            beforeSend: function(a) {
-                alert('antes de enviar');
-            },
-            success:function(c){
-                console.log(c);
-            }
+        /* MODAL EDITAR NOME E PROFISSAO */
+        $('.chama-modal-editar-nome').on('click', function () {
+            //informacoes do nome e profissao atuais
+            var nomeAtual = $('#nomeUser').text();
+            var profissaoAtual = $('#profissaoUser').text();
+
+            //informacoes do nome e profissao que serao atualizados
+            var nomeSobrenome = $('#nome-sobrenome').val();
+            var profissao = $('#edit-profissao').val();
+
+            setTimeout(function () {
+                $.ajax({
+                    url: '/perfil/atualizarInformacoes',
+                    method: 'POST',
+                    data: {idUser: idUsuario, nome: nomeSobrenome, profissao: profissao},
+                    success: function (get) {
+                        alert('Informações atualizadas!');
+                    }
+                });
+            },300);
         });
-    });
-},1000);
-*/
+    },1000);

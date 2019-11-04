@@ -115,21 +115,35 @@ class PerfilController extends Controller {
 
     public function uploadFoto() {
 
-            $id_user = $_POST['usuario'];
-            $nomeImagemUpload = time() . '_' . $_FILES['save-foto-user']['name'];
+        $id_user = $_POST['usuario'];
+        $nomeImagemUpload = time() . '_' . $_FILES['save-foto-user']['name'];
 
-            $target = 'public/uploads/fotoPerfil//'.$nomeImagemUpload;
+        $target = 'public/uploads/fotoPerfil//'.$nomeImagemUpload;
 
-            if (move_uploaded_file($_FILES['save-foto-user']['tmp_name'], $target)) {
-                $conn = mysqli_connect("remotemysql.com", "GQ4OpczpAV", "jt4ifMIloM", "GQ4OpczpAV");
-                $sql = "INSERT INTO imgPerfil (usuario, img) VALUES ('$id_user', '$nomeImagemUpload')";
+        if (move_uploaded_file($_FILES['save-foto-user']['tmp_name'], $target)) {
+            $conn = mysqli_connect("remotemysql.com", "GQ4OpczpAV", "jt4ifMIloM", "GQ4OpczpAV");
+            $sql = "INSERT INTO imgPerfil (usuario, img) VALUES ('$id_user', '$nomeImagemUpload')";
 
-                if(mysqli_query($conn, $sql)) {
-                    $this->redirect('perfil/editar/');
-                }
-            } else {
-                $this->render('error/usuario');
+            if(mysqli_query($conn, $sql)) {
+                $this->redirect('perfil/editar/');
             }
-
+        } else {
+            $this->render('error/usuario');
         }
+    }
+
+    public function atualizarInformacoes() {
+        $nome = $_POST['nome'];
+        $profissao = $_POST['profissao'];
+        $idUser = $_POST['idUser'];
+
+        $conn = mysqli_connect("remotemysql.com", "GQ4OpczpAV", "jt4ifMIloM", "GQ4OpczpAV");
+
+        $sql2 = "UPDATE usuario SET titulo = '".$nome."', profissao =  '".$profissao."' WHERE id = '$idUser'";
+        if(mysqli_query($conn, $sql2)) {
+            $this->redirect('perfil/editar/');
+        } else {
+            $this->render('error/usuario');
+        }
+    }
 }
