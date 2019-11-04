@@ -92,7 +92,14 @@ $(document).ready(function () {
                         data: {idUser: idUsuario, nome: nomeSobrenome, profissao: profissao},
                         success: function (get) {
                             getInfosPerfil();
-                            alert('Informações atualizadas!');
+                            Swal.fire({
+                                position: 'top-end',
+                                type: 'Maravilha!',
+                                title: 'Informações atualizadas!',
+                                showConfirmButton: false,
+                                timer: 2000
+                            });
+                            $('#modal-edit-nome-profissao').modal('hide');
                         }
                     });
                 },300);
