@@ -163,4 +163,40 @@ class PerfilController extends Controller {
             $this->render('error/usuario');
         }
     }
+
+    public function inserirVisaoGeral() {
+        $visao = $_POST['visao'];
+        $idUser = $_POST['idUser'];
+
+        $conn = mysqli_connect("remotemysql.com", "GQ4OpczpAV", "jt4ifMIloM", "GQ4OpczpAV");
+
+        $sql = "INSERT INTO visaoGeral (id_usuario, visao) VALUES ('$idUser', '$visao')";
+        if(mysqli_query($conn, $sql)) {
+            $this->redirect('perfil/editar/');
+        } else {
+            $this->render('error/usuario');
+        }
+    }
+
+    public function getVisao() {
+        if(isset($_POST['idUser'])) {
+
+            $idUser = $_POST['idUser'];
+
+            $conn = mysqli_connect("remotemysql.com", "GQ4OpczpAV", "jt4ifMIloM", "GQ4OpczpAV");
+
+            $result = mysqli_query($conn, "SELECT visao FROM visaoGeral WHERE id_usuario = '$idUser' ORDER BY id DESC LIMIT 1");
+
+            if (mysqli_num_rows($result) > 0) {
+                while($row = mysqli_fetch_assoc($result)) {
+                    header('Content-Type: application/json');
+                    echo json_encode(array('visao'=> $row['visao']));
+                }
+            } else {
+                $this->render('error/usuario');
+            }
+        } else {
+            $this->render('error/usuario');
+        }
+    }
 }

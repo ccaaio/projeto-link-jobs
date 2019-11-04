@@ -280,8 +280,8 @@
 
                                 <div class="product-feed-tab" id="info-dd">
                                     <div class="user-profile-ov">
-                                        <h3><a href="#" title="" class="overview-open">Visão Geral</a> <a href="#" title="" class="overview-open"><i class="fa fa-pencil"></i></a></h3>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sapien ante, ultricies et imperdiet id, semper vitae lacus. Pellentesque a enim vitae ligula condimentum consequat ut in nulla</p>
+                                        <h3><a href="#" title="" class="overview-open link-visao-geral">Visão Geral</a> <a href="#" title="" class="overview-open"><i class="fa fa-pencil"></i></a></h3>
+                                        <p id="content-visao-geral">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sapien ante, ultricies et imperdiet id, semper vitae lacus. Pellentesque a enim vitae ligula condimentum consequat ut in nulla</p>
                                     </div>
                                     <div class="user-profile-ov st2">
                                         <h3><a href="#" title="" class="exp-bx-open">Experiência</a><a href="#" title="" class="exp-bx-open"><i class="fa fa-pencil"></i></a> <a href="#" title="" class="exp-bx-open"><i class="fa fa-plus-square"></i></a></h3>
@@ -1024,8 +1024,8 @@
             <h3>Ver tudo</h3>
             <span>5000 caracteres restantes</span>
             <form>
-                <textarea></textarea>
-                <button type="submit" class="save">Salvar</button>
+                <textarea id="edit-visao-geral"></textarea>
+                <button id="btn-salvar-visao-geral" type="button" class="save">Salvar</button>
                 <button type="submit" class="cancel">Cancelar</button>
             </form>
             <a href="#" title="" class="close-box"><i class="la la-close"></i></a>

@@ -18,6 +18,14 @@ var getInfosPerfil = function () {
 
 $(document).ready(function () {
     getInfosPerfil();
+    $.ajax({
+       url: '/perfil/getVisao',
+       method: 'POST',
+       data: {idUser: idUsuario},
+       success: function (v) {
+           $('#content-visao-geral').text(v.visao);
+       } 
+    });
     setTimeout(function () {
         $('li[data-tab="info-dd"]').trigger('click');
     },1000);
@@ -107,5 +115,22 @@ $(document).ready(function () {
             });
         });
     },1000);
+
+    /* EDITAR VISAO GERAL */
+    $.ajax({
+       url: 'perfil/inserirVisaoGeral',
+       method: 'POST',
+       data: {idUser: idUsuario, visao: $('#edit-visao-geral').val()},
+       success: function (e) {
+           Swal.fire({
+               position: 'top-end',
+               type: 'success',
+               title: 'Informações atualizadas!',
+               showConfirmButton: false,
+               timer: 2000
+           });
+           $('.close-box').trigger('click');
+       }
+    });
 
 });
