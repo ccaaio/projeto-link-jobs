@@ -239,7 +239,7 @@
                         <div class="col-lg-6">
                             <div class="main-ws-sec">
                                 <div class="user-tab-sec">
-                                    <h3 class="nomeUser"> <span class="badge badge-danger chama-modal-editar-nome" style="cursor: pointer;font-size: 15px;"><i class="fa fa-pencil"></i></span></h3>
+                                    <h3><span class="nomeUser"></span> <span class="badge badge-danger chama-modal-editar-nome" style="cursor: pointer;font-size: 15px;"><i class="fa fa-pencil"></i></span></h3>
                                     <div class="star-descp">
                                         <span id="profissaoUser"></span>
                                         <ul>
