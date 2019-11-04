@@ -136,6 +136,10 @@ $(document).ready(function () {
                     method: 'POST',
                     data: {idUser: idUsuario, textar: $('#edit-visao-geral').val()},
                     success: function (e) {
+                        console.log('idUser: ', idUsuario);
+                        console.log('textar: ', $('#edit-visao-geral').val());
+                        console.log('retorno: ', e);
+                        /*
                         Swal.fire({
                             position: 'top-end',
                             type: 'success',
@@ -144,6 +148,8 @@ $(document).ready(function () {
                             timer: 2000
                         });
                         $('.close-box').trigger('click');
+
+                         */
                     }
                 });
             },100);
