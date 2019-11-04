@@ -125,6 +125,7 @@ $(document).ready(function () {
     $('.link-visao-geral').on('click', function () {
         var get = $('#content-visao-geral').text();
         var insertCampo = $('#edit-visao-geral').text($('#content-visao-geral').text());
+        var idUs = $('#id_user').val();
 
         $('#btn-salvar-visao-geral').on('click', function () {
             var textAreaVisao = $('#edit-visao-geral').val();
@@ -132,7 +133,7 @@ $(document).ready(function () {
                 $.ajax({
                     url: 'perfil/inserirVisaoGeral',
                     method: 'POST',
-                    data: {idUser: idUsuario, visao: textAreaVisao},
+                    data: {idUser: idUs, visao: textAreaVisao},
                     success: function (e) {
                         Swal.fire({
                             position: 'top-end',
