@@ -132,7 +132,7 @@ $(document).ready(function () {
             textAreaVisao = $('#edit-visao-geral').text(textAreaVisao);
             setTimeout(function () {
                 $.ajax({
-                    url: 'perfil/inserirVisaoGeral',
+                    url: '/perfil/inserirVisaoGeral',
                     method: 'POST',
                     data: {idUser: idUsuario, textar: $('#edit-visao-geral').val()},
                     success: function (e) {
