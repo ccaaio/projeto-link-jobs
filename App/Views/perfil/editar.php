@@ -207,7 +207,7 @@
                         <div class="col-lg-6">
                             <div class="main-ws-sec">
                                 <div class="user-tab-sec">
-                                    <h3><?php  echo \App\Lib\Auth::usuario()->usuario; ?> <span class="badge badge-danger" style="cursor: pointer;"><i class="fa fa-pencil"></i></span></h3>
+                                    <h3><?php  echo \App\Lib\Auth::usuario()->usuario; ?> <span class="badge badge-danger" style="cursor: pointer;font-size: 15px;"><i class="fa fa-pencil"></i></span></h3>
                                     <div class="star-descp">
                                         <span><?php  echo \App\Lib\Auth::usuario()->profissao; ?></span>
                                         <ul>
