@@ -135,6 +135,7 @@ $(document).ready(function () {
                     method: 'POST',
                     data: {idUser: idUs, visao: textAreaVisao},
                     success: function (e) {
+                        console.log(e);
                         Swal.fire({
                             position: 'top-end',
                             type: 'success',
