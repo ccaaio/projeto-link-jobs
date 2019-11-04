@@ -280,7 +280,7 @@
 
                                 <div class="product-feed-tab" id="info-dd">
                                     <div class="user-profile-ov">
-                                        <h3><a href="#" title="" class="overview-open link-visao-geral">Visão Geral</a> <a href="#" title="" class="overview-open"><i class="fa fa-pencil"></i></a></h3>
+                                        <h3><a href="#" title="" class="overview-open link-visao-geral">Visão Geral</a> <a href="#" title="" class="overview-open link-visao-geral"><i class="fa fa-pencil"></i></a></h3>
                                         <p id="content-visao-geral">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sapien ante, ultricies et imperdiet id, semper vitae lacus. Pellentesque a enim vitae ligula condimentum consequat ut in nulla</p>
                                     </div>
                                     <div class="user-profile-ov st2">
