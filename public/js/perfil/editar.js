@@ -123,20 +123,23 @@ $(document).ready(function () {
 
     /* EDITAR VISAO GERAL */
     $('#btn-salvar-visao-geral').on('click', function () {
-        $.ajax({
-            url: 'perfil/inserirVisaoGeral',
-            method: 'POST',
-            data: {idUser: idUsuario, visao: $('#edit-visao-geral').val()},
-            success: function (e) {
-                Swal.fire({
-                    position: 'top-end',
-                    type: 'success',
-                    title: 'Informações atualizadas!',
-                    showConfirmButton: false,
-                    timer: 2000
-                });
-                $('.close-box').trigger('click');
-            }
-        });
+        var visao = $('#edit-visao-geral').val();
+        setTimeout(function () {
+            $.ajax({
+                url: 'perfil/inserirVisaoGeral',
+                method: 'POST',
+                data: {idUser: idUsuario, visao: visao},
+                success: function (e) {
+                    Swal.fire({
+                        position: 'top-end',
+                        type: 'success',
+                        title: 'Informações atualizadas!',
+                        showConfirmButton: false,
+                        timer: 2000
+                    });
+                    $('.close-box').trigger('click');
+                }
+            });
+        },100);
     });
 });
