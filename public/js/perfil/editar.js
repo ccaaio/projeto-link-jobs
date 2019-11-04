@@ -57,12 +57,15 @@
             var profissaoAtual = $('#profissaoUser').text();
 
             //informacoes do nome e profissao que serao atualizados
-            var nomeSobrenome = $('#nome-sobrenome').val();
-            var profissao = $('#edit-profissao').val();
+            var nomeSobrenome = $('#nome-sobrenome').val(nomeAtual);
+            var profissao = $('#edit-profissao').val(profissaoAtual);
 
             $('#modal-edit-nome-profissao').modal('show');
 
             $('#btn-atualizarInformacoes').on('click', function () {
+                nomeSobrenome = $('#nome-sobrenome').val();
+                profissao = $('#edit-profissao').val();
+
                 setTimeout(function () {
                     $.ajax({
                         url: '/perfil/atualizarInformacoes',
