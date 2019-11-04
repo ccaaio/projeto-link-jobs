@@ -122,7 +122,12 @@ $(document).ready(function () {
     },1000);
 
     /* EDITAR VISAO GERAL */
+    $('.link-visao-geral').on('click', function () {
+        var get = $('#content-visao-geral').text();
+        var insertCampo = $('#edit-visao-geral').val(get);
+    });
     $('#btn-salvar-visao-geral').on('click', function () {
+
         var visao = $('#edit-visao-geral').val();
         setTimeout(function () {
             $.ajax({
