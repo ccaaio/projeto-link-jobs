@@ -20,7 +20,7 @@ $(document).ready(function () {
     getInfosPerfil();
     setTimeout(function () {
         $('li[data-tab="info-dd"]').trigger('click');
-    },250);
+    },500);
 
     setTimeout(function () {
         $('#upload-capa').on('change', function () {
