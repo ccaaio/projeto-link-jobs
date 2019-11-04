@@ -32,6 +32,23 @@
                 }
             });
         },200);
+
+        setTimeout(function () {
+            //obtem a lista de usuarios do bd e exibe em sugestoes
+            $.ajax({
+                url:"/perfil/getFotoPerfil/",
+                method:"POST",
+                data:{idUser: idUsuario},
+                success:function(f){
+                    var capa =f.src;
+                    var trimCapa = $.trim(capa);
+                    $('#img-usuario-foto-perfil').attr("src", "/public/uploads/fotoPerfil/"+trimCapa+"");
+                    setTimeout(function () {
+
+                    }, 1500);
+                }
+            });
+        },200);
     },1000);
 
 /*

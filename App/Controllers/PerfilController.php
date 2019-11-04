@@ -88,6 +88,29 @@ class PerfilController extends Controller {
         }
     }
 
+    public function getFotoPerfil() {
+        if(isset($_POST['idUser'])) {
+
+            $idUser = $_POST['idUser'];
+
+            $conn = mysqli_connect("remotemysql.com", "GQ4OpczpAV", "jt4ifMIloM", "GQ4OpczpAV");
+
+            $result = mysqli_query($conn, "SELECT * FROM imgPerfil WHERE usuario = '$idUser' ORDER BY id DESC LIMIT 1");
+
+            if (mysqli_num_rows($result) > 0) {
+                while($row = mysqli_fetch_assoc($result)) {
+                    header('Content-Type: application/json');
+                    echo json_encode(array('src'=> $row['img']));
+                }
+            } else {
+                header('Content-Type: application/json');
+                echo json_encode(array('src' => 'profile-default.png'));
+            }
+        } else {
+            $this->render('error/usuario');
+        }
+    }
+
 
 
     public function uploadFoto() {
@@ -99,7 +122,7 @@ class PerfilController extends Controller {
 
             if (move_uploaded_file($_FILES['save-foto-user']['tmp_name'], $target)) {
                 $conn = mysqli_connect("remotemysql.com", "GQ4OpczpAV", "jt4ifMIloM", "GQ4OpczpAV");
-                $sql = "INSERT INTO imgPerfil (usuario, img) VALUES ('13', '$nomeImagemUpload')";
+                $sql = "INSERT INTO imgPerfil (usuario, img) VALUES ('$id_user', '$nomeImagemUpload')";
 
                 if(mysqli_query($conn, $sql)) {
                     $this->redirect('perfil/editar/');
