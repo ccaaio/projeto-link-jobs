@@ -134,7 +134,7 @@ $(document).ready(function () {
                 $.ajax({
                     url: 'perfil/inserirVisaoGeral',
                     method: 'POST',
-                    data: {idUser: idUsuario, textar: textAreaVisao},
+                    data: {idUser: idUsuario, textar: $('#edit-visao-geral').val()},
                     success: function (e) {
                         Swal.fire({
                             position: 'top-end',

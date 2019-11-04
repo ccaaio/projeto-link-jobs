@@ -165,7 +165,7 @@ class PerfilController extends Controller {
     }
 
     public function inserirVisaoGeral() {
-        $visao = $_POST['visao'];
+        $visao = $_POST['textar'];
         $idUser = $_POST['idUser'];
 
         $conn = mysqli_connect("remotemysql.com", "GQ4OpczpAV", "jt4ifMIloM", "GQ4OpczpAV");
