@@ -1025,7 +1025,7 @@
             <span>5000 caracteres restantes</span>
             <form>
                 <textarea id="edit-visao-geral"></textarea>
-                <button id=" btn-salvar-visao-geral" type="button" class="save">Salvar</button>
+                <button id="btn-salvar-visao-geral" type="button" class="save">Salvar</button>
                 <button type="submit" class="cancel">Cancelar</button>
             </form>
             <a href="#" title="" class="close-box"><i class="la la-close"></i></a>
