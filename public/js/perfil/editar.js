@@ -33,7 +33,7 @@ $(document).ready(function () {
 
     setTimeout(function () {
         $('li[data-tab="info-dd"]').trigger('click');
-    },1000);
+    },1500);
 
     setTimeout(function () {
         $('#upload-capa').on('change', function () {
@@ -143,6 +143,7 @@ $(document).ready(function () {
                             showConfirmButton: false,
                             timer: 2000
                         });
+                        getVisaoGeral();
                         $('.close-box').trigger('click');
                     }
                 });
