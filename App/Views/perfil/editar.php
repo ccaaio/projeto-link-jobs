@@ -125,7 +125,7 @@
                             <div class="main-left-sidebar">
                                 <div class="user_profile">
                                     <div class="user-pro-img chama-modal-upload-foto-perfil" data-toggle="modal" data-target="#chama-modal-upload-foto-perfil">
-                                        <img id="img-usuario-foto-perfil" src="http://via.placeholder.com/170x170" alt="">
+                                        <img id="img-usuario-foto-perfil" src="http://via.placeholder.com/170x170" alt="" style="width: 170px !important; max-width: 170px !important; height: 170px !important; max-height: 170px !important;">
                                         <a href="#" title=""><i class="fa fa-camera"></i></a>
                                     </div>
                                     <div class="user_pro_status">
