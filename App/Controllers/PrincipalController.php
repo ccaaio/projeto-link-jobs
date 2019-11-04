@@ -15,11 +15,8 @@ class PrincipalController extends Controller {
 
         self::setViewParam('nameController',$this->app->getNameController());
 
-
-        self::setViewCss('/public/css/sweetalert2.min.css');
         self::setViewCss('/public/css/pages/principal/principal.css');
 
-        self::setViewJs('/public/js/sweetalert2.all.min.js');
         self::setViewJs('/public/js/principal/principal.js');
         self::setViewJs('/public/js/funcoes/listagens/sugestoes.js');
 
@@ -109,12 +106,9 @@ class PrincipalController extends Controller {
     public function amigos() {
         self::setViewParam('nameController',$this->app->getNameController());
 
-
-        self::setViewCss('/public/css/sweetalert2.min.css');
         self::setViewCss('/public/css/pages/principal/principal.css');
         self::setViewCss('/public/css/pages/principal/amigos.css');
 
-        self::setViewJs('/public/js/sweetalert2.all.min.js');
         self::setViewJs('/public/js/principal/principal.js');
         self::setViewJs('/public/js/funcoes/listagens/sugestoes.js');
         self::setViewJs('/public/js/principal/amigos.js');

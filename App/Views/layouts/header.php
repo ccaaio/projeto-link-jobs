@@ -18,6 +18,7 @@
     <link rel="stylesheet" type="text/css" href="/public/css/line-awesome.css">
     <link rel="stylesheet" type="text/css" href="/public/css/line-awesome-font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="/public/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/public/css/sweetalert2.min.css">
     <link rel="stylesheet" type="text/css" href="/public/css/style.css">
     <link rel="stylesheet" type="text/css" href="/public/css/responsive.css">
 
