@@ -185,7 +185,7 @@ class PerfilController extends Controller {
 
             $conn = mysqli_connect("remotemysql.com", "GQ4OpczpAV", "jt4ifMIloM", "GQ4OpczpAV");
 
-            $result = mysqli_query($conn, "SELECT visao FROM visaoGeral WHERE id_usuario = '$idUser' ORDER BY id DESC LIMIT 1");
+            $result = mysqli_query($conn, "SELECT * FROM visaoGeral WHERE id_usuario = '$idUser' ORDER BY id DESC LIMIT 1");
 
             if (mysqli_num_rows($result) > 0) {
                 while($row = mysqli_fetch_assoc($result)) {
