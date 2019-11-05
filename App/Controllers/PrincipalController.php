@@ -2,6 +2,8 @@
 
 namespace App\Controllers;
 
+use App\Models\Usuario;
+
 class PrincipalController extends Controller {
     private $app;
     public $isAuth;
@@ -14,6 +16,9 @@ class PrincipalController extends Controller {
     public function index() {
 
         self::setViewParam('nameController',$this->app->getNameController());
+
+        $oListaVaga = Usuario::listarVagas();
+        self::setViewParam('aListaVaga',$oListaVaga);
 
         self::setViewCss('/public/css/pages/principal/principal.css');
 

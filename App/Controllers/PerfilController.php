@@ -263,4 +263,14 @@ class PerfilController extends Controller {
 
         $this->render('error/usuario');
     }
+
+    public function salvarVaga() {
+        if($oUser = Usuario::salvarVaga($_POST)){
+
+            header("Location: https://projeto-link-jobs.herokuapp.com/perfil/editar");
+            $this->render('perfil/editar');
+        }
+
+        $this->render('error/usuario');
+    }
 }

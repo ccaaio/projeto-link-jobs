@@ -216,6 +216,34 @@ class Usuario
         }
     }
 
+    public static function salvarVaga($data)  {
+        try {
+
+            $db = new DB();
+
+            $idUsuario    = $data['id_usuario'];
+            $titulo = $data['titulo'];
+            $categoria = $data['categoria'];
+            $habilidade = $data['habilidade'];
+            $preco = $data['preco'];
+            $integral = $data['integral'];
+            $descricao = $data['descricao'];
+            $data = date('Y-m-d H:i:s');
+            $nomeUsuario = $data['nomeUsuario'];
+
+            $db->insert('vaga',
+                "id_usuario,titulo,categoria,habilidade,preco,integral,descricao,dataHora,nomeUsuario",
+                "'".$idUsuario."','".$titulo."','".$categoria."','".$habilidade."','".$preco."','".$integral."','".$descricao."','".$data."','".$nomeUsuario."'"
+            );
+
+            header("Location: https://projeto-link-jobs.herokuapp.com/principal");
+
+        }catch (\Exception $e){
+            echo $e->getMessage();
+
+        }
+    }
+
     public static function listarExperiencia($id=null) {
         $db = new DB();
 
@@ -321,6 +349,35 @@ class Usuario
                 // Faz a consulta
                 $query = $db->query(
                     "SELECT * FROM habilidades WHERE id_usuario = '".$idUsuario."' ORDER BY id DESC"
+                );
+
+                return $query->fetchAll();
+
+            }
+        }catch (Exception $e){
+            echo $e->getMessage();
+        }
+
+    }
+
+    public static function listarVagas($id=null) {
+        $db = new DB();
+
+        $idUsuario =  \App\Lib\Auth::usuario()->id;
+
+        try {
+
+            if($id) {
+                // Faz a consulta
+                $query = $db->query(
+                    "SELECT * FROM vaga WHERE id_usuario = '".$idUsuario."' ORDER BY id DESC"
+                );
+
+                return $query->fetch();
+            }else{
+                // Faz a consulta
+                $query = $db->query(
+                    "SELECT * FROM vaga WHERE id_usuario = '".$idUsuario."' ORDER BY id DESC"
                 );
 
                 return $query->fetchAll();
