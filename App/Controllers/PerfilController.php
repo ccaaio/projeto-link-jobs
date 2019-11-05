@@ -2,6 +2,9 @@
 
 namespace App\Controllers;
 
+use App\Lib\Auth;
+use App\Models\Usuario;
+
 class PerfilController extends Controller {
     private $app;
     public $isAuth;
@@ -198,5 +201,17 @@ class PerfilController extends Controller {
         } else {
             $this->render('error/usuario');
         }
+    }
+
+    public function salvarExperiencia() {
+        $this->existeLayout(false);
+
+        if($oUser = Usuario::salvarExperiencia($_POST)){
+
+            $this->redirect('perfil/editar');
+        }
+
+        $this->render('error/usuario');
+
     }
 }

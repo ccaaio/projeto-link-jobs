@@ -1036,12 +1036,13 @@
     <div class="overview-box" id="experience-box">
         <div class="overview-edit">
             <h3>Experiência</h3>
-            <form>
-                <input type="text" name="subject" placeholder="Subject">
-                <textarea></textarea>
+            <form method="post" action="/perfil/salvarExperiencia">
+                <input type="text" name="titulo" placeholder="Título">
+                <input type="hidden" name="id_usuario" value="<?php  echo \App\Lib\Auth::usuario()->id; ?>">
+                <textarea name="texto"></textarea>
                 <button type="submit" class="save">Salvar</button>
-                <button type="submit" class="save-add">Save & adicionar mais</button>
-                <button type="submit" class="cancel">Cancelar</button>
+                <!-- <button type="submit" class="save-add">Save & adicionar mais</button> -->
+                <button type="button" class="cancel">Cancelar</button>
             </form>
             <a href="#" title="" class="close-box"><i class="la la-close"></i></a>
         </div>

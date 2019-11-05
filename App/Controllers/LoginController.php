@@ -74,8 +74,7 @@ class LoginController extends Controller
 
     }
 
-    public function salvar()
-    {
+    public function salvar() {
         $this->existeLayout(false);
 
         if($oUser = Usuario::salvar($_POST)){

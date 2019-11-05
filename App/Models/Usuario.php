@@ -25,8 +25,7 @@ class Usuario
 
     }
 
-    public static function salvar($data)
-    {
+    public static function salvar($data)  {
         try {
 
             $db = new DB();
@@ -127,4 +126,29 @@ class Usuario
         }
 
     }
+
+
+    public static function salvarExperiencia($data)  {
+        try {
+
+            $db = new DB();
+
+            $titulo = $data['titulo'];
+            $idUsuario    = $data['id_usuario'];
+            $texto = $data['texto'];
+
+            $db->insert('experiencia',
+                "id_usuario,titulo,texto",
+                "'".$idUsuario."','".$titulo."', '".$texto."'"
+            );
+
+
+        }catch (\Exception $e){
+            echo $e->getMessage();
+
+        }
+
+    }
+
+
 }
