@@ -137,17 +137,16 @@ class Usuario
             $idUsuario    = $data['id_usuario'];
             $texto = $data['texto'];
 
-            $query = $db->insert('experiencia',
+            $db->insert('experiencia',
                 "id_usuario,titulo,texto",
                 "'".$idUsuario."','".$titulo."', '".$texto."'"
             );
-
-            return $query->fetchAll();
 
         }catch (\Exception $e){
             echo $e->getMessage();
 
         }
+
     }
 
 

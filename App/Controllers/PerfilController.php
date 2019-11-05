@@ -204,16 +204,11 @@ class PerfilController extends Controller {
     }
 
     public function salvarExperiencia() {
-        $this->existeLayout(false);
-
         if($oUser = Usuario::salvarExperiencia($_POST)){
 
             $this->render('perfil/editar');
         }
 
         $this->render('error/usuario');
-
     }
 }
-
-
