@@ -305,13 +305,6 @@
                                             <?php
                                         }
                                         ?>
-
-                                        <h4>Web designer <a href="#" title=""><i class="fa fa-pencil"></i></a></h4>
-                                        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sapien ante, ultricies et imperdiet id, semper vitae lacus. Pellentesque a enim vitae ligula condimentum consequat ut in nulla </p>
-                                        <h4> UI / UX Designer <a href="#" title=""><i class="fa fa-pencil"></i></a></h4>
-                                        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sapien ante, ultricies et imperdiet id, semper vitae lacus. Pellentesque a enim vitae ligula condimentum consequat ut in nulla</p>
-                                        <h4>Desenvolvedor PHP <a href="#" title=""><i class="fa fa-pencil"></i></a></h4>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sapien ante, ultricies et imperdiet id, semper vitae lacus. Pellentesque a enim vitae ligula condimentum consequat ut in nulla</p>
                                         <p class="no-margin">  </p>
                                     </div>
                                     <div class="user-profile-ov">
