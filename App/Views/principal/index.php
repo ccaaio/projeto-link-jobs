@@ -220,7 +220,8 @@
 
 
                                         <!-- template postagem -->
-                                    <!-- <div class="post-bar"> -->
+                       <!--
+                                    <div class="post-bar">
                                         <div class="post_topbar">
                                             <div class="usy-dt">
                                                 <img src="http://via.placeholder.com/50x50" alt="">
@@ -277,6 +278,7 @@
                                             <a><i class="la la-eye"></i>Visualizações 50</a>
                                         </div>
                                     </div>
+                           -->
                                     <div class="top-profiles">
                                         <div class="pf-hd">
                                             <h3>Top Perfis</h3>
