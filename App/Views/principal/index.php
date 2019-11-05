@@ -423,6 +423,7 @@
             <div class="post-project-fields">
                 <form method="post" action="/perfil/salvarVaga">
                     <input type="hidden" name="id_usuario" value="<?php  echo \App\Lib\Auth::usuario()->id; ?>">
+                    <input type="hidden" name="nomeUsuario" value="<?php  echo \App\Lib\Auth::usuario()->usuario; ?>">
                     <div class="row">
                         <div class="col-lg-12">
                             <input type="text" name="titulo" placeholder="Título">
