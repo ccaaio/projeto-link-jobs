@@ -142,6 +142,8 @@ class Usuario
                 "'".$idUsuario."','".$titulo."', '".$texto."'"
             );
 
+            header("Location: https://projeto-link-jobs.herokuapp.com/perfil/editar");
+
         }catch (\Exception $e){
             echo $e->getMessage();
 
