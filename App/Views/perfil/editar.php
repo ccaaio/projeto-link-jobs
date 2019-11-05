@@ -296,7 +296,7 @@
                                                 <?php
                                                 foreach($aViewVar['aListaExperiencia'] as $aExperiencia) {
                                                     ?>
-                                                    <h4><?php echo $aExperiencia['titulo']; ?> <a href="/perfil/editarExperiencia/<?php echo $aExperiencia['id']; ?>" title=""><i class="fa fa-pencil"></i></a></h4>
+                                                    <h4><?php echo $aExperiencia['titulo']; ?> <a data-id-experiencia="<?php echo $aExperiencia['id']; ?>" title=""><i class="fa fa-pencil"></i></a></h4>
                                                        <p><?php echo $aExperiencia['texto']; ?></p>
 
                                                     <?php
