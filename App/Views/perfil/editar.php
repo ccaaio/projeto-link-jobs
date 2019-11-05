@@ -309,9 +309,27 @@
                                     </div>
                                     <div class="user-profile-ov">
                                         <h3><a href="#" title="" class="ed-box-open">Educação</a> <a href="#" title="" class="ed-box-open"><i class="fa fa-pencil"></i></a> <a href="#" title=""><i class="fa fa-plus-square"></i></a></h3>
-                                        <h4>Master em Ciência de Dados</h4>
-                                        <span>2015 - 2018</span>
-                                        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sapien ante, ultricies et imperdiet id, semper vitae lacus. Pellentesque a enim vitae ligula condimentum consequat ut in nulla </p>
+
+                                        <?php
+                                        if(!count($aViewVar['aListaEducacao'])){
+                                            ?>
+                                            <div class="alert alert-danger" role="alert">Nenhuma informação de Educação cadastrada!</div>
+                                            <?php
+                                        } else {
+                                            ?>
+                                            <?php
+                                            foreach($aViewVar['aListaEducacao'] as $aEducacao) {
+                                                ?>
+                                                <h4><?php echo $aEducacao['titulo']; ?> <a data-id-educacao="<?php echo $aEducacao['id']; ?>" title=""><i class="fa fa-pencil"></i></a></h4>
+                                                <span> <?php echo $aEducacao['ano_inicio']; ?> - <?php echo $aEducacao['ano_fim']; ?> </span>
+                                                <p><?php echo $aEducacao['texto']; ?></p>
+
+                                                <?php
+                                            }
+                                            ?>
+                                            <?php
+                                        }
+                                        ?>
                                     </div>
                                     <div class="user-profile-ov">
                                         <h3><a href="#" title="" class="lct-box-open">Localização</a> <a href="#" title="" class="lct-box-open"><i class="fa fa-pencil"></i></a> <a href="#" title=""><i class="fa fa-plus-square"></i></a></h3>
@@ -325,7 +343,7 @@
                                             <?php
                                             foreach($aViewVar['aListaLocalizacao'] as $aLocalizacao) {
                                                 ?>
-                                                <h4><?php echo $aLocalizacao['titulo']; ?> <a data-id-experiencia="<?php echo $aLocalizacao['id']; ?>" title=""><i class="fa fa-pencil"></i></a></h4>
+                                                <h4><?php echo $aLocalizacao['titulo']; ?> <a data-id-localizacao="<?php echo $aLocalizacao['id']; ?>" title=""><i class="fa fa-pencil"></i></a></h4>
                                                 <p><?php echo $aLocalizacao['texto']; ?></p>
 
                                                 <?php
@@ -1094,30 +1112,31 @@
 
     <div class="overview-box" id="education-box">
         <div class="overview-edit">
-            <h3>Education</h3>
-            <form>
-                <input type="text" name="school" placeholder="School / University">
+            <h3>Educação</h3>
+            <form method="post" action="/perfil/salvarEducacao">
+                <input type="hidden" name="id_usuario" value="<?php  echo \App\Lib\Auth::usuario()->id; ?>">
+                <input type="text" name="titulo" placeholder="Escola / Universidade">
                 <div class="datepicky">
                     <div class="row">
                         <div class="col-lg-6 no-left-pd">
                             <div class="datefm">
-                                <input type="text" name="from" placeholder="From" class="datepicker">
+                                <input type="date" name="ano_inicio" placeholder="Data de Entrada" class="datepicker">
                                 <i class="fa fa-calendar"></i>
                             </div>
                         </div>
                         <div class="col-lg-6 no-righ-pd">
                             <div class="datefm">
-                                <input type="text" name="to" placeholder="To" class="datepicker">
+                                <input type="date" name="ano_fim" placeholder="Data de Saída" class="datepicker">
                                 <i class="fa fa-calendar"></i>
                             </div>
                         </div>
                     </div>
                 </div>
-                <input type="text" name="degree" placeholder="Degree">
-                <textarea placeholder="Description"></textarea>
+                <!-- <input type="text" name="degree" placeholder="Degree"> -->
+                <textarea name="texto" placeholder="Descrição"></textarea>
                 <button type="submit" class="save">Salvar</button>
-                <button type="submit" class="save-add">Salvar & adicionar mais</button>
-                <button type="submit" class="cancel">Cancelar</button>
+                <!-- <button type="submit" class="save-add">Salvar & adicionar mais</button> -->
+                <button type="button" class="cancel">Cancelar</button>
             </form>
             <a href="#" title="" class="close-box"><i class="la la-close"></i></a>
         </div>

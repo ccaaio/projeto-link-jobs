@@ -149,6 +149,30 @@ class Usuario
         }
     }
 
+    public static function salvarEducacao($data)  {
+        try {
+
+            $db = new DB();
+
+            $titulo = $data['titulo'];
+            $idUsuario    = $data['id_usuario'];
+            $texto = $data['texto'];
+            $anoInicio = $data['ano_inicio'];
+            $anoFim = $data['ano_fim'];
+
+            $db->insert('educacao',
+                "id_usuario,titulo,ano_inicio,ano_fim,texto",
+                "'".$idUsuario."','".$titulo."','".$anoInicio."','".$anoFim."' '".$texto."'"
+            );
+
+            header("Location: https://projeto-link-jobs.herokuapp.com/perfil/editar");
+
+        }catch (\Exception $e){
+            echo $e->getMessage();
+
+        }
+    }
+
     public static function salvarLocalizacao($data)  {
         try {
 
@@ -210,6 +234,35 @@ class Usuario
                 // Faz a consulta
                 $query = $db->query(
                     "SELECT * FROM experiencia WHERE id_usuario = '".$idUsuario."' ORDER BY id DESC"
+                );
+
+                return $query->fetchAll();
+
+            }
+        }catch (Exception $e){
+            echo $e->getMessage();
+        }
+
+    }
+
+    public static function listarEducacao($id=null) {
+        $db = new DB();
+
+        $idUsuario =  \App\Lib\Auth::usuario()->id;
+
+        try {
+
+            if($id) {
+                // Faz a consulta
+                $query = $db->query(
+                    "SELECT * FROM educacao WHERE id_usuario = '".$idUsuario."' ORDER BY id DESC"
+                );
+
+                return $query->fetch();
+            }else{
+                // Faz a consulta
+                $query = $db->query(
+                    "SELECT * FROM educacao WHERE id_usuario = '".$idUsuario."' ORDER BY id DESC"
                 );
 
                 return $query->fetchAll();
