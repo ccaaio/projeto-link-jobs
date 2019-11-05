@@ -32,8 +32,12 @@ class PerfilController extends Controller {
         self::setViewParam('nameController',$this->app->getNameController());
 
         $oListaExperiencia = Usuario::listarExperiencia();
+        $oListaLocalizacao = Usuario::listarLocalizacao();
+        $oListaHabilidades = Usuario::listarHabilidades();
 
         self::setViewParam('aListaExperiencia',$oListaExperiencia);
+        self::setViewParam('aListaLocalizacao',$oListaLocalizacao);
+        self::setViewParam('aListaHabilidades',$oListaHabilidades);
 
 
         self::setViewCss('/public/css/pages/principal/principal.css');
@@ -209,6 +213,26 @@ class PerfilController extends Controller {
 
     public function salvarExperiencia() {
         if($oUser = Usuario::salvarExperiencia($_POST)){
+
+            header("Location: https://projeto-link-jobs.herokuapp.com/perfil/editar");
+            $this->render('perfil/editar');
+        }
+
+        $this->render('error/usuario');
+    }
+
+    public function salvarLocalizacao() {
+        if($oUser = Usuario::salvarLocalizacao($_POST)){
+
+            header("Location: https://projeto-link-jobs.herokuapp.com/perfil/editar");
+            $this->render('perfil/editar');
+        }
+
+        $this->render('error/usuario');
+    }
+
+    public function salvarHabilidade() {
+        if($oUser = Usuario::salvarHabilidade($_POST)){
 
             header("Location: https://projeto-link-jobs.herokuapp.com/perfil/editar");
             $this->render('perfil/editar');

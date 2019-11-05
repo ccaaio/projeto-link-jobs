@@ -315,20 +315,50 @@
                                     </div>
                                     <div class="user-profile-ov">
                                         <h3><a href="#" title="" class="lct-box-open">Localização</a> <a href="#" title="" class="lct-box-open"><i class="fa fa-pencil"></i></a> <a href="#" title=""><i class="fa fa-plus-square"></i></a></h3>
-                                        <h4>São Paulo</h4>
-                                        <p>Av Ibirapuera, 1000 - SP </p>
+                                        <?php
+                                        if(!count($aViewVar['aListaLocalizacao'])){
+                                            ?>
+                                            <div class="alert alert-danger" role="alert">Nenhuma localizacao cadastrada!</div>
+                                            <?php
+                                        } else {
+                                            ?>
+                                            <?php
+                                            foreach($aViewVar['aListaLocalizacao'] as $aLocalizacao) {
+                                                ?>
+                                                <h4><?php echo $aLocalizacao['titulo']; ?> <a data-id-experiencia="<?php echo $aLocalizacao['id']; ?>" title=""><i class="fa fa-pencil"></i></a></h4>
+                                                <p><?php echo $aLocalizacao['texto']; ?></p>
+
+                                                <?php
+                                            }
+                                            ?>
+                                            <?php
+                                        }
+                                        ?>
                                     </div>
                                     <div class="user-profile-ov">
                                         <h3><a href="#" title="" class="skills-open">Habilidades</a> <a href="#" title="" class="skills-open"><i class="fa fa-pencil"></i></a> <a href="#"><i class="fa fa-plus-square"></i></a></h3>
                                         <ul>
-                                            <li><a href="#" title="">HTML</a></li>
-                                            <li><a href="#" title="">PHP</a></li>
-                                            <li><a href="#" title="">CSS</a></li>
-                                            <li><a href="#" title="">Javascript</a></li>
-                                            <li><a href="#" title="">Wordpress</a></li>
-                                            <li><a href="#" title="">Photoshop</a></li>
-                                            <li><a href="#" title="">Illustrator</a></li>
-                                            <li><a href="#" title="">Corel Draw</a></li>
+                                            <?php
+                                            if(!count($aViewVar['aListaHabilidades'])){
+                                                ?>
+                                                <div class="alert alert-danger" role="alert">Nenhuma habilidade encontrada!</div>
+                                                <?php
+                                            } else {
+                                                ?>
+                                                <ul>
+                                                <?php
+                                                foreach($aViewVar['aListaHabilidades'] as $aHabilidades) {
+                                                    ?>
+
+                                                    <li><a data-id-habilidade="<?php echo $aHabilidades['id']; ?>" href="#" title="<?php echo $aHabilidades['habilidade']; ?>" alt="<?php echo $aHabilidades['habilidade']; ?>"><?php echo $aHabilidades['habilidade']; ?></a></li>
+
+                                                    <?php
+                                                }
+                                                ?>
+                                                </ul>
+                                                <?php
+                                            }
+                                            ?>
                                         </ul>
                                     </div>
                                 </div>
@@ -1096,20 +1126,28 @@
     <div class="overview-box" id="location-box">
         <div class="overview-edit">
             <h3>Localização</h3>
-            <form>
-                <div class="datefm">
-                    <select>
-                        <option>Country</option>
-                        <option value="pakistan">Paquistão</option>
-                        <option value="england">Inglaterra</option>
-                        <option value="india">India</option>
-                        <option value="usa">Estados Unidos</option>
-                    </select>
-                    <i class="fa fa-globe"></i>
+            <form method="post" action="/perfil/salvarLocalizacao">
+                <input type="hidden" name="id_usuario" value="<?php  echo \App\Lib\Auth::usuario()->id; ?>">
+                <input name="titulo" type="text" placeholder="Estado/País">
+                <input type="text" name="texto" placeholder="Endereço (ex: Av Ibirapuera, 1000 - SP)">
+                <!--
+               <div class="datefm">
+
+                   <select>
+                       <option>País</option>
+                       <option value="pakistan">Paquistão</option>
+                       <option value="england">Inglaterra</option>
+                       <option value="india">India</option>
+                       <option value="usa">Estados Unidos</option>
+                   </select>
+                   <i class="fa fa-globe"></i>
+
                 </div>
+                   -->
+                <!--
                 <div class="datefm">
                     <select>
-                        <option>City</option>
+                        <option>Cidade</option>
                         <option value="london">Londres</option>
                         <option value="new-york">Nova York</option>
                         <option value="sydney">Sydney</option>
@@ -1117,8 +1155,9 @@
                     </select>
                     <i class="fa fa-map-marker"></i>
                 </div>
+                -->
                 <button type="submit" class="save">Salvar</button>
-                <button type="submit" class="cancel">Cancelar</button>
+                <button type="button" class="cancel">Cancelar</button>
             </form>
             <a href="#" title="" class="close-box"><i class="la la-close"></i></a>
         </div>
@@ -1126,17 +1165,18 @@
 
     <div class="overview-box" id="skills-box">
         <div class="overview-edit">
-            <h3>Skills</h3>
-            <ul>
+            <h3>Habilidades</h3>
+            <ul class="invisivel">
                 <li><a href="#" title="" class="skl-name">HTML</a><a href="#" title="" class="close-skl"><i class="la la-close"></i></a></li>
                 <li><a href="#" title="" class="skl-name">php</a><a href="#" title="" class="close-skl"><i class="la la-close"></i></a></li>
                 <li><a href="#" title="" class="skl-name">css</a><a href="#" title="" class="close-skl"><i class="la la-close"></i></a></li>
             </ul>
-            <form>
-                <input type="text" name="skills" placeholder="Skills">
+            <form method="post" action="/perfil/salvarHabilidade">
+                <input type="text" name="habilidade" placeholder="ex: HTML ou PHP...">
+                <input type="hidden" name="id_usuario" value="<?php  echo \App\Lib\Auth::usuario()->id; ?>">
                 <button type="submit" class="save">Salvar</button>
-                <button type="submit" class="save-add">Save & adicionar mais</button>
-                <button type="submit" class="cancel">Cancelar</button>
+                <!-- <button type="submit" class="save-add">Save & adicionar mais</button> -->
+                <button type="button" class="cancel">Cancelar</button>
             </form>
             <a href="#" title="" class="close-box"><i class="la la-close"></i></a>
         </div>

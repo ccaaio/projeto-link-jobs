@@ -147,7 +147,49 @@ class Usuario
             echo $e->getMessage();
 
         }
+    }
 
+    public static function salvarLocalizacao($data)  {
+        try {
+
+            $db = new DB();
+
+            $titulo = $data['titulo'];
+            $texto = $data['texto'];
+            $idUsuario    = $data['id_usuario'];
+
+            $db->insert('localizacao',
+                "id_usuario,titulo,texto",
+                "'".$idUsuario."','".$titulo."','".$texto."'"
+            );
+
+            header("Location: https://projeto-link-jobs.herokuapp.com/perfil/editar");
+
+        }catch (\Exception $e){
+            echo $e->getMessage();
+
+        }
+    }
+
+    public static function salvarHabilidade($data)  {
+        try {
+
+            $db = new DB();
+
+            $habilidade = $data['habilidade'];
+            $idUsuario    = $data['id_usuario'];
+
+            $db->insert('habilidades',
+                "id_usuario,habilidade",
+                "'".$idUsuario."','".$habilidade."'"
+            );
+
+            header("Location: https://projeto-link-jobs.herokuapp.com/perfil/editar");
+
+        }catch (\Exception $e){
+            echo $e->getMessage();
+
+        }
     }
 
     public static function listarExperiencia($id=null) {
@@ -168,6 +210,64 @@ class Usuario
                 // Faz a consulta
                 $query = $db->query(
                     "SELECT * FROM experiencia WHERE id_usuario = '".$idUsuario."' ORDER BY id DESC"
+                );
+
+                return $query->fetchAll();
+
+            }
+        }catch (Exception $e){
+            echo $e->getMessage();
+        }
+
+    }
+
+    public static function listarLocalizacao($id=null) {
+        $db = new DB();
+
+        $idUsuario =  \App\Lib\Auth::usuario()->id;
+
+        try {
+
+            if($id) {
+                // Faz a consulta
+                $query = $db->query(
+                    "SELECT * FROM localizacao WHERE id_usuario = '".$idUsuario."' ORDER BY id DESC"
+                );
+
+                return $query->fetch();
+            }else{
+                // Faz a consulta
+                $query = $db->query(
+                    "SELECT * FROM localizacao WHERE id_usuario = '".$idUsuario."' ORDER BY id DESC"
+                );
+
+                return $query->fetchAll();
+
+            }
+        }catch (Exception $e){
+            echo $e->getMessage();
+        }
+
+    }
+
+    public static function listarHabilidades($id=null) {
+        $db = new DB();
+
+        $idUsuario =  \App\Lib\Auth::usuario()->id;
+
+        try {
+
+            if($id) {
+                // Faz a consulta
+                $query = $db->query(
+                    "SELECT * FROM habilidades WHERE id_usuario = '".$idUsuario."' ORDER BY id DESC"
+                );
+
+                return $query->fetch();
+            }else{
+                // Faz a consulta
+                $query = $db->query(
+                    "SELECT * FROM habilidades WHERE id_usuario = '".$idUsuario."' ORDER BY id DESC"
                 );
 
                 return $query->fetchAll();
