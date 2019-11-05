@@ -143,11 +143,14 @@
                                 <div class="posts-section">
 
                                     <?php
-                                    if(!count($aViewVar['aListaVaga'])){
+                                    if(!count($aViewVar['aListaVagas'])){
                                         ?>
                                         <div class="alert alert-warning" role="alert">Você não publicou nada ainda...</div>
                                         <?php
                                     } else {
+                                    ?>
+                                    <?php
+                                    foreach($aViewVar['aListaExperiencia'] as $aExperiencia) {
                                         ?>
                                         <div class="post-bar">
                                             <div class="post_topbar">
@@ -203,16 +206,9 @@
                                                 <a><i class="la la-eye"></i>Visualizações 0</a>
                                             </div>
                                         </div>
-                                            <?php
-                                            foreach($aViewVar['aListaHabilidades'] as $oListaVaga) {
-                                                ?>
-
-                                                <li><a data-id-habilidade="<?php echo $oListaVaga['id']; ?>" href="#" title="<?php echo $oListaVaga['habilidade']; ?>" alt="<?php echo $oListaVaga['habilidade']; ?>"><?php echo $oListaVaga['habilidade']; ?></a></li>
-
-                                                <?php
-                                            }
-                                            ?>
-                                        </ul>
+                                        <?php
+                                    }
+                                        ?>
                                         <?php
                                     }
                                     ?>

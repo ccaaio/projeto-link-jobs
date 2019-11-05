@@ -18,7 +18,7 @@ class PrincipalController extends Controller {
         self::setViewParam('nameController',$this->app->getNameController());
 
         $oListaVaga = Usuario::listarVagas();
-        self::setViewParam('aListaVaga',$oListaVaga);
+        self::setViewParam('aListaVagas',$oListaVaga);
 
         self::setViewCss('/public/css/pages/principal/principal.css');
 
