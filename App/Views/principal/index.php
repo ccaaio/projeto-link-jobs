@@ -154,8 +154,8 @@
                                                 <div class="usy-dt">
                                                     <img src="http://via.placeholder.com/50x50" alt="">
                                                     <div class="usy-name">
-                                                        <h3><?php echo $aVagas['nomeUsuario']; ?></h3>
-                                                        <span><img src="/public/images/clock.png" alt=""><?php echo $aVagas['dataHora']; ?></span>
+                                                        <h3><?php echo $oListaVaga['nomeUsuario']; ?></h3>
+                                                        <span><img src="/public/images/clock.png" alt=""><?php echo $oListaVaga['dataHora']; ?></span>
                                                     </div>
                                                 </div>
                                                 <div class="ed-opts">
@@ -171,7 +171,7 @@
                                             </div>
                                             <div class="epi-sec">
                                                 <ul class="descp">
-                                                    <li><img src="/public/images/icon8.png" alt=""><span><?php echo $aVagas['categoria']; ?></span></li>
+                                                    <li><img src="/public/images/icon8.png" alt=""><span><?php echo $oListaVaga['categoria']; ?></span></li>
                                                     <li><img src="/public/images/icon9.png" alt=""><span>Brasil</span></li>
                                                 </ul>
                                                 <ul class="bk-links">
@@ -180,15 +180,15 @@
                                                 </ul>
                                             </div>
                                             <div class="job_descp">
-                                                <h3><?php echo $aVagas['titulo']; ?></h3>
-                                                <p><?php echo $aVagas['descricao']; ?></p>
+                                                <h3><?php echo $oListaVaga['titulo']; ?></h3>
+                                                <p><?php echo $oListaVaga['descricao']; ?></p>
                                                 <ul class="job-dt">
-                                                    <li><a href="#" title=""><?php echo $aVagas['integral']; ?></a></li>
-                                                    <li><span>R$ <?php echo $aVagas['preco']; ?> / hr</span></li>
+                                                    <li><a href="#" title=""><?php echo $oListaVaga['integral']; ?></a></li>
+                                                    <li><span>R$ <?php echo $oListaVaga['preco']; ?> / hr</span></li>
                                                 </ul>
 
                                                 <ul class="skill-tags">
-                                                    <li><a href="#" title=""><?php echo $aVagas['habilidade']; ?></a></li>
+                                                    <li><a href="#" title=""><?php echo $oListaVaga['habilidade']; ?></a></li>
                                                 </ul>
                                             </div>
                                             <div class="job-status-bar">
@@ -204,10 +204,10 @@
                                             </div>
                                         </div>
                                             <?php
-                                            foreach($aViewVar['aListaHabilidades'] as $aVagas) {
+                                            foreach($aViewVar['aListaHabilidades'] as $oListaVaga) {
                                                 ?>
 
-                                                <li><a data-id-habilidade="<?php echo $aVagas['id']; ?>" href="#" title="<?php echo $aVagas['habilidade']; ?>" alt="<?php echo $aVagas['habilidade']; ?>"><?php echo $aVagas['habilidade']; ?></a></li>
+                                                <li><a data-id-habilidade="<?php echo $oListaVaga['id']; ?>" href="#" title="<?php echo $oListaVaga['habilidade']; ?>" alt="<?php echo $oListaVaga['habilidade']; ?>"><?php echo $oListaVaga['habilidade']; ?></a></li>
 
                                                 <?php
                                             }
