@@ -1120,13 +1120,13 @@
                     <div class="row">
                         <div class="col-lg-6 no-left-pd">
                             <div class="datefm">
-                                <input type="text" name="ano_inicio" placeholder="Data de Entrada (ex: dd/mm/aaaa)" class="datepicker">
+                                <input type="date" name="ano_inicio" placeholder="Data de Início" class="datepicker">
                                 <i class="fa fa-calendar"></i>
                             </div>
                         </div>
                         <div class="col-lg-6 no-righ-pd">
                             <div class="datefm">
-                                <input type="text" name="ano_fim" placeholder="Data de Saída (ex: dd/mm/aaaa)" class="datepicker">
+                                <input type="date" name="ano_fim" placeholder="Data de Saída" class="datepicker">
                                 <i class="fa fa-calendar"></i>
                             </div>
                         </div>
