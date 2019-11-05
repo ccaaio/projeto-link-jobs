@@ -285,6 +285,27 @@
                                     </div>
                                     <div class="user-profile-ov st2">
                                         <h3><a href="#" title="" class="exp-bx-open">Experiência</a><a href="#" title="" class="exp-bx-open"><i class="fa fa-pencil"></i></a> <a href="#" title="" class="exp-bx-open"><i class="fa fa-plus-square"></i></a></h3>
+
+                                        <?php
+                                        if(!count($aViewVar['aListaExperiencia'])){
+                                            ?>
+                                            <div class="alert alert-danger" role="alert">Nenhuma experiência cadastrada!</div>
+                                            <?php
+                                        } else {
+                                        ?>
+                                                <?php
+                                                foreach($aViewVar['aListaExperiencia'] as $aExperiencia) {
+                                                    ?>
+                                                    <h4><?php echo $aExperiencia['titulo']; ?> <a href="/perfil/editarExperiencia/<?php echo $aExperiencia['id']; ?>" title=""><i class="fa fa-pencil"></i></a></h4>
+                                                       <p><?php echo $aExperiencia['texto']; ?></p>
+
+                                                    <?php
+                                                }
+                                                ?>
+                                            <?php
+                                        }
+                                        ?>
+
                                         <h4>Web designer <a href="#" title=""><i class="fa fa-pencil"></i></a></h4>
                                         <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sapien ante, ultricies et imperdiet id, semper vitae lacus. Pellentesque a enim vitae ligula condimentum consequat ut in nulla </p>
                                         <h4> UI / UX Designer <a href="#" title=""><i class="fa fa-pencil"></i></a></h4>

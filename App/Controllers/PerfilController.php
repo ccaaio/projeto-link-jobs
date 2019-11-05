@@ -31,6 +31,10 @@ class PerfilController extends Controller {
 
         self::setViewParam('nameController',$this->app->getNameController());
 
+        $oListaExperiencia = Usuario::listarExperiencia();
+
+        self::setViewParam('aListaExperiencia',$oListaExperiencia);
+
 
         self::setViewCss('/public/css/pages/principal/principal.css');
 
