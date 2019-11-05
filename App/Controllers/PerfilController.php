@@ -206,6 +206,7 @@ class PerfilController extends Controller {
     public function salvarExperiencia() {
         if($oUser = Usuario::salvarExperiencia($_POST)){
 
+            header("Location: https://projeto-link-jobs.herokuapp.com/perfil/editar");
             $this->render('perfil/editar');
         }
 
