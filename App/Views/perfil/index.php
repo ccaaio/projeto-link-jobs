@@ -445,35 +445,96 @@
                                     </div>
                                     <div class="user-profile-ov st2">
                                         <h3>Experiência</h3>
-                                        <h4>Web designer</h4>
-                                        <p> </p>
-                                        <h4>UI / UX Designer</h4>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sapien ante, ultricies et imperdiet id, semper vitae lacus. Pellentesque a enim vitae ligula condimentum consequat ut in nulla</p>
-                                        <h4>Desenvolvedor PHP</h4>
-                                        <p class="no-margin"> </p>
+                                        <?php
+                                        if(!count($aViewVar['aListaExperiencia'])){
+                                        ?>
+                                        <div class="alert alert-danger" role="alert">Nenhuma experiência cadastrada!</div>
+                                        <?php
+                                        } else {
+                                        ?>
+                                        <?php
+                                        foreach($aViewVar['aListaExperiencia'] as $aExperiencia) {
+                                        ?>
+                                        <h4><?php echo $aExperiencia['titulo']; ?></h4>
+                                        <p><?php echo $aExperiencia['texto']; ?></p>
+
+                                        <?php
+                                        }
+                                        ?>
+                                        <?php
+                                        }
+                                        ?>
+                                        <p class="no-margin">  </p>
                                     </div>
                                     <div class="user-profile-ov">
                                         <h3>Educação</h3>
-                                        <h4>Master em Ciência de Dados</h4>
-                                        <span>2015 - 2018</span>
-                                        <p> </p>
+                                        <?php
+                                        if(!count($aViewVar['aListaEducacao'])){
+                                            ?>
+                                            <div class="alert alert-danger" role="alert">Nenhuma informação de Educação cadastrada!</div>
+                                            <?php
+                                        } else {
+                                            ?>
+                                            <?php
+                                            foreach($aViewVar['aListaEducacao'] as $aEducacao) {
+                                                ?>
+                                                <h4><?php echo $aEducacao['titulo']; ?></h4>
+                                                <span> <?php echo $aEducacao['ano_inicio']; ?> - <?php echo $aEducacao['ano_fim']; ?> </span>
+                                                <p><?php echo $aEducacao['texto']; ?></p>
+
+                                                <?php
+                                            }
+                                            ?>
+                                            <?php
+                                        }
+                                        ?>
                                     </div>
                                     <div class="user-profile-ov">
                                         <h3>Localização</h3>
-                                        <h4>Brasil</h4>
-                                        <p>Av Ibirapuera, 1000 - SP </p>
+                                        <?php
+                                        if(!count($aViewVar['aListaLocalizacao'])){
+                                            ?>
+                                            <div class="alert alert-danger" role="alert">Nenhuma localizacao cadastrada!</div>
+                                            <?php
+                                        } else {
+                                            ?>
+                                            <?php
+                                            foreach($aViewVar['aListaLocalizacao'] as $aLocalizacao) {
+                                                ?>
+                                                <h4><?php echo $aLocalizacao['titulo']; ?></h4>
+                                                <p><?php echo $aLocalizacao['texto']; ?></p>
+
+                                                <?php
+                                            }
+                                            ?>
+                                            <?php
+                                        }
+                                        ?>
                                     </div>
                                     <div class="user-profile-ov">
                                         <h3>Habilidades</h3>
                                         <ul>
-                                            <li><a href="#" title="">HTML</a></li>
-                                            <li><a href="#" title="">PHP</a></li>
-                                            <li><a href="#" title="">CSS</a></li>
-                                            <li><a href="#" title="">Javascript</a></li>
-                                            <li><a href="#" title="">Wordpress</a></li>
-                                            <li><a href="#" title="">Photoshop</a></li>
-                                            <li><a href="#" title="">Illustrator</a></li>
-                                            <li><a href="#" title="">Corel Draw</a></li>
+                                            <?php
+                                            if(!count($aViewVar['aListaHabilidades'])){
+                                                ?>
+                                                <div class="alert alert-danger" role="alert">Nenhuma habilidade encontrada!</div>
+                                                <?php
+                                            } else {
+                                                ?>
+                                                <ul>
+                                                    <?php
+                                                    foreach($aViewVar['aListaHabilidades'] as $aHabilidades) {
+                                                        ?>
+
+                                                        <li><a data-id-habilidade="<?php echo $aHabilidades['id']; ?>" href="#" title="<?php echo $aHabilidades['habilidade']; ?>" alt="<?php echo $aHabilidades['habilidade']; ?>"><?php echo $aHabilidades['habilidade']; ?></a></li>
+
+                                                        <?php
+                                                    }
+                                                    ?>
+                                                </ul>
+                                                <?php
+                                            }
+                                            ?>
                                         </ul>
                                     </div>
                                 </div>
