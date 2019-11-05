@@ -208,7 +208,7 @@ class PerfilController extends Controller {
 
         if($oUser = Usuario::salvarExperiencia($_POST)){
 
-            $this->redirect('perfil/editar');
+            $this->render('perfil/editar');
         }
 
         $this->render('error/usuario');
