@@ -1,5 +1,5 @@
 <body>
-
+<input id="idUsuario" type="hidden" value="<?php  echo \App\Lib\Auth::usuario()->id; ?>">
 <div class="wrapper">
     <header>
         <div class="container">
@@ -441,7 +441,7 @@
                                 <div class="product-feed-tab" id="info-dd">
                                     <div class="user-profile-ov">
                                         <h3>Ver tudo</h3>
-                                        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sapien ante, ultricies et imperdiet id, semper vitae lacus. Pellentesque a enim vitae ligula condimentum consequat ut in nulla</p>
+                                        <p id="texto-visao-geral"></p>
                                     </div>
                                     <div class="user-profile-ov st2">
                                         <h3>Experiência</h3>
