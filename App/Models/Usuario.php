@@ -155,14 +155,14 @@ class Usuario
             $db = new DB();
 
             $titulo = $data['titulo'];
-            $idUsuario    = $data['id_usuario'];
-            $texto = $data['texto'];
+            $idUsuario = $data['id_usuario'];
             $anoInicio = $data['ano_inicio'];
             $anoFim = $data['ano_fim'];
+            $texto = $data['texto'];
 
             $db->insert('educacao',
                 "id_usuario,titulo,ano_inicio,ano_fim,texto",
-                "'".$idUsuario."','".$titulo."','".$anoInicio."','".$anoFim."' '".$texto."'"
+                "'".$idUsuario."','".$titulo."','".$anoInicio."','".$anoFim."','".$texto."'"
             );
 
             header("Location: https://projeto-link-jobs.herokuapp.com/perfil/editar");
