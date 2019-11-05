@@ -37,7 +37,7 @@ class PerfilController extends Controller {
         $oListaHabilidades = Usuario::listarHabilidades();
 
         self::setViewParam('aListaExperiencia',$oListaExperiencia);
-        self::setViewParam('aListaHabilidades',$oListaEducacao);
+        self::setViewParam('aListaEducacao',$oListaEducacao);
         self::setViewParam('aListaLocalizacao',$oListaLocalizacao);
         self::setViewParam('aListaHabilidades',$oListaHabilidades);
 
