@@ -229,7 +229,7 @@ class Usuario
             $integral = $data['integral'];
             $descricao = $data['descricao'];
             $data = date('Y-m-d H:i:s');
-            $nomeUsuario = $data['nomeUsuario'];
+            $nomeUsuario = \App\Lib\Auth::usuario()->usuario;
 
             $db->insert('vaga',
                 "id_usuario,titulo,categoria,habilidade,preco,integral,descricao,dataHora,nomeUsuario",
