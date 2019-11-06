@@ -21,7 +21,6 @@
     #countryList{
         position: absolute;
         background-color: #efefef;
-        padding: 0.5em;
         width: 100%;
         border-bottom: 1px solid #bdbdbd;
         border-right: 1px solid #bdbdbd;
