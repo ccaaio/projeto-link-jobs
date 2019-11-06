@@ -14,7 +14,7 @@
     <script>
         $(document).ready(function () {
            setTimeout(function () {
-               $('input[name="search"]').typeahead({
+               $('input[name="txtCountry"]').typeahead({
                    source: function (query, result) {
                        $.ajax({
                            url: "/perfil/buscarUsuario",
