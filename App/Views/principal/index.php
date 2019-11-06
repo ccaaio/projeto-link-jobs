@@ -19,7 +19,6 @@
     }
 
     #countryList{
-        display: block;
         position: absolute;
         background-color: #efefef;
         padding: 0.5em;
