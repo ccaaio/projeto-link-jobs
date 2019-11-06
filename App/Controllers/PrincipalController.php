@@ -218,6 +218,11 @@ class PrincipalController extends Controller {
     public function amigo(){
         self::setViewParam('aAmigo',Usuario::listar($this->app->getParams()[0]));
 
+        self::setViewCss('/public/css/pages/principal/principal.css');
+
+        self::setViewJs('/public/js/principal/principal.js');
+        self::setViewJs('/public/js/funcoes/listagens/sugestoes.js');
+
         $this->render('principal/amigo');
     }
 }
