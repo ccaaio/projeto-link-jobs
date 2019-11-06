@@ -42,6 +42,7 @@ $(document).ready(function () {
                 var capa =f.src;
                 var trimCapa = $.trim(capa);
                 $('.user-pro-img img').attr("src", "/public/uploads/fotoPerfil/"+trimCapa+"");
+                $('.foto-perfil-navbar').attr('src', '/public/uploads/fotoPerfil/'+trimFoto+'');
                 setTimeout(function () {
 
                 }, 1500);
