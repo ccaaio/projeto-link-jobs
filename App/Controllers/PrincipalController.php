@@ -214,4 +214,10 @@ class PrincipalController extends Controller {
             }
         }
     }
+
+    public function amigo(){
+        self::setViewParam('aAmigo',Usuario::listar($this->app->getParams()[0]));
+
+        $this->render('principal/amigo');
+    }
 }
