@@ -276,4 +276,23 @@ class PerfilController extends Controller {
 
         $this->render('error/usuario');
     }
+
+    public function buscarUsuario() {
+        $keyword = strval($_POST['query']);
+        $search_param = "{$keyword}%";
+        $conn =new mysqli("remotemysql.com", "GQ4OpczpAV", "jt4ifMIloM", "GQ4OpczpAV");
+
+        $sql = $conn->prepare("SELECT * FROM usuario WHERE titulo LIKE ?");
+        $sql->bind_param("s",$search_param);
+        $sql->execute();
+        $result = $sql->get_result();
+        if ($result->num_rows > 0) {
+            while($row = $result->fetch_assoc()) {
+                $countryResult[] = $row["titulo"];
+            }
+            echo json_encode($countryResult);
+        }
+        $conn->close();
+    }
+
 }
