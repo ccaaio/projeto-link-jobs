@@ -58,10 +58,10 @@
 
                                 </div>
                                 <div class="sign_in_sec" id="tab-2">
-                                    <div class="signup-tab">
+                                    <div class="signup-tab invisivel">
                                         <ul>
                                             <li data-tab="tab-3" class="current"><a href="#" title="">Usuário</a></li>
-                                            <li data-tab="tab-4 invisivel"><a href="#" title="">Empresa</a></li>
+                                            <li class="invisivel" data-tab="tab-4"><a href="#" title="">Empresa</a></li>
                                         </ul>
                                     </div>
                                     <div class="dff-tab current" id="tab-3">
