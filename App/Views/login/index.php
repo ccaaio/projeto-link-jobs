@@ -55,7 +55,7 @@
                                     <div class="signup-tab">
                                         <ul>
                                             <li data-tab="tab-3" class="current"><a href="#" title="">Usuário</a></li>
-                                            <li data-tab="tab-4"><a href="#" title="">Empresa</a></li>
+                                            <li data-tab="tab-4 invisivel"><a href="#" title="">Empresa</a></li>
                                         </ul>
                                     </div>
                                     <div class="dff-tab current" id="tab-3">
@@ -200,7 +200,7 @@
                                             </div>
                                         </form>
                                     </div>
-                                    <div class="dff-tab" id="tab-4">
+                                    <div class="dff-tab invisivel" id="tab-4">
                                         <form>
                                             <div class="row">
                                                 <div class="col-lg-12 no-pdd">
