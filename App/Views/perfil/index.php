@@ -1,5 +1,6 @@
 <body>
 <input id="idUsuario" type="hidden" value="<?php  echo \App\Lib\Auth::usuario()->id; ?>">
+<input type="hidden" id="id-logado" value="<?php  echo \App\Lib\Auth::usuario()->id; ?>">
 <div class="wrapper">
     <header>
         <div class="container">
