@@ -17,6 +17,21 @@
         overflow: hidden !important;
         text-overflow: ellipsis !important;
     }
+
+    #countryList{
+        display: block;
+        position: absolute;
+        background-color: #efefef;
+        padding: 0.5em;
+        width: 100%;
+        border-bottom: 1px solid #bdbdbd;
+        border-right: 1px solid #bdbdbd;
+        border-left: 1px solid #bdbdbd;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        text-align: left;
+        box-shadow: 0 4px 7px -5px black;
+    }
 </style>
 <div class="wrapper">
     <header>
