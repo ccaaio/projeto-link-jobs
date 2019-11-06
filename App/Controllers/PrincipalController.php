@@ -217,6 +217,7 @@ class PrincipalController extends Controller {
 
     public function amigo(){
         self::setViewParam('aAmigo',Usuario::listar($this->app->getParams()[0]));
+        self::setViewParam('aFoto',Usuario::listarFoto($this->app->getParams()[0]));
 
         self::setViewCss('/public/css/pages/principal/principal.css');
 
