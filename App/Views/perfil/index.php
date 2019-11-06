@@ -62,7 +62,7 @@
 
 
     <section class="cover-sec">
-        <img src="http://via.placeholder.com/1600x400" alt="">
+        <img id="img-capa" src="http://via.placeholder.com/1600x400" alt="CAPA DO PERFIL DO USUÁRIO" title="CAPA DO PERFIL DO USUÁRIO" style="width: 1600px !important; max-width: 1600px !important; height: 400px !important; max-height: 400px !important;">
     </section>
 
 

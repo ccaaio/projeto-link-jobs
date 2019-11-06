@@ -1,4 +1,4 @@
-<style>
+9<style>
     .cover-sec > label.upload-capa {
         display: inline-block;
         color: #e44d3a;
