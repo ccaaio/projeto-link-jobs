@@ -42,7 +42,7 @@
                                                 <div class="checky-sec">
                                                     <div class="fgt-sec">
                                                         <input type="checkbox" name="cc" id="lembrar-de-mim">
-                                                        <label for="c1">
+                                                        <label for="lembrar-de-mim">
                                                             <span></span>
                                                         </label>
                                                         <small>Lembrar de mim</small>
