@@ -35,7 +35,7 @@ $(document).ready(function () {
                             $(item).remove();
                         },300);
                         Swal.fire({
-                            position: 'top-end',
+                            position: 'center',
                             type: 'success',
                             title: 'Solicitação de Amizade enviada!',
                             showConfirmButton: false,
