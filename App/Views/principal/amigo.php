@@ -73,7 +73,7 @@
                             <div class="main-left-sidebar">
                                 <div class="user_profile">
                                     <div class="user-pro-img">
-                                        <img src="/public/images/perfil/<?php echo $aViewVar['aFoto']['img']; ?>" alt="" style="width: 170px !important; max-width: 170px !important; height: 170px !important; max-height: 170px !important;">
+                                        <img src="/public/uploads/fotoPerfil/<?php echo $aViewVar['aFoto']['img']; ?>" alt="" style="width: 170px !important; max-width: 170px !important; height: 170px !important; max-height: 170px !important;">
                                     </div>
                                     <div class="user_pro_status">
 

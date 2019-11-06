@@ -273,6 +273,35 @@ class Usuario
 
     }
 
+    public static function listarVisaoG($id=null) {
+        $db = new DB();
+
+        $idUsuario =  \App\Lib\Auth::usuario()->id;
+
+        try {
+
+            if($id) {
+                // Faz a consulta
+                $query = $db->query(
+                    "SELECT * FROM visaoGeral WHERE id_usuario = '".$id."' ORDER BY id DESC"
+                );
+
+                return $query->fetch();
+            }else{
+                // Faz a consulta
+                $query = $db->query(
+                    "SELECT * FROM experiencia WHERE id_usuario = '".$idUsuario."' ORDER BY id DESC"
+                );
+
+                return $query->fetchAll();
+
+            }
+        }catch (Exception $e){
+            echo $e->getMessage();
+        }
+
+    }
+
     public static function listarEducacao($id=null) {
         $db = new DB();
 
