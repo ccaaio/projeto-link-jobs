@@ -77,7 +77,7 @@ $(document).ready(function () {
                     var capa =f.src;
                     var trimCapa = $.trim(capa);
                     $('#img-usuario-foto-perfil').attr("src", "/public/uploads/fotoPerfil/"+trimCapa+"");
-                    $('.foto-perfil-navbar').attr('src', '/public/uploads/fotoPerfil/'+trimFoto+'');
+                    $('.foto-perfil-navbar').attr('src', '/public/uploads/fotoPerfil/'+trimCapa+'');
                     setTimeout(function () {
 
                     }, 1500);
