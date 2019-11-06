@@ -8,7 +8,7 @@ $(document).ready(function () {
         data:{idUser: idLogadoFoto},
         success:function(f){
             var capa =f.src;
-            var trimCapa = $.trim(capa);
+            var trimFoto = $.trim(capa);
             $('.usr-pic').html('<img class="foto-perfil-user-logado" src="/public/uploads/fotoPerfil/'+trimFoto+'" alt="Foto do Perfil">');
             $('.user-picy').html('<img class="foto-perfil-user-logado" src="/public/uploads/fotoPerfil/'+trimFoto+'" alt="Foto do Perfil">');
             $('.foto-perfil-navbar').attr('src', '/public/uploads/fotoPerfil/'+trimFoto+'');
