@@ -1,3 +1,9 @@
+<style>
+    .invisivel{
+        display: none !important;
+        visibility: hidden !important;
+    }
+</style>
 <body class="sign-in">
     <div class="wrapper">
         <div class="sign-in-page">
