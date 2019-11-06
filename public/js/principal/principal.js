@@ -6,13 +6,15 @@ $(document).ready(function () {
         url:"/perfil/getFotoPerfil/",
         method:"POST",
         data:{idUser: idLogadoFoto},
-        success:function(s){
-            //alert(s.foto);
-            var foto =s.foto;
-            var trimFoto = $.trim(foto);
-            $('.usr-pic').html('<img class="foto-perfil-user-logado" src="/public/uploads/fotoPerfil/'+trimFoto+'" alt="Foto do Perfil">');
-            $('.user-picy').html('<img class="foto-perfil-user-logado" src="/public/uploads/fotoPerfil/'+trimFoto+'" alt="Foto do Perfil">');
-            $('.foto-perfil-navbar').attr('src', '/public/uploads/fotoPerfil/'+trimFoto+'');
+        success:function(f){
+            var capa =f.src;
+            var trimCapa = $.trim(capa);
+            $('.usr-pic').attr("src", "/public/uploads/fotoPerfil/"+trimCapa+"");
+            $('.user-picy').attr("src", "/public/uploads/fotoPerfil/"+trimCapa+"");
+            $('.foto-perfil-navbar').attr("src", "/public/uploads/fotoPerfil/"+trimCapa+"");
+            setTimeout(function () {
+
+            }, 1500);
         }
     });
 
