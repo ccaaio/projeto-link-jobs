@@ -3,7 +3,7 @@ $(document).ready(function () {
 
     //obtem a lista de usuarios do bd e exibe em sugestoes
     $.ajax({
-        url:"/principal/getFotoPerfil/",
+        url:"/perfil/getCapaPerfil/",
         method:"POST",
         data:{idUser: idLogadoFoto},
         success:function(s){
