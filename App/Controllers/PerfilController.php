@@ -18,6 +18,9 @@ class PerfilController extends Controller {
 
         self::setViewParam('nameController',$this->app->getNameController());
 
+        $oListaVaga = Usuario::listarVagas();
+        self::setViewParam('aListaVagas',$oListaVaga);
+
         $oListaExperiencia = Usuario::listarExperiencia();
         $oListaEducacao = Usuario::listarEducacao();
         $oListaLocalizacao = Usuario::listarLocalizacao();

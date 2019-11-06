@@ -194,242 +194,216 @@
                                 </div>
                                 <div class="product-feed-tab current" id="feed-dd">
                                     <div class="posts-section">
-                                        <div class="post-bar">
-                                            <div class="post_topbar">
-                                                <div class="usy-dt">
-                                                    <img src="http://via.placeholder.com/50x50" alt="">
-                                                    <div class="usy-name">
-                                                        <h3>John Doe</h3>
-                                                        <span><img src="images/clock.png" alt="">6 minutos atrás</span>
-                                                    </div>
-                                                </div>
-                                                <div class="ed-opts">
-                                                    <a href="#" title="" class="ed-opts-open"><i class="la la-ellipsis-v"></i></a>
-                                                    <ul class="ed-options">
-                                                        <li><a href="#" title="">Editar uma postagem</a></li>
-                                                        <li><a href="#" title="">Não foi Salvo</a></li>
-                                                        <li><a href="#" title="">Liberar</a></li>
-                                                        <li><a href="#" title="">Fechar</a></li>
-                                                        <li><a href="#" title="">Esconder</a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <div class="epi-sec">
-                                                <ul class="descp">
-                                                    <li><img src="images/icon8.png" alt=""><span>Codificador Épico</span></li>
-                                                    <li><img src="images/icon9.png" alt=""><span>São Paulo</span></li>
-                                                </ul>
-                                                <ul class="bk-links">
-                                                    <li><a href="#" title=""><i class="la la-bookmark"></i></a></li>
-                                                    <li><a href="#" title=""><i class="la la-envelope"></i></a></li>
-                                                </ul>
-                                            </div>
-                                            <div class="job_descp">
-                                                <h3>Desenvolvedor Wordpress Senior</h3>
-                                                <ul class="job-dt">
-                                                    <li><a href="#" title="">Integral</a></li>
-                                                    <li><span>R$90 / hr</span></li>
-                                                </ul>
-                                                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sapien ante, ultricies et imperdiet id, semper vitae lacus. Pellentesque a enim vitae ligula condimentum consequat ut in nulla <a href="#" title="">ver mais</a></p>
-                                                <ul class="skill-tags">
-                                                    <li><a href="#" title="">HTML</a></li>
-                                                    <li><a href="#" title="">PHP</a></li>
-                                                    <li><a href="#" title="">CSS</a></li>
-                                                    <li><a href="#" title="">Javascript</a></li>
-                                                    <li><a href="#" title="">Wordpress</a></li>
-                                                </ul>
-                                            </div>
-                                            <div class="job-status-bar">
-                                                <ul class="like-com">
-                                                    <li>
-                                                        <a href="#"><i class="la la-heart"></i>Curtir</a>
-                                                        <img src="images/liked-img.png" alt="">
-                                                        <span>45</span>
-                                                    </li>
-                                                    <li><a href="#" title="" class="com"><img src="images/com.png" alt=""> Comentarios 336</a></li>
-                                                </ul>
-                                                <a><i class="la la-eye"></i>Visualizações 943</a>
-                                            </div>
-                                        </div>
-                                        <div class="post-bar">
-                                            <div class="post_topbar">
-                                                <div class="usy-dt">
-                                                    <img src="http://via.placeholder.com/50x50" alt="">
-                                                    <div class="usy-name">
-                                                        <h3>John Doe</h3>
-                                                        <span><img src="images/clock.png" alt="">52 minutos atrás</span>
-                                                    </div>
-                                                </div>
-                                                <div class="ed-opts">
-                                                    <a href="#" title="" class="ed-opts-open"><i class="la la-ellipsis-v"></i></a>
-                                                    <ul class="ed-options">
-                                                        <li><a href="#" title="">Editar uma postagem</a></li>
-                                                        <li><a href="#" title="">Não foi Salvo</a></li>
-                                                        <li><a href="#" title="">Liberar</a></li>
-                                                        <li><a href="#" title="">Fechar</a></li>
-                                                        <li><a href="#" title="">Esconder</a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <div class="epi-sec">
-                                                <ul class="descp">
-                                                    <li><img src="images/icon8.png" alt=""><span>Desenvolvedor Front End </span></li>
-                                                    <li><img src="images/icon9.png" alt=""><span>São Paulo</span></li>
-                                                </ul>
-                                                <ul class="bk-links">
-                                                    <li><a href="#" title=""><i class="la la-bookmark"></i></a></li>
-                                                    <li><a href="#" title=""><i class="la la-envelope"></i></a></li>
-                                                    <li><a href="#" title="" class="bid_now">De um lance</a></li>
-                                                </ul>
-                                            </div>
-                                            <div class="job_descp">
-                                                <h3>Aplicativo de compras IOS</h3>
-                                                <ul class="job-dt">
-                                                    <li><span>R$390 - R$1150</span></li>
-                                                </ul>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sapien ante, ultricies et imperdiet id, semper vitae lacus. Pellentesque a enim vitae ligula condimentum consequat ut in nulla  <a href="#" title="">ver mais</a></p>
-                                                <ul class="skill-tags">
-                                                    <li><a href="#" title="">HTML</a></li>
-                                                    <li><a href="#" title="">PHP</a></li>
-                                                    <li><a href="#" title="">CSS</a></li>
-                                                    <li><a href="#" title="">Javascript</a></li>
-                                                    <li><a href="#" title="">Wordpress</a></li>
-                                                    <li><a href="#" title="">Photoshop</a></li>
-                                                    <li><a href="#" title="">Illustrator</a></li>
-                                                    <li><a href="#" title="">Corel Draw</a></li>
-                                                </ul>
-                                            </div>
-                                            <div class="job-status-bar">
-                                                <ul class="like-com">
-                                                    <li>
-                                                        <a href="#"><i class="la la-heart"></i>Curtir</a>
-                                                        <img src="images/liked-img.png" alt="">
-                                                        <span>92</span>
-                                                    </li>
-                                                    <li><a href="#" title="" class="com"><img src="images/com.png" alt=""> Comentarios 124</a></li>
-                                                </ul>
-                                                <a><i class="la la-eye"></i>Visualizações 652</a>
-                                            </div>
-                                        </div>
-                                        <div class="post-bar">
-                                            <div class="post_topbar">
-                                                <div class="usy-dt">
-                                                    <img src="http://via.placeholder.com/50x50" alt="">
-                                                    <div class="usy-name">
-                                                        <h3>John Doe</h3>
-                                                        <span><img src="images/clock.png" alt="">27 minutos atrás</span>
-                                                    </div>
-                                                </div>
-                                                <div class="ed-opts">
-                                                    <a href="#" title="" class="ed-opts-open"><i class="la la-ellipsis-v"></i></a>
-                                                    <ul class="ed-options">
-                                                        <li><a href="#" title="">Editar uma postagem</a></li>
-                                                        <li><a href="#" title="">Não foi Salvo</a></li>
-                                                        <li><a href="#" title="">Liberar</a></li>
-                                                        <li><a href="#" title="">Fechar</a></li>
-                                                        <li><a href="#" title="">Esconder</a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <div class="epi-sec">
-                                                <ul class="descp">
-                                                    <li><img src="images/icon8.png" alt=""><span>Codificador Épico</span></li>
-                                                    <li><img src="images/icon9.png" alt=""><span>São Paulo </span></li>
-                                                </ul>
-                                                <ul class="bk-links">
-                                                    <li><a href="#" title=""><i class="la la-bookmark"></i></a></li>
-                                                    <li><a href="#" title=""><i class="la la-envelope"></i></a></li>
-                                                </ul>
-                                            </div>
-                                            <div class="job_descp">
 
-                                                <h3> UI / UX designer Senior</h3>
-                                                <ul class="job-dt">
-                                                    <li><a href="#" title="">Integral</a></li>
-                                                    <li><span>R$110 / hr</span></li>
-                                                </ul>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sapien ante, ultricies et imperdiet id, semper vitae lacus. Pellentesque a enim vitae ligula condimentum consequat ut in nulla  <a href="#" title="">view more</a></p>
-                                                <ul class="skill-tags">
-                                                    <li><a href="#" title="">HTML</a></li>
-                                                    <li><a href="#" title="">PHP</a></li>
-                                                    <li><a href="#" title="">CSS</a></li>
-                                                    <li><a href="#" title="">Javascript</a></li>
-                                                    <li><a href="#" title="">Adobe XD</a></li>
+                                        <?php
+                                        if(!count($aViewVar['aListaVagas'])){
+                                            ?>
+                                            <div class="alert alert-warning" role="alert">Você não publicou nada ainda...</div>
+                                            <?php
+                                        } else {
+                                            ?>
+                                            <?php
+                                            foreach($aViewVar['aListaVagas'] as $aListaVaga) {
+                                                ?>
+                                                <div class="post-bar">
+                                                    <div class="post_topbar">
+                                                        <div class="usy-dt">
+                                                            <img src="http://via.placeholder.com/50x50" alt="">
+                                                            <div class="usy-name">
+                                                                <h3><?php echo $aListaVaga['nomeUsuario']; ?></h3>
+                                                                <span><img src="/public/images/clock.png" alt=""><?php echo $aListaVaga['dataHora']; ?></span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="ed-opts">
+                                                            <a href="#" title="" class="ed-opts-open"><i class="la la-ellipsis-v"></i></a>
+                                                            <ul class="ed-options">
+                                                                <li><a href="#" title="">Editar uma postagem</a></li>
+                                                                <li><a href="#" title="">Não foi Salvo</a></li>
+                                                                <li><a href="#" title="">Liberar</a></li>
+                                                                <li><a href="#" title="">Fechar</a></li>
+                                                                <li><a href="#" title="">Esconder</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="epi-sec">
+                                                        <ul class="descp">
+                                                            <li><img src="/public/images/icon8.png" alt=""><span><?php echo $aListaVaga['categoria']; ?></span></li>
+                                                            <li><img src="/public/images/icon9.png" alt=""><span>Brasil</span></li>
+                                                        </ul>
+                                                        <ul class="bk-links">
+                                                            <li><a href="#" title=""><i class="la la-bookmark"></i></a></li>
+                                                            <li><a href="#" title=""><i class="la la-envelope"></i></a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="job_descp">
+                                                        <h3><?php echo $aListaVaga['titulo']; ?></h3>
+                                                        <p><?php echo $aListaVaga['descricao']; ?></p>
+                                                        <ul class="job-dt">
+                                                            <li><a href="#" title=""><?php echo $aListaVaga['integral']; ?></a></li>
+                                                            <li><span>R$ <?php echo $aListaVaga['preco']; ?> / hr</span></li>
+                                                        </ul>
 
-                                                </ul>
-                                            </div>
-                                            <div class="job-status-bar">
-                                                <ul class="like-com">
-                                                    <li>
-                                                        <a href="#"><i class="la la-heart"></i>Curtir</a>
-                                                        <img src="images/liked-img.png" alt="">
-                                                        <span>115</span>
-                                                    </li>
-                                                    <li><a href="#" title="" class="com"><img src="images/com.png" alt=""> Comentarios 291 </a></li>
-                                                </ul>
-                                                <a><i class="la la-eye"></i>Visualizações 958</a>
-                                            </div>
-                                        </div>
-                                        <div class="post-bar">
-                                            <div class="post_topbar">
-                                                <div class="usy-dt">
-                                                    <img src="http://via.placeholder.com/50x50" alt="">
-                                                    <div class="usy-name">
-                                                        <h3>John Doe</h3>
-                                                        <span><img src="images/clock.png" alt="">4 min ago</span>
+                                                        <ul class="skill-tags">
+                                                            <li><a href="#" title=""><?php echo $aListaVaga['habilidade']; ?></a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="job-status-bar">
+                                                        <ul class="like-com">
+                                                            <li>
+                                                                <a href="#"><i class="la la-heart"></i>Curtir</a>
+                                                                <!-- <img src="/public/images/liked-img.png" alt=""> -->
+                                                                <span>25</span>
+                                                            </li>
+                                                            <li><a href="#" title="" class="com"><img src="/public/images/com.png" alt=""> Comentário 0</a></li>
+                                                        </ul>
+                                                        <a><i class="la la-eye"></i>Visualizações 0</a>
                                                     </div>
                                                 </div>
-                                                <div class="ed-opts">
-                                                    <a href="#" title="" class="ed-opts-open"><i class="la la-ellipsis-v"></i></a>
-                                                    <ul class="ed-options">
-                                                        <li><a href="#" title="">Editar uma postagem</a></li>
-                                                        <li><a href="#" title="">Não foi Salvo</a></li>
-                                                        <li><a href="#" title="">Liberar</a></li>
-                                                        <li><a href="#" title="">Fechar</a></li>
-                                                        <li><a href="#" title="">Esconder</a></li>
+                                                <?php
+                                            }
+                                            ?>
+                                            <?php
+                                        }
+                                        ?>
+
+
+
+                                        <!-- template postagem -->
+                                        <!--
+                                                     <div class="post-bar">
+                                                         <div class="post_topbar">
+                                                             <div class="usy-dt">
+                                                                 <img src="http://via.placeholder.com/50x50" alt="">
+                                                                 <div class="usy-name">
+                                                                     <h3>John Doe</h3>
+                                                                     <span><img src="/public/images/clock.png" alt="">3 minutos atrás</span>
+                                                                 </div>
+                                                             </div>
+                                                             <div class="ed-opts">
+                                                                 <a href="#" title="" class="ed-opts-open"><i class="la la-ellipsis-v"></i></a>
+                                                                 <ul class="ed-options">
+                                                                     <li><a href="#" title="">Editar uma postagem</a></li>
+                                                                     <li><a href="#" title="">Não foi Salvo</a></li>
+                                                                     <li><a href="#" title="">Liberar</a></li>
+                                                                     <li><a href="#" title="">Fechar</a></li>
+                                                                     <li><a href="#" title="">Esconder</a></li>
+                                                                 </ul>
+                                                             </div>
+                                                         </div>
+                                                         <div class="epi-sec">
+                                                             <ul class="descp">
+                                                                 <li><img src="/public/images/icon8.png" alt=""><span>Codificador Épico</span></li>
+                                                                 <li><img src="/public/images/icon9.png" alt=""><span>India</span></li>
+                                                             </ul>
+                                                             <ul class="bk-links">
+                                                                 <li><a href="#" title=""><i class="la la-bookmark"></i></a></li>
+                                                                 <li><a href="#" title=""><i class="la la-envelope"></i></a></li>
+                                                             </ul>
+                                                         </div>
+                                                         <div class="job_descp">
+                                                             <h3>Desenvolverdor Wordpress Senior</h3>
+                                                             <ul class="job-dt">
+                                                                 <li><a href="#" title="">Integral</a></li>
+                                                                 <li><span>R$90 / hr</span></li>
+                                                             </ul>
+
+                                                             <ul class="skill-tags">
+                                                                 <li><a href="#" title="">HTML</a></li>
+                                                                 <li><a href="#" title="">PHP</a></li>
+                                                                 <li><a href="#" title="">CSS</a></li>
+                                                                 <li><a href="#" title="">Javascript</a></li>
+                                                                 <li><a href="#" title="">Wordpress</a></li>
+                                                             </ul>
+                                                         </div>
+                                                         <div class="job-status-bar">
+                                                             <ul class="like-com">
+                                                                 <li>
+                                                                     <a href="#"><i class="la la-heart"></i>Curtir</a>
+                                                                     <img src="/public/images/liked-img.png" alt="">
+                                                                     <span>25</span>
+                                                                 </li>
+                                                                 <li><a href="#" title="" class="com"><img src="/public/images/com.png" alt=""> Comentário 15</a></li>
+                                                             </ul>
+                                                             <a><i class="la la-eye"></i>Visualizações 50</a>
+                                                         </div>
+                                                     </div>
+                                            -->
+                                        <div class="top-profiles">
+                                            <div class="pf-hd">
+                                                <h3>Top Perfis</h3>
+                                                <i class="la la-ellipsis-v"></i>
+                                            </div>
+                                            <div class="profiles-slider">
+                                                <div class="user-profy">
+                                                    <img src="http://via.placeholder.com/57x57" alt="">
+                                                    <h3>John Doe</h3>
+                                                    <span>Designer Gráfico</span>
+                                                    <ul>
+                                                        <li><a href="#" title="" class="followw">Adicionar</a></li>
+                                                        <li><a href="#" title="" class="envlp"><img src="/public/images/envelop.png" alt=""></a></li>
+                                                        <li><a href="#" title="" class="hire">Contratar</a></li>
                                                     </ul>
+                                                    <a href="perfildousuario2.html" title="">Visualizar Perfil</a>
+                                                </div>
+                                                <div class="user-profy">
+                                                    <img src="http://via.placeholder.com/57x57" alt="">
+                                                    <h3>John Doe</h3>
+                                                    <span>Designer Gráfico</span>
+                                                    <ul>
+                                                        <li><a href="#" title="" class="followw">Adicionar</a></li>
+                                                        <li><a href="#" title="" class="envlp"><img src="/public/images/envelop.png" alt=""></a></li>
+                                                        <li><a href="#" title="" class="hire">Contratar</a></li>
+                                                    </ul>
+                                                    <a href="perfildousuario2.html" title="">Visualizar Perfil</a>
+                                                </div>
+                                                <div class="user-profy">
+                                                    <img src="http://via.placeholder.com/57x57" alt="">
+                                                    <h3>John Doe</h3>
+                                                    <span>Designer Gráfico</span>
+                                                    <ul>
+                                                        <li><a href="#" title="" class="followw">Adicionar</a></li>
+                                                        <li><a href="#" title="" class="envlp"><img src="/public/images/envelop.png" alt=""></a></li>
+                                                        <li><a href="#" title="" class="hire">Contratar</a></li>
+                                                    </ul>
+                                                    <a href="perfildousuario2.html" title="">Visualizar Perfil</a>
+                                                </div>
+                                                <div class="user-profy">
+                                                    <img src="http://via.placeholder.com/57x57" alt="">
+                                                    <h3>John Doe</h3>
+                                                    <span>Designer Gráfico</span>
+                                                    <ul>
+                                                        <li><a href="#" title="" class="followw">Adicionar</a></li>
+                                                        <li><a href="#" title="" class="envlp"><img src="/public/images/envelop.png" alt=""></a></li>
+                                                        <li><a href="#" title="" class="hire">Contratar</a></li>
+                                                    </ul>
+                                                    <a href="perfildousuario2.html" title="">Visualizar Perfil</a>
+                                                </div>
+                                                <div class="user-profy">
+                                                    <img src="http://via.placeholder.com/57x57" alt="">
+                                                    <h3>John Doe</h3>
+                                                    <span>Designer Gráfico</span>
+                                                    <ul>
+                                                        <li><a href="#" title="" class="followw">Adicionar</a></li>
+                                                        <li><a href="#" title="" class="envlp"><img src="/public/images/envelop.png" alt=""></a></li>
+                                                        <li><a href="#" title="" class="hire">Contratar</a></li>
+                                                    </ul>
+                                                    <a href="perfildousuario2.html" title="">Visualizar Perfil</a>
+                                                </div>
+                                                <div class="user-profy">
+                                                    <img src="http://via.placeholder.com/57x57" alt="">
+                                                    <h3>John Doe</h3>
+                                                    <span>Designer Gráfico</span>
+                                                    <ul>
+                                                        <li><a href="#" title="" class="followw">Adicionar</a></li>
+                                                        <li><a href="#" title="" class="envlp"><img src="/public/images/envelop.png" alt=""></a></li>
+                                                        <li><a href="#" title="" class="hire">Contratar</a></li>
+                                                    </ul>
+                                                    <a href="perfildousuario2.html" title="">Visualizar Perfil</a>
                                                 </div>
                                             </div>
-                                            <div class="epi-sec">
-                                                <ul class="descp">
-                                                    <li><img src="images/icon8.png" alt=""><span>Codificador Épico</span></li>
-                                                    <li><img src="images/icon9.png" alt=""><span>São Paulo</span></li>
-                                                </ul>
-                                                <ul class="bk-links">
-                                                    <li><a href="#" title=""><i class="la la-bookmark"></i></a></li>
-                                                    <li><a href="#" title=""><i class="la la-envelope"></i></a></li>
-                                                    <li><a href="#" title="" class="bid_now">De um lance</a></li>
-                                                </ul>
-                                            </div>
-                                            <div class="job_descp">
-                                                <h3>Site simples </h3>
-                                                <ul class="job-dt">
-                                                    <li><span>R$300 - R$350</span></li>
-                                                </ul>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sapien ante, ultricies et imperdiet id, semper vitae lacus. Pellentesque a enim vitae ligula condimentum consequat ut in nulla   <a href="#" title="">ver mais</a></p>
-                                                <ul class="skill-tags">
-                                                    <li><a href="#" title="">HTML</a></li>
-                                                    <li><a href="#" title="">PHP</a></li>
-                                                    <li><a href="#" title="">CSS</a></li>
-                                                    <li><a href="#" title="">Javascript</a></li>
-                                                    <li><a href="#" title="">Wordpress</a></li>
-                                                    <li><a href="#" title="">Photoshop</a></li>
-                                                    <li><a href="#" title="">Illustrator</a></li>
-                                                    <li><a href="#" title="">Corel Draw</a></li>
-                                                </ul>
-                                            </div>
-                                            <div class="job-status-bar">
-                                                <ul class="like-com">
-                                                    <li>
-                                                        <a href="#"><i class="la la-heart"></i>Curtir</a>
-                                                        <img src="images/liked-img.png" alt="">
-                                                        <span>195</span>
-                                                    </li>
-                                                    <li><a href="#" title="" class="com"><img src="images/com.png" alt=""> Comentarios 315</a></li>
-                                                </ul>
-                                                <a><i class="la la-eye"></i>Visualizações 324</a>
-                                            </div>
                                         </div>
+
+
                                         <div class="process-comm">
                                             <div class="spinner">
                                                 <div class="bounce1"></div>
