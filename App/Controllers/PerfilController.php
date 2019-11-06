@@ -278,30 +278,27 @@ class PerfilController extends Controller {
     }
 
     public function buscarUsuario() {
-        $servername = "remotemysql.com";
-        $username = "GQ4OpczpAV";
-        $password = "jt4ifMIloM";
-        $dbname = "GQ4OpczpAV";
-        $conn = new mysqli($servername, $username, $password, $dbname);
-        if ($conn->connect_error) {
-            die("Connection failed: " . $conn->connect_error);
-        }
-        $id = $_GET['q'];
-        $sql = "select * from usuario where titulo like '%".$id."%' limit 1";
-        $result = $conn->query($sql);
-        if ($result->num_rows > 0) {
-            while($row = $result->fetch_assoc()) {
-                echo $row["titulo"]. "\n";
+        $connect = mysqli_connect("remotemysql.com", "GQ4OpczpAV", "jt4ifMIloM", "GQ4OpczpAV");
+        if(isset($_POST["query"]))
+        {
+            $output = '';
+            $query = "SELECT * FROM usuario WHERE titulo LIKE '%".$_POST["query"]."%'";
+            $result = mysqli_query($connect, $query);
+            $output = '<ul class="list-unstyled">';
+            if(mysqli_num_rows($result) > 0)
+            {
+                while($row = mysqli_fetch_array($result))
+                {
+                    $output .= '<li>'.$row["titulo"].'</li>';
+                }
             }
-        } else {
-            echo "nenhum amigo encontrado!";
+            else
+            {
+                $output .= '<li>Nenhum usuario encontrado!</li>';
+            }
+            $output .= '</ul>';
+            echo $output;
         }
-        $conn->close();
-    }
-
-    public function getForm() {
-        $id = $_GET['q'];
-        echo $id;
     }
 
 }

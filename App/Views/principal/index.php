@@ -27,7 +27,8 @@
                 </div>
                 <div class="search-bar">
                     <form action="/perfil/getForm">
-                        <input type="search" name="txtCountry" placeholder="Digite o nome do amigo..." id="txtCountry" class="typeahead">
+                        <input type="text" name="country" id="country" placeholder="Digite o nome do amigo..." class="typeahead">
+                        <div id="countryList"></div>
                         <button type="submit"><i class="la la-search"></i></button>
                     </form>
                 </div>

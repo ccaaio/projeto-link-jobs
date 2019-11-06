@@ -21,9 +21,7 @@ class PrincipalController extends Controller {
         self::setViewParam('aListaVagas',$oListaVaga);
 
         self::setViewCss('/public/css/pages/principal/principal.css');
-        self::setViewCss('/public/css/autocomplete.css');
 
-        self::setViewJs('/public/js/jquery.autocomplete.js');
         self::setViewJs('/public/js/principal/principal.js');
         self::setViewJs('/public/js/funcoes/listagens/sugestoes.js');
 

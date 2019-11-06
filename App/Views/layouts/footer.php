@@ -14,7 +14,26 @@
     <script>
         $(document).ready(function () {
            setTimeout(function () {
-               $("input[type='search']").autocomplete("/perfil/buscarUsuario");
+               $('#country').keyup(function(){
+                   var query = $(this).val();
+                   if(query != '')
+                   {
+                       $.ajax({
+                           url:"/perfil/buscarUsuario",
+                           method:"POST",
+                           data:{query:query},
+                           success:function(data)
+                           {
+                               $('#countryList').fadeIn();
+                               $('#countryList').html(data);
+                           }
+                       });
+                   }
+               });
+               $(document).on('click', 'li', function(){
+                   $('#country').val($(this).text());
+                   $('#countryList').fadeOut();
+               });
            },500);
         });
     </script>
