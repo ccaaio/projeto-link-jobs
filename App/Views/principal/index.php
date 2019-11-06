@@ -26,7 +26,7 @@
                     <a href="principal.html" title=""><img src="/public/images/logo.png" alt=""></a>
                 </div>
                 <div class="search-bar">
-                    <form>
+                    <form action="/perfil/getForm">
                         <input type="search" name="txtCountry" placeholder="Digite o nome do amigo..." id="txtCountry" class="typeahead">
                         <button type="submit"><i class="la la-search"></i></button>
                     </form>

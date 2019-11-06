@@ -278,21 +278,30 @@ class PerfilController extends Controller {
     }
 
     public function buscarUsuario() {
-        $keyword = strval($_POST['query']);
-        $search_param = "{$keyword}%";
-        $conn =new mysqli("remotemysql.com", "GQ4OpczpAV", "jt4ifMIloM", "GQ4OpczpAV");
-
-        $sql = $conn->prepare("SELECT * FROM usuario WHERE titulo LIKE ?");
-        $sql->bind_param("s",$search_param);
-        $sql->execute();
-        $result = $sql->get_result();
+        $servername = "remotemysql.com";
+        $username = "GQ4OpczpAV";
+        $password = "jt4ifMIloM";
+        $dbname = "GQ4OpczpAV";
+        $conn = new mysqli($servername, $username, $password, $dbname);
+        if ($conn->connect_error) {
+            die("Connection failed: " . $conn->connect_error);
+        }
+        $id = $_GET['q'];
+        $sql = "select * from usuario where titulo like '%".$id."%' limit 1";
+        $result = $conn->query($sql);
         if ($result->num_rows > 0) {
             while($row = $result->fetch_assoc()) {
-                $countryResult[] = $row["titulo"];
+                echo $row["titulo"]. "\n";
             }
-            echo json_encode($countryResult);
+        } else {
+            echo "nenhum amigo encontrado!";
         }
         $conn->close();
+    }
+
+    public function getForm() {
+        $id = $_GET['q'];
+        echo $id;
     }
 
 }

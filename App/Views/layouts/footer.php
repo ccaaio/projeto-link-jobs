@@ -14,21 +14,7 @@
     <script>
         $(document).ready(function () {
            setTimeout(function () {
-               $('input[name="txtCountry"]').typeahead({
-                   source: function (query, result) {
-                       $.ajax({
-                           url: "/perfil/buscarUsuario",
-                           data: 'query=' + query,
-                           dataType: "json",
-                           type: "POST",
-                           success: function (data) {
-                               result($.map(data, function (item) {
-                                   return item;
-                               }));
-                           }
-                       });
-                   }
-               });
+               $("input[type='search']").autocomplete("/perfil/buscarUsuario");
            },500);
         });
     </script>
