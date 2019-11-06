@@ -6,7 +6,9 @@
     <script type="text/javascript" src="/public/js/jquery.mCustomScrollbar.js"></script>
     <script type="text/javascript" src="/public/js/slick.min.js"></script>
     <script type="text/javascript" src="/public/js/scrollbar.js"></script>
+    <script type="text/javascript" src="/public/js/typeahead.js"></script>
     <script type="text/javascript" src="/public/js/sweetalert2.all.min.js"></script>
+
     <script type="text/javascript" src="/public/js/script.js"></script>
 
     <script>
