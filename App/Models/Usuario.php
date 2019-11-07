@@ -457,7 +457,7 @@ class Usuario
             if($id) {
                 // Faz a consulta
                 $query = $db->query(
-                    "SELECT profile_image FROM capaPerfil WHERE usuario = '".$id."' ORDER BY id DESC LIMIT 1"
+                    "SELECT profile_image FROM capaPerfil WHERE id_usuario = '".$id."' ORDER BY id DESC LIMIT 1"
                 );
 
                 return $query->fetch();
