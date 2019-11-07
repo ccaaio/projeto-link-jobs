@@ -12,6 +12,33 @@ $(document).ready(function () {
         });
     }
 
+    var refreshContadorLikes = function (idPerfil) {
+        $.ajax({
+           url: '/perfil/getLikes',
+           method: 'POST',
+           data: {idUser:idUsuario, idPerfil: idPerfil},
+           success: function (l) {
+               $('#qtd-likes').text(l.qtd);
+           }
+        });
+    };
+
+    $('.recomendarPerfil').on('click', function () {
+       getIdPerfil = $(this).attr('data-id-perfil');
+
+       $.ajax({
+          url: '/perfil/recomendarPerfil',
+          method: 'POST',
+          data: {idPerfil: getIdPerfil, idUser: idUsuario},
+          success: function (r) {
+              refreshContadorLikes(getIdPerfil);
+              alert('Perfil recomendado com sucesso!');
+          }
+       });
+    });
+
+
+
    //carrega informações do perfil de usuário
     setTimeout(function () {
         getVisaoGeral();
