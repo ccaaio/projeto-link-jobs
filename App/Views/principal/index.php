@@ -17,19 +17,6 @@
         overflow: hidden !important;
         text-overflow: ellipsis !important;
     }
-
-    #countryList{
-        position: absolute;
-        background-color: #efefef;
-        width: 100%;
-        border-bottom: 1px solid #bdbdbd;
-        border-right: 1px solid #bdbdbd;
-        border-left: 1px solid #bdbdbd;
-        border-bottom-left-radius: 10px;
-        border-bottom-right-radius: 10px;
-        text-align: left;
-        box-shadow: 0 4px 7px -5px black;
-    }
 </style>
 <div class="wrapper">
     <header>
@@ -39,7 +26,7 @@
                     <a href="principal.html" title=""><img src="/public/images/logo.png" alt=""></a>
                 </div>
                 <div class="search-bar">
-                    <form action="/perfil/getForm">
+                    <form>
                         <input type="text" name="country" id="country" placeholder="Digite o nome do amigo..." class="typeahead">
                         <div id="countryList"></div>
                         <button type="submit"><i class="la la-search"></i></button>

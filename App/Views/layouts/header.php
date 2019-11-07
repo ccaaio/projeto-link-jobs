@@ -24,3 +24,18 @@
 
     <?php echo $aViewCss; ?>
 </head>
+
+<style>
+    #countryList{
+        position: absolute;
+        background-color: #efefef;
+        width: 100%;
+        border-bottom: 1px solid #bdbdbd;
+        border-right: 1px solid #bdbdbd;
+        border-left: 1px solid #bdbdbd;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        text-align: left;
+        box-shadow: 0 4px 7px -5px black;
+    }
+</style>

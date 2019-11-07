@@ -82,7 +82,8 @@
                 </div>
                 <div class="search-bar">
                     <form>
-                        <input type="text" name="search" placeholder="Digite o nome do amigo...">
+                        <input type="text" name="country" id="country" placeholder="Digite o nome do amigo..." class="typeahead">
+                        <div id="countryList"></div>
                         <button type="submit"><i class="la la-search"></i></button>
                     </form>
                 </div>
