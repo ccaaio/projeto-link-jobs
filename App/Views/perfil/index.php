@@ -173,19 +173,19 @@
                                         <ul>
                                             <li data-tab="feed-dd" class="active">
                                                 <a href="#" title="">
-                                                    <img src="images/ic1.png" alt="">
+                                                    <img src="/public/images/ic1.png" alt="">
                                                     <span>Vagas</span>
                                                 </a>
                                             </li>
                                             <li data-tab="info-dd">
                                                 <a href="#" title="">
-                                                    <img src="images/ic2.png" alt="">
+                                                    <img src="/public/images/ic2.png" alt="">
                                                     <span>Informações</span>
                                                 </a>
                                             </li>
                                             <li data-tab="portfolio-dd">
                                                 <a href="#" title="">
-                                                    <img src="images/ic3.png" alt="">
+                                                    <img src="/public/images/ic3.png" alt="">
                                                     <span>Portfólio</span>
                                                 </a>
                                             </li>
@@ -586,13 +586,13 @@
                         </div>
                         <div class="col-lg-3">
                             <div class="right-sidebar">
-                                <div class="message-btn">
+                                <div class="message-btn d-none">
                                     <a href="#" title=""><i class="fa fa-envelope"></i> Mensagens</a>
                                 </div>
                                 <div class="widget widget-portfolio">
                                     <div class="wd-heady">
                                         <h3>Portfólio</h3>
-                                        <img src="images/photo-icon.png" alt="">
+                                        <img src="/public/images/photo-icon.png" alt="">
                                     </div>
                                     <div class="pf-gallery">
                                         <ul>
