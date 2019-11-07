@@ -1,5 +1,5 @@
 
-<footer>
+<footer class="d-none">
     <div class="footy-sec mn no-margin">
         <div class="container">
             <ul>
