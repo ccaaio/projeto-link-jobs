@@ -218,6 +218,7 @@ class PrincipalController extends Controller {
     public function amigo(){
         self::setViewParam('aAmigo',Usuario::listar($this->app->getParams()[0]));
         self::setViewParam('aFoto',Usuario::listarFoto($this->app->getParams()[0]));
+        self::setViewParam('aCapa',Usuario::listarCapa($this->app->getParams()[0]));
         self::setViewParam('aVisao',Usuario::listarVisaoG($this->app->getParams()[0]));
         self::setViewParam('aListaExperiencia',Usuario::listarExperiencia($this->app->getParams()[0]));
         self::setViewParam('aListaEducacao',Usuario::listarEducacao($this->app->getParams()[0]));

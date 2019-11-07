@@ -447,5 +447,34 @@ class Usuario
 
     }
 
+    public static function listarCapa($id=null) {
+        $db = new DB();
+
+        $idUsuario =  \App\Lib\Auth::usuario()->id;
+
+        try {
+
+            if($id) {
+                // Faz a consulta
+                $query = $db->query(
+                    "SELECT img FROM capaPerfil WHERE usuario = '".$id."' ORDER BY id DESC LIMIT 1"
+                );
+
+                return $query->fetch();
+            }else{
+                // Faz a consulta
+                $query = $db->query(
+                    "SELECT img FROM capaPerfil WHERE id_usuario = '".$idUsuario."' ORDER BY id DESC LIMIT 1"
+                );
+
+                return $query->fetchAll();
+
+            }
+        }catch (Exception $e){
+            echo $e->getMessage();
+        }
+
+    }
+
 
 }
