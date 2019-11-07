@@ -184,8 +184,8 @@
                                                 </a>
                                             </li>
                                             <li data-tab="portfolio-dd">
-                                                <a href="#" title="">
-                                                    <img src="/public/images/ic3.png" alt="">
+                                                <a href="#" title="" style="text-decoration: none !important;color: #b2b2b2;">
+                                                    <i class="la la-thumbs-o-up" style="font-size: 34px;"></i>
                                                     <span>Portfólio</span>
                                                 </a>
                                             </li>
