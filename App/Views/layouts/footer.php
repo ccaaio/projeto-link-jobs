@@ -1,4 +1,18 @@
 
+<footer>
+    <div class="footy-sec mn no-margin">
+        <div class="container">
+            <ul>
+                <li><a href="#" title="">Ajuda</a></li>
+                <li><a href="#" title="">Política de Privacidade</a></li>
+                <li><a href="#" title="">Carreira</a></li>
+                <li><a href="#" title="">Fórum</a></li>
+                <li><a href="#" title="">Fale Conosco</a></li>
+            </ul>
+            <p><img src="images/copy-icon2.png" alt="">Copyright 2019 - Universidade Presbiteriana Mackenzie</p>
+        </div>
+    </div>
+</footer>
 
     <script type="text/javascript" src="/public/js/jquery.min.js"></script>
     <script type="text/javascript" src="/public/js/popper.js"></script>
