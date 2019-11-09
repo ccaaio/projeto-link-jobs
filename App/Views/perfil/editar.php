@@ -314,7 +314,7 @@
 
                                             <li data-tab="info-dd">
                                                 <a href="#" title="">
-                                                    <img src="images/ic2.png" alt="">
+                                                    <img src="/public/images/ic2.png" alt="">
                                                     <span>Informações</span>
                                                 </a>
                                             </li>
@@ -322,13 +322,13 @@
 
                                             <li data-tab="portfolio-dd">
                                                 <a href="#" title="">
-                                                    <img src="images/ic3.png" alt="">
+                                                    <img src="/public/images/ic3.png" alt="">
                                                     <span>Portfólio</span>
                                                 </a>
                                             </li>
                                             <li data-tab="payment-dd">
                                                 <a href="#" title="">
-                                                    <img src="images/ic6.png" alt="">
+                                                    <img src="/public/images/ic6.png" alt="">
                                                     <span>Pagamento</span>
                                                 </a>
                                             </li>
