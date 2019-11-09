@@ -59,10 +59,6 @@
                         <input type="text" class="form-control" id="nome-sobrenome" required>
                     </div>
                     <div class="form-group">
-                        <label for="senha" class="col-form-label">Senha:</label>
-                        <input type="password" class="form-control" id="senha">
-                    </div>
-                    <div class="form-group">
                         <label for="email" class="col-form-label">E-mail:</label>
                         <input type="email" class="form-control" id="email" placeholder="seu-email@linkjobs.com" required>
                     </div>
