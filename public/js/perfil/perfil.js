@@ -55,6 +55,9 @@ $(document).ready(function () {
           success: function (r) {
               if(r.curtiu == '1') {
                 $('.la-thumbs-o-up').css('color', '#dc3545');
+                  $('.recomendarPerfil').addClass('removerRecomendacao');
+                  //$('.recomendarPerfil').removeAttr('data-id-perfil');
+                  $('.recomendarPerfil').removeClass('recomendarPerfil');
               } else if(r.curtiu == '0') {
 
               }
