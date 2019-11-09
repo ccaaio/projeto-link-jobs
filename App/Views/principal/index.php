@@ -278,7 +278,7 @@
                            -->
                                     <div class="top-profiles">
                                         <div class="pf-hd">
-                                            <h3>Você deveria conhecer</h3>
+                                            <h3>Você deveria conhecer:</h3>
                                             <i class="la la-ellipsis-v"></i>
                                         </div>
                                         <div class="profiles-slider">
