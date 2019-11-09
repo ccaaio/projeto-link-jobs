@@ -126,12 +126,13 @@ $(document).ready(function () {
                         success: function (get) {
                             getInfosPerfil();
                             Swal.fire({
-                                position: 'top-end',
+                                position: 'center',
                                 type: 'success',
                                 title: 'Informações atualizadas!',
                                 showConfirmButton: false,
                                 timer: 2000
                             });
+                            $('#modal-edit-nome-profissao').modal('hide');
                         }
                     });
                 },300);
