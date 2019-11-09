@@ -61,7 +61,7 @@ $(document).ready(function () {
             $('.integral-editar-vaga').val(integral);
             $('.descricao-editar-vaga').val(descricao);
 
-            $('#btn-editar-vaga').on('click', function () {
+
                 var tituloEdit = $('.titulo-editar-vaga').val();
                 var categoriaEdit = $('.categoria-editar-vaga').val();
                 var habilidadeEdit = $('.habilidade-editar-vaga').val();
@@ -73,7 +73,7 @@ $(document).ready(function () {
                     editarVaga(idVaga, idUsuario, tituloEdit, categoriaEdit, habilidadeEdit, precoEdit, integralEdit, descricaoEdit);
                 },150);
                 $('#modal-editar-vaga').modal('hide');
-            });
+
         });
 
         $('#modal-editar-vaga').modal('show');
