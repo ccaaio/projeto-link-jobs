@@ -621,7 +621,123 @@
                     </div>
                     <div class="form-group">
                         <label for="categoria-editar-vaga" class="col-form-label">Categoria:</label>
-                        <input type="text" class="form-control categoria-editar-vaga" id="categoria-editar-vaga">
+                        <select class="form-control categoria-editar-vaga" id="categoria-editar-vaga" name="categoria">
+                            <option class="text-capitalize" val="algorithm">algorithm</option>
+                            <option class="text-capitalize" val="AngularJS">AngularJS</option>
+                            <option class="text-capitalize" val="artificial intelligence">artificial intelligence</option>
+                            <option class="text-capitalize" val="backpropagation">backpropagation</option>
+                            <option class="text-capitalize" val="Bayes' Theorem">Bayes' Theorem</option>
+                            <option class="text-capitalize" val="Bayesian network">Bayesian network</option>
+                            <option class="text-capitalize" val="bias">bias</option>
+                            <option class="text-capitalize" val="Big Data">Big Data</option>
+                            <option class="text-capitalize" val="binomial distribution">binomial distribution</option>
+                            <option class="text-capitalize" val="chi-square test">chi-square test</option>
+                            <option class="text-capitalize" val="classification">classification</option>
+                            <option class="text-capitalize" val="clustering">clustering</option>
+                            <option class="text-capitalize" val="coefficient">coefficient</option>
+                            <option class="text-capitalize" val="computational linguistics">computational linguistics</option>
+                            <option class="text-capitalize" val="confidence interval">confidence interval</option>
+                            <option class="text-capitalize" val="continuous variable">continuous variable</option>
+                            <option class="text-capitalize" val="correlation">correlation</option>
+                            <option class="text-capitalize" val="covariance">covariance</option>
+                            <option class="text-capitalize" val="cross-validation">cross-validation</option>
+                            <option class="text-capitalize" val="D3">D3</option>
+                            <option class="text-capitalize" val="data engineer">data engineer</option>
+                            <option class="text-capitalize" val="data mining">data mining</option>
+                            <option class="text-capitalize" val="data science">data science</option>
+                            <option class="text-capitalize" val="data structure">data structure</option>
+                            <option class="text-capitalize" val="data wrangling">data wrangling</option>
+                            <option class="text-capitalize" val="decision trees">decision trees</option>
+                            <option class="text-capitalize" val="deep learning">deep learning</option>
+                            <option class="text-capitalize" val="dependent variable">dependent variable</option>
+                            <option class="text-capitalize" val="dimension reduction">dimension reduction</option>
+                            <option class="text-capitalize" val="discrete variable">discrete variable</option>
+                            <option class="text-capitalize" val="econometrics">econometrics</option>
+                            <option class="text-capitalize" val="feature">feature</option>
+                            <option class="text-capitalize" val="feature engineering">feature engineering</option>
+                            <option class="text-capitalize" val="GATE">GATE</option>
+                            <option class="text-capitalize" val="gradient boosting">gradient boosting</option>
+                            <option class="text-capitalize" val="gradient descent">gradient descent</option>
+                            <option class="text-capitalize" val="histogram">histogram</option>
+                            <option class="text-capitalize" val="independent variable">independent variable</option>
+                            <option class="text-capitalize" val="JavaScript">JavaScript</option>
+                            <option class="text-capitalize" val="k-means clustering">k-means clustering</option>
+                            <option class="text-capitalize" val="k-nearest neighbors">k-nearest neighbors</option>
+                            <option class="text-capitalize" val="latent variable">latent variable</option>
+                            <option class="text-capitalize" val="lift">lift</option>
+                            <option class="text-capitalize" val="linear algebra">linear algebra</option>
+                            <option class="text-capitalize" val="linear regression">linear regression</option>
+                            <option class="text-capitalize" val="logarithm">logarithm</option>
+                            <option class="text-capitalize" val="logistic regression">logistic regression</option>
+                            <option class="text-capitalize" val="machine learning">machine learning</option>
+                            <option class="text-capitalize" val="machine learning model">machine learning model</option>
+                            <option class="text-capitalize" val="Markov Chain">Markov Chain</option>
+                            <option class="text-capitalize" val="MATLAB">MATLAB</option>
+                            <option class="text-capitalize" val="matrix">matrix</option>
+                            <option class="text-capitalize" val="mean">mean</option>
+                            <option class="text-capitalize" val="Mean Absolute Error">Mean Absolute Error</option>
+                            <option class="text-capitalize" val="Mean Squared Error">Mean Squared Error</option>
+                            <option class="text-capitalize" val="median">median</option>
+                            <option class="text-capitalize" val="mode">mode</option>
+                            <option class="text-capitalize" val="model">model</option>
+                            <option class="text-capitalize" val="Monte Carlo method">Monte Carlo method</option>
+                            <option class="text-capitalize" val="moving average">moving average</option>
+                            <option class="text-capitalize" val="n">n-gram</option>
+                            <option class="text-capitalize" val="naive Bayes classifier">naive Bayes classifier</option>
+                            <option class="text-capitalize" val="neural network">neural network</option>
+                            <option class="text-capitalize" val="normal distribution">normal distribution</option>
+                            <option class="text-capitalize" val="NoSQL">NoSQL</option>
+                            <option class="text-capitalize" val="null hypothesis">null hypothesis</option>
+                            <option class="text-capitalize" val="objective function">objective function</option>
+                            <option class="text-capitalize" val="outlier">outlier</option>
+                            <option class="text-capitalize" val="overfitting">overfitting</option>
+                            <option class="text-capitalize" val="P ">P value</option>
+                            <option class="text-capitalize" val="PageRank">PageRank</option>
+                            <option class="text-capitalize" val="Pandas">Pandas</option>
+                            <option class="text-capitalize" val="perceptron">perceptron</option>
+                            <option class="text-capitalize" val="Perl">Perl</option>
+                            <option class="text-capitalize" val="pivot table">pivot table</option>
+                            <option class="text-capitalize" val="Poisson distribution">Poisson distribution</option>
+                            <option class="text-capitalize" val="posterior distribution">posterior distribution</option>
+                            <option class="text-capitalize" val="predictive analytics">predictive analytics</option>
+                            <option class="text-capitalize" val="predictive modeling">predictive modeling</option>
+                            <option class="text-capitalize" val="principal component analysis">principal component analysis</option>
+                            <option class="text-capitalize" val="prior distribution">prior distribution</option>
+                            <option class="text-capitalize" val="probability distribution">probability distribution</option>
+                            <option class="text-capitalize" val="Python">Python</option>
+                            <option class="text-capitalize" val="quantile, quartile">quantile, quartile</option>
+                            <option class="text-capitalize" val="R">R</option>
+                            <option class="text-capitalize" val="random forest">random forest</option>
+                            <option class="text-capitalize" val="regression">regression</option>
+                            <option class="text-capitalize" val="reinforcement learning">reinforcement learning</option>
+                            <option class="text-capitalize" val="Root Mean Squared Error">Root Mean Squared Error</option>
+                            <option class="text-capitalize" val="Ruby">Ruby</option>
+                            <option class="text-capitalize" val="S curve">S curve</option>
+                            <option class="text-capitalize" val="SAS">SAS</option>
+                            <option class="text-capitalize" val="scalar">scalar</option>
+                            <option class="text-capitalize" val="scripting">scripting</option>
+                            <option class="text-capitalize" val="serial correlation">serial correlation</option>
+                            <option class="text-capitalize" val="shell">shell</option>
+                            <option class="text-capitalize" val="spatiotemporal data">spatiotemporal data</option>
+                            <option class="text-capitalize" val="SPSS">SPSS</option>
+                            <option class="text-capitalize" val="SQL">SQL</option>
+                            <option class="text-capitalize" val="standard deviation">standard deviation</option>
+                            <option class="text-capitalize" val="standard normal distribution">standard normal distribution</option>
+                            <option class="text-capitalize" val="standardized score">standardized score</option>
+                            <option class="text-capitalize" val="Stata">Stata</option>
+                            <option class="text-capitalize" val="strata, stratified sampling">strata, stratified sampling</option>
+                            <option class="text-capitalize" val="supervised learning">supervised learning</option>
+                            <option class="text-capitalize" val="support vector machine">support vector machine</option>
+                            <option class="text-capitalize" val="t-distribution">t-distribution</option>
+                            <option class="text-capitalize" val="Tableau">Tableau</option>
+                            <option class="text-capitalize" val="time series data">time series data</option>
+                            <option class="text-capitalize" val="UIMA">UIMA</option>
+                            <option class="text-capitalize" val="unsupervised learning">unsupervised learning</option>
+                            <option class="text-capitalize" val="variance">variance</option>
+                            <option class="text-capitalize" val="vector">vector</option>
+                            <option class="text-capitalize" val="vector space">vector space</option>
+                            <option class="text-capitalize" val="Weka">Weka</option>
+                        </select>
                     </div>
                     <div class="form-group">
                         <label for="habilidade-editar-vaga" class="col-form-label">Habilidade:</label>
@@ -633,7 +749,10 @@
                     </div>
                     <div class="form-group">
                         <label for="integral-editar-vaga" class="col-form-label">Integral/Meio Período:</label>
-                        <input type="text" class="form-control integral-editar-vaga" id="integral-editar-vaga">
+                        <select class="form-control integral-editar-vaga" id="integral-editar-vaga" name="integral">
+                            <option class="text-capitalize" val="Integral">Integral</option>
+                            <option class="text-capitalize" val="Meio ">Meio Período</option>
+                        </select>
                     </div>
                     <div class="form-group">
                         <label for="descricao-editar-vaga" class="col-form-label">Descrição:</label>
