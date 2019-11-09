@@ -183,7 +183,7 @@
                                                     <span>Informações</span>
                                                 </a>
                                             </li>
-                                            <li data-tab="portfolio-dd">
+                                            <li>
                                                 <a class="recomendarPerfil" data-id-perfil="<?php echo $aViewVar['aAmigo']['id']; ?>" title="" style="text-decoration: none !important;color: #b2b2b2;cursor: pointer;">
                                                     <span id="qtd-likes" class="badge badge-pill badge-danger" style="position: absolute;color: #FFFFFF;font-size: 14px;line-height: 0.98;padding-top: 0.4em;padding-bottom: 0.4em;margin-left: 45px;margin-top: -9px;">3</span>
                                                     <i class="la la-thumbs-o-up" style="font-size: 34px;"></i>
@@ -516,9 +516,9 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-3">
+                        <div class="col-lg-3" style="transform: translate(0px, 13.6em);">
                             <div class="right-sidebar">
-                                <div class="message-btn">
+                                <div class="message-btn d-none">
                                     <a href="#" title=""><i class="fa fa-envelope"></i> Mensagens</a>
                                 </div>
                                 <div class="widget widget-portfolio">
