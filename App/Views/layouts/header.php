@@ -73,4 +73,11 @@
         color: #ffffff !important;
         transition: all 0.5s;
     }
+
+    .user-info a {
+        white-space: nowrap !important;
+        width: 91px !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+    }
 </style>
