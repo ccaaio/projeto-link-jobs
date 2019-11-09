@@ -25,7 +25,6 @@ $(document).ready(function () {
                     $('.recomendarPerfil').removeClass('recomendarPerfil');
 
                     $('.removerRecomendacao').on('click', function () {
-                        alert('remover');
                         getIdPerfil = $(this).attr('data-id-perfil');
 
                         $.ajax({
@@ -63,7 +62,6 @@ $(document).ready(function () {
                verificaSeJaRecomendou(idPerfil, idUsuario);
 
                $('.removerRecomendacao').on('click', function () {
-                   alert('remover');
                    getIdPerfil = $(this).attr('data-id-perfil');
 
                    $.ajax({
@@ -99,7 +97,6 @@ $(document).ready(function () {
                   $('.recomendarPerfil').removeClass('recomendarPerfil');
 
                   $('.removerRecomendacao').on('click', function () {
-                      alert('remover');
                       getIdPerfil = $(this).attr('data-id-perfil');
 
                       $.ajax({
