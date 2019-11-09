@@ -290,7 +290,7 @@ class Usuario
             }else{
                 // Faz a consulta
                 $query = $db->query(
-                    "SELECT * FROM experiencia WHERE id_usuario = '".$idUsuario."' ORDER BY id DESC"
+                    "SELECT * FROM visaoGeral WHERE id_usuario = '".$idUsuario."' ORDER BY id DESC"
                 );
 
                 return $query->fetchAll();
