@@ -25,6 +25,7 @@ $(document).ready(function () {
                 } else if(v.curtiu == '0') {
 
                 }
+                refreshContadorLikes(getIdPerfil, idUsuario);
             }
         });
     };
