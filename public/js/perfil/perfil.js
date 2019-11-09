@@ -36,6 +36,8 @@ $(document).ready(function () {
                                     $('.la-thumbs-o-up').css('color', '#dc3545');
                                 } else if(r.curtiu == '0') {
                                     $('.la-thumbs-o-up').css('color', '#b2b2b2');
+                                    $('.removerRecomendacao').addClass('recomendarPerfil');
+                                    $('.removerRecomendacao').removeClass('removerRecomendacao');
                                 }
                                 refreshContadorLikes(getIdPerfil, idUsuario);
                                 verificaSeJaRecomendou(getIdPerfil, idUsuario);
@@ -75,6 +77,8 @@ $(document).ready(function () {
                                $('.la-thumbs-o-up').css('color', '#dc3545');
                            } else if(r.curtiu == '0') {
                                $('.la-thumbs-o-up').css('color', '#b2b2b2');
+                               $('.removerRecomendacao').addClass('recomendarPerfil');
+                               $('.removerRecomendacao').removeClass('removerRecomendacao');
                            }
                            refreshContadorLikes(getIdPerfil, idUsuario);
                            verificaSeJaRecomendou(getIdPerfil, idUsuario);
@@ -111,6 +115,8 @@ $(document).ready(function () {
                                   $('.la-thumbs-o-up').css('color', '#dc3545');
                               } else if(r.curtiu == '0') {
                                   $('.la-thumbs-o-up').css('color', '#b2b2b2');
+                                  $('.removerRecomendacao').addClass('recomendarPerfil');
+                                  $('.removerRecomendacao').removeClass('removerRecomendacao');
                               }
                               refreshContadorLikes(getIdPerfil, idUsuario);
                               verificaSeJaRecomendou(getIdPerfil, idUsuario);
