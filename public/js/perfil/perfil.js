@@ -38,6 +38,7 @@ $(document).ready(function () {
 
                                 }
                                 refreshContadorLikes(getIdPerfil, idUsuario);
+                                verificaSeJaRecomendou(getIdPerfil, idUsuario);
                             }
                         });
                     });
@@ -75,6 +76,7 @@ $(document).ready(function () {
 
                            }
                            refreshContadorLikes(getIdPerfil, idUsuario);
+                           verificaSeJaRecomendou(getIdPerfil, idUsuario);
                        }
                    });
                });
@@ -110,6 +112,7 @@ $(document).ready(function () {
 
                               }
                               refreshContadorLikes(getIdPerfil, idUsuario);
+                              verificaSeJaRecomendou(getIdPerfil, idUsuario);
                           }
                       });
                   });
