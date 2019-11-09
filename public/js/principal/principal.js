@@ -28,12 +28,12 @@ $(document).ready(function () {
             data: {idVaga: idVaga, idUser: idUsuario, titulo: titulo, categoria: categoria, habilidade: habilidade, preco: preco, integral: integral, descricao: descricao},
             success: function (d) {
                 Swal.fire({
-                    position: 'center',
                     icon: 'success',
-                    title: 'Publicação alterada!',
+                    title: 'Publicação Alterada!',
+                    text: 'Sua publicação foi alterada com sucesso!',
                     showConfirmButton: false,
-                    timer: 1500
-                });
+                    timer: 1500,
+                })
                 setTimeout(function () {
                     window.location.href = "https://projeto-link-jobs.herokuapp.com/principal/";
                 },1600);

@@ -445,7 +445,7 @@ class PerfilController extends Controller {
 
             $sql = "UPDATE vaga SET titulo = '".$titulo."', categoria = '".$categoria."', habilidade = '".$habilidade."', preco = '".$preco."', integral = '".$integral."', descricao = '".$descricao."' WHERE id = '$idVaga' AND id_usuario = '$idUser'";
             if(mysqli_query($conn, $sql)) {
-                $this->redirect('principal/');
+
             } else {
                 $this->render('error/usuario');
             }
