@@ -153,7 +153,7 @@
                                     <?php
                                     foreach($aViewVar['aListaVagas'] as $aListaVaga) {
                                         ?>
-                                        <div class="post-bar">
+                                        <div class="post-bar content-vaga" data-id-vaga="<?php echo $aListaVaga['id']; ?>" data-id-usuario-vaga="<?php echo $aListaVaga['id_usuario']; ?>" data-titulo-vaga="<?php echo $aListaVaga['titulo']; ?>">
                                             <div class="post_topbar">
                                                 <div class="usy-dt">
                                                     <img src="http://via.placeholder.com/50x50" alt="">
@@ -165,11 +165,9 @@
                                                 <div class="ed-opts">
                                                     <a href="#" title="" class="ed-opts-open"><i class="la la-ellipsis-v"></i></a>
                                                     <ul class="ed-options">
-                                                        <li><a href="#" title="">Editar uma postagem</a></li>
-                                                        <li><a href="#" title="">Não foi Salvo</a></li>
-                                                        <li><a href="#" title="">Liberar</a></li>
-                                                        <li><a href="#" title="">Fechar</a></li>
-                                                        <li><a href="#" title="">Esconder</a></li>
+                                                        <li class="li-editar-vaga" data-id-vaga="<?php echo $aListaVaga['id']; ?>" data-id-usuario-vaga="<?php echo $aListaVaga['id_usuario']; ?>" data-titulo-vaga="<?php echo $aListaVaga['titulo']; ?>" data-categoria-vaga="<?php echo $aListaVaga['categoria']; ?>" data-habilidade-vaga="<?php echo $aListaVaga['habilidade']; ?>" data-preco-vaga="<?php echo $aListaVaga['preco']; ?>" data-integral-vaga="<?php echo $aListaVaga['integral']; ?>" data-descricao-vaga="<?php echo $aListaVaga['descricao']; ?>"><a href="#" title="">Editar esta postagem</a></li>
+                                                        <li class="li-excluir-vaga" data-id-vaga="<?php echo $aListaVaga['id']; ?>" data-id-usuario-vaga="<?php echo $aListaVaga['id_usuario']; ?>" data-titulo-vaga="<?php echo $aListaVaga['titulo']; ?>"><a href="#" title="">Excluir postagem</a></li>
+                                                        <li class="li-esconder-vaga" data-id-vaga="<?php echo $aListaVaga['id']; ?>" data-id-usuario-vaga="<?php echo $aListaVaga['id_usuario']; ?>" data-titulo-vaga="<?php echo $aListaVaga['titulo']; ?>"><a href="#" title="">Esconder</a></li>
                                                     </ul>
                                                 </div>
                                             </div>
@@ -580,4 +578,27 @@
             <a href="#" title=""><i class="la la-times-circle-o"></i></a>
         </div>
     </div>
+
+    <!-- Modal Confirmação Excluir -->
+    <div class="modal fade" id="#modal-confirmacao-exluir-vaga" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Confirmação de Exclusão de Postagem</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Você tem certeza que deseja excluir a postagem <strong>"<span id="tituloPostagemVaga" class="text-danger text-uppercase"></span>"</strong>?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-light" data-dismiss="modal">Cancelar exclusão</button>
+                    <button id="excluirPostagem" type="button" class="btn btn-danger">Sim, quero excluir esta postagem!</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
 </div>

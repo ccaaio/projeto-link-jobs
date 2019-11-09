@@ -1,6 +1,58 @@
 $(document).ready(function () {
     var idLogadoFoto = $('#id-logado').val();
 
+    var excluirVaga = function(idVaga, idUsuario) {
+        $.ajax({
+           url: '/perfil/excluirVaga',
+           method: 'POST',
+           data: {idVaga: idVaga, idUser: idUsuario},
+           success: function (d) {
+               alert('excluído com sucesso!');
+           }
+        });
+    };
+
+    var editarVaga = function(idVaga, idUsuario, titulo, categoria, habilidade, preco, integral, descricao) {
+        $.ajax({
+            url: '/perfil/editarVaga',
+            method: 'POST',
+            data: {idVaga: idVaga, idUser: idUsuario, titulo: titulo, categoria: categoria, habilidade: habilidade, preco: preco, integral: integral, descricao: descricao},
+            success: function (d) {
+                alert('Editado com sucesso!');
+            }
+        });
+    };
+
+    $('.li-editar-vaga').on('click', function () {
+       var idVaga = $(this).attr('data-id-vaga');
+       var idUsuario = $(this).attr('data-id-usuario-vaga');
+       var titulo = $(this).attr('data-titulo-vaga');
+       var categoria = $(this).attr('data-categoria-vaga');
+       var habilidade = $(this).attr('data-habilidade-vaga');
+       var preco = $(this).attr('data-preco-vaga');
+       var integral = $(this).attr('data-integral-vaga');
+       var descricao = $(this).attr('data-descricao-vaga');
+
+       editarVaga(idVaga, idUsuario, titulo, categoria, habilidade, preco, integral, descricao);
+    });
+
+    $('.li-excluir-vaga').on('click', function () {
+       var idVaga = $(this).attr('data-id-vaga');
+       var idUsuario = $(this).attr('data-id-usuario-vaga');
+       var titulo = $(this).attr('data-titulo-vaga');
+
+       $('#modal-confirmacao-exluir-vaga').modal('show');
+
+        $('#modal-confirmacao-exluir-vaga').on('show.bs.modal', function (event) {
+            $('#tituloPostagemVaga').text(titulo);
+
+            $('#excluirPostagem').on('click', function () {
+                excluirVaga(idVaga, idUsuario);
+                $('#modal-confirmacao-exluir-vaga').modal('hide');
+            });
+        });
+    });
+
     //obtem a lista de usuarios do bd e exibe em sugestoes
     $.ajax({
         url:"/perfil/getFotoPerfil/",
