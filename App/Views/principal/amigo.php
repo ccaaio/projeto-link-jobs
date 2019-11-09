@@ -215,16 +215,6 @@
                                                                 <span><img src="/public/images/clock.png" alt=""><?php echo $aListaVaga['dataHora']; ?></span>
                                                             </div>
                                                         </div>
-                                                        <div class="ed-opts">
-                                                            <a href="#" title="" class="ed-opts-open"><i class="la la-ellipsis-v"></i></a>
-                                                            <ul class="ed-options">
-                                                                <li><a href="#" title="">Editar uma postagem</a></li>
-                                                                <li><a href="#" title="">Não foi Salvo</a></li>
-                                                                <li><a href="#" title="">Liberar</a></li>
-                                                                <li><a href="#" title="">Fechar</a></li>
-                                                                <li><a href="#" title="">Esconder</a></li>
-                                                            </ul>
-                                                        </div>
                                                     </div>
                                                     <div class="epi-sec">
                                                         <ul class="descp">
