@@ -108,11 +108,21 @@ $(document).ready(function () {
                 nomeSobrenome = $('#nome-sobrenome').val();
                 profissao = $('#edit-profissao').val();
 
+                var email = $('#email').val();
+                var dataNasc = $('#dataNasc').val();
+                var inicio = $('#inicio-area').val();
+                var cidade = $('#cidade').val();
+                var estado = $('#estado').val();
+                var instrucao = $('#nivel-instrucao').val();
+                var salario = $('#salario').val();
+
+
+
                 setTimeout(function () {
                     $.ajax({
                         url: '/perfil/atualizarInformacoes',
                         method: 'POST',
-                        data: {idUser: idUsuario, nome: nomeSobrenome, profissao: profissao, email: $('#email').val(), dataNasc: $('#dataNasc').val(), inicio: $('#inicio-area').val(), cidade: $('#cidade').val(), estado: $('#estado').val(), instrucao: $('#nivel-instrucao').val()},
+                        data: {idUser: idUsuario, nome: nomeSobrenome, profissao: profissao, email: email, dataNasc: dataNasc, inicio: inicio, cidade: cidade, estado: estado, instrucao: instrucao, salario: salario},
                         success: function (get) {
                             getInfosPerfil();
                             Swal.fire({
