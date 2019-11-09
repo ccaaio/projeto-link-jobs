@@ -67,6 +67,7 @@ $(document).ready(function () {
     });
 
     $('.removerRecomendacao').on('click', function () {
+        alert('remover');
         getIdPerfil = $(this).attr('data-id-perfil');
 
         $.ajax({
