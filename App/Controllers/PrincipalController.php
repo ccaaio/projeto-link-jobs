@@ -231,6 +231,7 @@ class PrincipalController extends Controller {
 
         self::setViewJs('/public/js/principal/principal.js');
         self::setViewJs('/public/js/funcoes/listagens/sugestoes.js');
+        self::setViewJs('/public/js/funcoes/listagens/perfil.js');
 
         $this->render('principal/amigo');
     }
