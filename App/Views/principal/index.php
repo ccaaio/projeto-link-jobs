@@ -40,52 +40,6 @@
     </div>
 </div>
 
-<!-- Modal Editar -->
-<div class="modal fade" id="modal-editar-vaga" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header bg-secondary">
-                <h5 class="modal-title" id="exampleModalLabel">Editar Publicação: <strong>"<span id="titulo-publicacao-editar"></span>"</strong</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <form>
-                    <div class="form-group">
-                        <label for="titulo-editar-vaga" class="col-form-label">Titulo:</label>
-                        <input type="text" class="form-control titulo-editar-vaga" id="titulo-editar-vaga">
-                    </div>
-                    <div class="form-group">
-                        <label for="categoria-editar-vaga" class="col-form-label">Categoria:</label>
-                        <input type="text" class="form-control categoria-editar-vaga" id="categoria-editar-vaga">
-                    </div>
-                    <div class="form-group">
-                        <label for="habilidade-editar-vaga" class="col-form-label">Habilidade:</label>
-                        <input type="text" class="form-control habilidade-editar-vaga" id="habilidade-editar-vaga">
-                    </div>
-                    <div class="form-group">
-                        <label for="preco-editar-vaga" class="col-form-label">Preço:</label>
-                        <input type="text" class="form-control preco-editar-vaga" id="preco-editar-vaga">
-                    </div>
-                    <div class="form-group">
-                        <label for="integral-editar-vaga" class="col-form-label">Integral/Meio Período:</label>
-                        <input type="text" class="form-control integral-editar-vaga" id="integral-editar-vaga">
-                    </div>
-                    <div class="form-group">
-                        <label for="descricao-editar-vaga" class="col-form-label">Descrição:</label>
-                        <textarea class="form-control descricao-editar-vaga" id="descricao-editar-vaga"></textarea>
-                    </div>
-                </form>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-light" data-dismiss="modal">Cancelar Edição</button>
-                <button id="btn-editar-vaga" type="button" class="btn btn-secondary">Salvar Alterações</button>
-            </div>
-        </div>
-    </div>
-</div>
-
 <div class="wrapper">
     <header>
         <div class="container">
@@ -644,6 +598,51 @@
                 </form>
             </div>
             <a href="#" title=""><i class="la la-times-circle-o"></i></a>
+        </div>
+    </div>
+</div>
+<!-- Modal Editar -->
+<div class="modal fade" id="modal-editar-vaga" tabindex="-1" role="dialog" aria-labelledby="modal-editar-vagaLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modal-editar-vagaLabel">Editar Publicação: <strong>"<span id="titulo-publicacao-editar"></span>"</strong</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="titulo-editar-vaga" class="col-form-label">Titulo:</label>
+                        <input type="text" class="form-control titulo-editar-vaga" id="titulo-editar-vaga">
+                    </div>
+                    <div class="form-group">
+                        <label for="categoria-editar-vaga" class="col-form-label">Categoria:</label>
+                        <input type="text" class="form-control categoria-editar-vaga" id="categoria-editar-vaga">
+                    </div>
+                    <div class="form-group">
+                        <label for="habilidade-editar-vaga" class="col-form-label">Habilidade:</label>
+                        <input type="text" class="form-control habilidade-editar-vaga" id="habilidade-editar-vaga">
+                    </div>
+                    <div class="form-group">
+                        <label for="preco-editar-vaga" class="col-form-label">Preço:</label>
+                        <input type="text" class="form-control preco-editar-vaga" id="preco-editar-vaga">
+                    </div>
+                    <div class="form-group">
+                        <label for="integral-editar-vaga" class="col-form-label">Integral/Meio Período:</label>
+                        <input type="text" class="form-control integral-editar-vaga" id="integral-editar-vaga">
+                    </div>
+                    <div class="form-group">
+                        <label for="descricao-editar-vaga" class="col-form-label">Descrição:</label>
+                        <textarea class="form-control descricao-editar-vaga" id="descricao-editar-vaga"></textarea>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-light" data-dismiss="modal">Cancelar Edição</button>
+                <button id="btn-editar-vaga" type="button" class="btn btn-secondary">Salvar Alterações</button>
+            </div>
         </div>
     </div>
 </div>
