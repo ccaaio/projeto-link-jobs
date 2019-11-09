@@ -23,6 +23,26 @@ $(document).ready(function () {
                     $('.recomendarPerfil').addClass('removerRecomendacao');
                     //$('.recomendarPerfil').removeAttr('data-id-perfil');
                     $('.recomendarPerfil').removeClass('recomendarPerfil');
+
+                    $('.removerRecomendacao').on('click', function () {
+                        alert('remover');
+                        getIdPerfil = $(this).attr('data-id-perfil');
+
+                        $.ajax({
+                            url: '/perfil/removerRecomendacao',
+                            method: 'POST',
+                            data: {idPerfil: getIdPerfil, idUser: idUsuario},
+                            success: function (r) {
+                                if(r.curtiu == '1') {
+                                    $('.la-thumbs-o-up').css('color', '#dc3545');
+                                } else if(r.curtiu == '0') {
+
+                                }
+                                refreshContadorLikes(getIdPerfil, idUsuario);
+                            }
+                        });
+                    });
+
                 } else if(v.curtiu == '0') {
 
                 }
@@ -40,7 +60,26 @@ $(document).ready(function () {
            data: {idPerfil: idPerfil},
            success: function (l) {
                $('#qtd-likes').text(l.qtdRecomendacoes);
-               verificaSeJaRecomendou(idPerfil, idUsuario)
+               verificaSeJaRecomendou(idPerfil, idUsuario);
+
+               $('.removerRecomendacao').on('click', function () {
+                   alert('remover');
+                   getIdPerfil = $(this).attr('data-id-perfil');
+
+                   $.ajax({
+                       url: '/perfil/removerRecomendacao',
+                       method: 'POST',
+                       data: {idPerfil: getIdPerfil, idUser: idUsuario},
+                       success: function (r) {
+                           if(r.curtiu == '1') {
+                               $('.la-thumbs-o-up').css('color', '#dc3545');
+                           } else if(r.curtiu == '0') {
+
+                           }
+                           refreshContadorLikes(getIdPerfil, idUsuario);
+                       }
+                   });
+               });
            }
         });
     };
@@ -58,6 +97,26 @@ $(document).ready(function () {
                   $('.recomendarPerfil').addClass('removerRecomendacao');
                   //$('.recomendarPerfil').removeAttr('data-id-perfil');
                   $('.recomendarPerfil').removeClass('recomendarPerfil');
+
+                  $('.removerRecomendacao').on('click', function () {
+                      alert('remover');
+                      getIdPerfil = $(this).attr('data-id-perfil');
+
+                      $.ajax({
+                          url: '/perfil/removerRecomendacao',
+                          method: 'POST',
+                          data: {idPerfil: getIdPerfil, idUser: idUsuario},
+                          success: function (r) {
+                              if(r.curtiu == '1') {
+                                  $('.la-thumbs-o-up').css('color', '#dc3545');
+                              } else if(r.curtiu == '0') {
+
+                              }
+                              refreshContadorLikes(getIdPerfil, idUsuario);
+                          }
+                      });
+                  });
+
               } else if(r.curtiu == '0') {
 
               }
@@ -65,27 +124,6 @@ $(document).ready(function () {
           }
        });
     });
-
-    $('.removerRecomendacao').on('click', function () {
-        alert('remover');
-        getIdPerfil = $(this).attr('data-id-perfil');
-
-        $.ajax({
-            url: '/perfil/removerRecomendacao',
-            method: 'POST',
-            data: {idPerfil: getIdPerfil, idUser: idUsuario},
-            success: function (r) {
-                if(r.curtiu == '1') {
-                    $('.la-thumbs-o-up').css('color', '#dc3545');
-                } else if(r.curtiu == '0') {
-
-                }
-                refreshContadorLikes(getIdPerfil, idUsuario);
-            }
-        });
-    });
-
-
 
    //carrega informações do perfil de usuário
     setTimeout(function () {
