@@ -17,6 +17,7 @@
     <link rel="stylesheet" type="text/css" href="/public/css/slick-theme.css">
     <link rel="stylesheet" type="text/css" href="/public/css/line-awesome.css">
     <link rel="stylesheet" type="text/css" href="/public/css/line-awesome-font-awesome.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
     <link rel="stylesheet" type="text/css" href="/public/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="/public/css/sweetalert2.min.css">
     <link rel="stylesheet" type="text/css" href="/public/css/style.css">
