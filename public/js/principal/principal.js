@@ -41,8 +41,6 @@ $(document).ready(function () {
        var idUsuario = $(this).attr('data-id-usuario-vaga');
        var titulo = $(this).attr('data-titulo-vaga');
 
-       $('#modal-confirmacao-exluir-vaga').modal('show');
-
         $('#modal-confirmacao-exluir-vaga').on('show.bs.modal', function (event) {
             alert(titulo);
             $('#tituloPostagemVaga').text(titulo);
@@ -52,6 +50,9 @@ $(document).ready(function () {
                 $('#modal-confirmacao-exluir-vaga').modal('hide');
             });
         });
+
+        $('#modal-confirmacao-exluir-vaga').modal('show');
+
     });
 
     //obtem a lista de usuarios do bd e exibe em sugestoes
