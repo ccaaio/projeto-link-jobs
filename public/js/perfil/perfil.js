@@ -35,7 +35,7 @@ $(document).ready(function () {
                                 if(r.curtiu == '1') {
                                     $('.la-thumbs-o-up').css('color', '#dc3545');
                                 } else if(r.curtiu == '0') {
-
+                                    $('.la-thumbs-o-up').css('color', '#b2b2b2');
                                 }
                                 refreshContadorLikes(getIdPerfil, idUsuario);
                                 verificaSeJaRecomendou(getIdPerfil, idUsuario);
@@ -44,7 +44,8 @@ $(document).ready(function () {
                     });
 
                 } else if(v.curtiu == '0') {
-
+                    $('.removerRecomendacao').addClass('recomendarPerfil');
+                    $('.removerRecomendacao').removeClass('removerRecomendacao');
                 }
                 refreshContadorLikes(getIdPerfil, idUsuario);
             }
@@ -73,7 +74,7 @@ $(document).ready(function () {
                            if(r.curtiu == '1') {
                                $('.la-thumbs-o-up').css('color', '#dc3545');
                            } else if(r.curtiu == '0') {
-
+                               $('.la-thumbs-o-up').css('color', '#b2b2b2');
                            }
                            refreshContadorLikes(getIdPerfil, idUsuario);
                            verificaSeJaRecomendou(getIdPerfil, idUsuario);
@@ -109,7 +110,7 @@ $(document).ready(function () {
                               if(r.curtiu == '1') {
                                   $('.la-thumbs-o-up').css('color', '#dc3545');
                               } else if(r.curtiu == '0') {
-
+                                  $('.la-thumbs-o-up').css('color', '#b2b2b2');
                               }
                               refreshContadorLikes(getIdPerfil, idUsuario);
                               verificaSeJaRecomendou(getIdPerfil, idUsuario);
