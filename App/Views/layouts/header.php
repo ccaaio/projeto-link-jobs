@@ -62,6 +62,7 @@
 
     #countryList li:hover{
         background-color: #ff8d8d !important;
+        cursor: pointer !important;
         transition: all 0.5s;
     }
 
