@@ -37,5 +37,16 @@
         border-bottom-right-radius: 10px;
         text-align: left;
         box-shadow: 0 4px 7px -5px black;
+        z-index: 10;
+    }
+
+    #countryList li:hover{
+        background-color: #ff8d8d !important;
+        transition: all 0.5ms;
+    }
+
+    #countryList li:hover a{
+        color: #ffffff !important;
+        transition: all 0.5ms;
     }
 </style>
