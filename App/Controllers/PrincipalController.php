@@ -204,7 +204,7 @@ class PrincipalController extends Controller {
                             <h3>'.$row['nome_solicitante'].'</h3>
                             <h4>Profissão</h4>
                         </div>
-                        <a data-id-seguidor="'.$row['id_requisitado'].'" href="/principal/perfil/" title="" class="view-more-pro">Ver Perfil</a>
+                        <a href="/principal/amigo/'.$row["id_solicitante"].'" data-id-search="'.$row["id_solicitante"].'" title="" class="view-more-pro">Ver Perfil</a>
                     </div>
                 </div>    
                 ';
