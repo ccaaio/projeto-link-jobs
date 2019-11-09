@@ -621,7 +621,7 @@
                     </div>
                     <div class="form-group">
                         <label for="categoria-editar-vaga" class="col-form-label">Categoria:</label>
-                        <select class="form-control categoria-editar-vaga" id="categoria-editar-vaga" name="categoria">
+                        <select class="form-control categoria-editar-vaga" id="categoria-editar-vaga" name="categoria-editar-vaga">
                             <option class="text-capitalize" val="algorithm">algorithm</option>
                             <option class="text-capitalize" val="AngularJS">AngularJS</option>
                             <option class="text-capitalize" val="artificial intelligence">artificial intelligence</option>

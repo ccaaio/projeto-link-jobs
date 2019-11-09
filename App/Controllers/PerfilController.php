@@ -435,7 +435,7 @@ class PerfilController extends Controller {
             $idUser = $_POST['idUser'];
             $idVaga = $_POST['idVaga'];
             $titulo = $_POST['titulo'];
-            $categoria = $_POST['titulo'];
+            $categoria = $_POST['categoria'];
             $habilidade = $_POST['habilidade'];
             $preco = $_POST['preco'];
             $integral = $_POST['integral'];
