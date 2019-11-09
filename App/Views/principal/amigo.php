@@ -173,13 +173,13 @@
                                         <ul>
                                             <li data-tab="feed-dd" class="active">
                                                 <a href="#" title="">
-                                                    <img src="images/ic1.png" alt="">
+                                                    <img src="/public/images/ic1.png" alt="">
                                                     <span>Vagas</span>
                                                 </a>
                                             </li>
                                             <li data-tab="info-dd">
                                                 <a href="#" title="">
-                                                    <img src="images/ic2.png" alt="">
+                                                    <img src="/public/images/ic2.png" alt="">
                                                     <span>Informações</span>
                                                 </a>
                                             </li>
