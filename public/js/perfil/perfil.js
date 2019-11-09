@@ -29,6 +29,8 @@ $(document).ready(function () {
         });
     };
 
+    verificaSeJaRecomendou($('.recomendarPerfil').attr('data-id-perfil'), $('#idUsuario').val());
+
     var refreshContadorLikes = function (idPerfil, idUsuario) {
         $.ajax({
            url: '/perfil/getLikes',
