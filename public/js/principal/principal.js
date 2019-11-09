@@ -44,6 +44,7 @@ $(document).ready(function () {
        $('#modal-confirmacao-exluir-vaga').modal('show');
 
         $('#modal-confirmacao-exluir-vaga').on('show.bs.modal', function (event) {
+            alert(titulo);
             $('#tituloPostagemVaga').text(titulo);
 
             $('#excluirPostagem').on('click', function () {
