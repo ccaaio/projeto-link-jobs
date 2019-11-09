@@ -168,7 +168,7 @@ class PerfilController extends Controller {
 
         $conn = mysqli_connect("remotemysql.com", "GQ4OpczpAV", "jt4ifMIloM", "GQ4OpczpAV");
 
-        $sql2 = "UPDATE usuario SET titulo = '".$nome."', profissao =  '".$profissao."' WHERE id = '$idUser', email = '".$email."', data_nascimento = '".$dataNasc."', inicio_trabalho = '".$inicio."', cidade = '".$cidade."', estado = '".$estado."', salario = '".$salario."', nivel_instrucao = '".$instrucao."'";
+        $sql2 = "UPDATE usuario SET titulo = '".$nome."', profissao = '".$profissao."', email = '".$email."', data_nascimento = '".$dataNasc."', inicio_trabalho = '".$inicio."', cidade = '".$cidade."', estado = '".$estado."', salario = '".$salario."', nivel_instrucao = '".$instrucao."' WHERE id = '$idUser'";
         if(mysqli_query($conn, $sql2)) {
             $this->redirect('perfil/editar/');
         } else {
