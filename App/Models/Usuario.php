@@ -402,7 +402,7 @@ class Usuario
                     "SELECT * FROM vaga WHERE id_usuario = '".$id."' ORDER BY id DESC"
                 );
 
-                return $query->fetch();
+                return $query->fetchAll();
             }else{
                 // Faz a consulta
                 $query = $db->query(
