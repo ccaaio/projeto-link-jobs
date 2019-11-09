@@ -410,4 +410,23 @@ class PerfilController extends Controller {
         }
     }
 
+    public function excluirVaga() {
+        if(isset($_POST['idUser']) && isset($_POST['idVaga'])) {
+
+            $idUser = $_POST['idUser'];
+            $idVaga = $_POST['idVaga'];
+
+            $conn = mysqli_connect("remotemysql.com", "GQ4OpczpAV", "jt4ifMIloM", "GQ4OpczpAV");
+
+            $sql = "DELETE FROM vaga WHERE id = '$idVaga' AND id_usuario = '$idUser'";
+            if(mysqli_query($conn, $sql)) {
+                $this->redirect('principal/');
+            } else {
+                $this->render('error/usuario');
+            }
+        } else {
+            $this->render('error/usuario');
+        }
+    }
+
 }
