@@ -1089,9 +1089,9 @@
                                 </div><!--product-feed-tab end-->
                             </div><!--main-ws-sec end-->
                         </div>
-                        <div class="col-lg-3">
+                        <div class="col-lg-3" style="transform: translate(0px, 13.6em);">
                             <div class="right-sidebar">
-                                <div class="message-btn">
+                                <div class="message-btn d-none">
                                     <a href="#" title=""><i class="fa fa-envelope"></i>Mensagens</a>
                                 </div>
                                 <div class="widget widget-portfolio">
