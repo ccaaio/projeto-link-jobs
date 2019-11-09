@@ -38,49 +38,6 @@ $(document).ready(function () {
                                     $('.la-thumbs-o-up').css('color', '#b2b2b2');
                                     $('.removerRecomendacao').addClass('recomendarPerfil');
                                     $('.removerRecomendacao').removeClass('removerRecomendacao');
-
-                                    $('.recomendarPerfil').on('click', function () {
-                                        getIdPerfil = $(this).attr('data-id-perfil');
-
-                                        $.ajax({
-                                            url: '/perfil/recomendarPerfil',
-                                            method: 'POST',
-                                            data: {idPerfil: getIdPerfil, idUser: idUsuario},
-                                            success: function (r) {
-                                                if(r.curtiu == '1') {
-                                                    $('.la-thumbs-o-up').css('color', '#dc3545');
-                                                    $('.recomendarPerfil').addClass('removerRecomendacao');
-                                                    //$('.recomendarPerfil').removeAttr('data-id-perfil');
-                                                    $('.recomendarPerfil').removeClass('recomendarPerfil');
-
-                                                    $('.removerRecomendacao').on('click', function () {
-                                                        getIdPerfil = $(this).attr('data-id-perfil');
-
-                                                        $.ajax({
-                                                            url: '/perfil/removerRecomendacao',
-                                                            method: 'POST',
-                                                            data: {idPerfil: getIdPerfil, idUser: idUsuario},
-                                                            success: function (r) {
-                                                                if(r.curtiu == '1') {
-                                                                    $('.la-thumbs-o-up').css('color', '#dc3545');
-                                                                } else if(r.curtiu == '0') {
-                                                                    $('.la-thumbs-o-up').css('color', '#b2b2b2');
-                                                                    $('.removerRecomendacao').addClass('recomendarPerfil');
-                                                                    $('.removerRecomendacao').removeClass('removerRecomendacao');
-                                                                }
-                                                                refreshContadorLikes(getIdPerfil, idUsuario);
-                                                                verificaSeJaRecomendou(getIdPerfil, idUsuario);
-                                                            }
-                                                        });
-                                                    });
-
-                                                } else if(r.curtiu == '0') {
-
-                                                }
-                                                refreshContadorLikes(getIdPerfil, idUsuario);
-                                            }
-                                        });
-                                    });
                                 }
                                 refreshContadorLikes(getIdPerfil, idUsuario);
                                 verificaSeJaRecomendou(getIdPerfil, idUsuario);
@@ -91,49 +48,6 @@ $(document).ready(function () {
                 } else if(v.curtiu == '0') {
                     $('.removerRecomendacao').addClass('recomendarPerfil');
                     $('.removerRecomendacao').removeClass('removerRecomendacao');
-
-                    $('.recomendarPerfil').on('click', function () {
-                        getIdPerfil = $(this).attr('data-id-perfil');
-
-                        $.ajax({
-                            url: '/perfil/recomendarPerfil',
-                            method: 'POST',
-                            data: {idPerfil: getIdPerfil, idUser: idUsuario},
-                            success: function (r) {
-                                if(r.curtiu == '1') {
-                                    $('.la-thumbs-o-up').css('color', '#dc3545');
-                                    $('.recomendarPerfil').addClass('removerRecomendacao');
-                                    //$('.recomendarPerfil').removeAttr('data-id-perfil');
-                                    $('.recomendarPerfil').removeClass('recomendarPerfil');
-
-                                    $('.removerRecomendacao').on('click', function () {
-                                        getIdPerfil = $(this).attr('data-id-perfil');
-
-                                        $.ajax({
-                                            url: '/perfil/removerRecomendacao',
-                                            method: 'POST',
-                                            data: {idPerfil: getIdPerfil, idUser: idUsuario},
-                                            success: function (r) {
-                                                if(r.curtiu == '1') {
-                                                    $('.la-thumbs-o-up').css('color', '#dc3545');
-                                                } else if(r.curtiu == '0') {
-                                                    $('.la-thumbs-o-up').css('color', '#b2b2b2');
-                                                    $('.removerRecomendacao').addClass('recomendarPerfil');
-                                                    $('.removerRecomendacao').removeClass('removerRecomendacao');
-                                                }
-                                                refreshContadorLikes(getIdPerfil, idUsuario);
-                                                verificaSeJaRecomendou(getIdPerfil, idUsuario);
-                                            }
-                                        });
-                                    });
-
-                                } else if(r.curtiu == '0') {
-
-                                }
-                                refreshContadorLikes(getIdPerfil, idUsuario);
-                            }
-                        });
-                    });
                 }
                 refreshContadorLikes(getIdPerfil, idUsuario);
             }
@@ -165,49 +79,6 @@ $(document).ready(function () {
                                $('.la-thumbs-o-up').css('color', '#b2b2b2');
                                $('.removerRecomendacao').addClass('recomendarPerfil');
                                $('.removerRecomendacao').removeClass('removerRecomendacao');
-
-                               $('.recomendarPerfil').on('click', function () {
-                                   getIdPerfil = $(this).attr('data-id-perfil');
-
-                                   $.ajax({
-                                       url: '/perfil/recomendarPerfil',
-                                       method: 'POST',
-                                       data: {idPerfil: getIdPerfil, idUser: idUsuario},
-                                       success: function (r) {
-                                           if(r.curtiu == '1') {
-                                               $('.la-thumbs-o-up').css('color', '#dc3545');
-                                               $('.recomendarPerfil').addClass('removerRecomendacao');
-                                               //$('.recomendarPerfil').removeAttr('data-id-perfil');
-                                               $('.recomendarPerfil').removeClass('recomendarPerfil');
-
-                                               $('.removerRecomendacao').on('click', function () {
-                                                   getIdPerfil = $(this).attr('data-id-perfil');
-
-                                                   $.ajax({
-                                                       url: '/perfil/removerRecomendacao',
-                                                       method: 'POST',
-                                                       data: {idPerfil: getIdPerfil, idUser: idUsuario},
-                                                       success: function (r) {
-                                                           if(r.curtiu == '1') {
-                                                               $('.la-thumbs-o-up').css('color', '#dc3545');
-                                                           } else if(r.curtiu == '0') {
-                                                               $('.la-thumbs-o-up').css('color', '#b2b2b2');
-                                                               $('.removerRecomendacao').addClass('recomendarPerfil');
-                                                               $('.removerRecomendacao').removeClass('removerRecomendacao');
-                                                           }
-                                                           refreshContadorLikes(getIdPerfil, idUsuario);
-                                                           verificaSeJaRecomendou(getIdPerfil, idUsuario);
-                                                       }
-                                                   });
-                                               });
-
-                                           } else if(r.curtiu == '0') {
-
-                                           }
-                                           refreshContadorLikes(getIdPerfil, idUsuario);
-                                       }
-                                   });
-                               });
                            }
                            refreshContadorLikes(getIdPerfil, idUsuario);
                            verificaSeJaRecomendou(getIdPerfil, idUsuario);
