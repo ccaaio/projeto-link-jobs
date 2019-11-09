@@ -429,4 +429,29 @@ class PerfilController extends Controller {
         }
     }
 
+    public function editarVaga() {
+        if(isset($_POST['idVaga']) && isset($_POST['titulo']) && isset($_POST['categoria']) && isset($_POST['habilidade']) && isset($_POST['preco']) && isset($_POST['integral']) && isset($_POST['descricao']) && isset($_POST['idUser'])) {
+
+            $idUser = $_POST['idUser'];
+            $idVaga = $_POST['idVaga'];
+            $titulo = $_POST['titulo'];
+            $categoria = $_POST['titulo'];
+            $habilidade = $_POST['habilidade'];
+            $preco = $_POST['preco'];
+            $integral = $_POST['integral'];
+            $descricao = $_POST['descricao'];
+
+            $conn = mysqli_connect("remotemysql.com", "GQ4OpczpAV", "jt4ifMIloM", "GQ4OpczpAV");
+
+            $sql = "UPDATE vaga SET titulo = '".$titulo."', categoria = '".$categoria."', habilidade = '".$habilidade."', preco = '".$preco."', integral = '".$integral."', descricao = '".$descricao."' WHERE id = '$idVaga' AND id_usuario = '$idUser'";
+            if(mysqli_query($conn, $sql)) {
+                $this->redirect('principal/');
+            } else {
+                $this->render('error/usuario');
+            }
+        } else {
+            $this->render('error/usuario');
+        }
+    }
+
 }

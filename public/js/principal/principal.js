@@ -7,7 +7,16 @@ $(document).ready(function () {
            method: 'POST',
            data: {idVaga: idVaga, idUser: idUsuario},
            success: function (d) {
-               alert('excluído com sucesso!');
+               Swal.fire({
+                   position: 'center',
+                   icon: 'success',
+                   title: 'Publicação excluída!',
+                   showConfirmButton: false,
+                   timer: 1500
+               });
+               setTimeout(function () {
+                   window.location.href = "https://projeto-link-jobs.herokuapp.com/principal/";
+               },1600);
            }
         });
     };
@@ -18,7 +27,16 @@ $(document).ready(function () {
             method: 'POST',
             data: {idVaga: idVaga, idUser: idUsuario, titulo: titulo, categoria: categoria, habilidade: habilidade, preco: preco, integral: integral, descricao: descricao},
             success: function (d) {
-                alert('Editado com sucesso!');
+                Swal.fire({
+                    position: 'center',
+                    icon: 'success',
+                    title: 'Publicação alterada!',
+                    showConfirmButton: false,
+                    timer: 1500
+                });
+                setTimeout(function () {
+                    window.location.href = "https://projeto-link-jobs.herokuapp.com/principal/";
+                },1600);
             }
         });
     };
@@ -33,7 +51,33 @@ $(document).ready(function () {
        var integral = $(this).attr('data-integral-vaga');
        var descricao = $(this).attr('data-descricao-vaga');
 
-       editarVaga(idVaga, idUsuario, titulo, categoria, habilidade, preco, integral, descricao);
+       $('#modal-confirmacao-exluir-vaga').on('show.bs.modal', function (event) {
+            $('#titulo-publicacao-editar').text(titulo);
+
+            $('.titulo-editar-vaga').val(titulo);
+            $('.categoria-editar-vaga').val(categoria);
+            $('.habilidade-editar-vaga').val(habilidade);
+            $('.preco-editar-vaga').val(preco);
+            $('.integral-editar-vaga').val(integral);
+            $('.descricao-editar-vaga').val(descricao);
+
+            $('#btn-editar-vaga').on('click', function () {
+                var tituloEdit = $('.titulo-editar-vaga').val();
+                var categoriaEdit = $('.categoria-editar-vaga').val();
+                var habilidadeEdit = $('.habilidade-editar-vaga').val();
+                var precoEdit = $('.preco-editar-vaga').val();
+                var integralEdit = $('.integral-editar-vaga').val();
+                var descricaoEdit = $('.descricao-editar-vaga').val();
+
+                setTimeout(function () {
+                    editarVaga(idVaga, idUsuario, tituloEdit, categoriaEdit, habilidadeEdit, precoEdit, integralEdit, descricaoEdit);
+                },150);
+                $('#modal-editar-vaga').modal('hide');
+            });
+        });
+
+        $('#modal-editar-vaga').modal('show');
+
     });
 
     $('.li-excluir-vaga').on('click', function () {
