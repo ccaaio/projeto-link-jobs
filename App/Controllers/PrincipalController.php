@@ -140,7 +140,7 @@ class PrincipalController extends Controller {
                                 <li><a href="#" title="" class="hire-us recusar-solicitacao" data-id-usuario-solicitante="'.$row['id_solicitante'].'" data-nome-usuario-solicitante="'.$row['nome_solicitado'].'"><i class="fa fa-times" aria-hidden="true"></i></a></li>
                             </ul>
                         </div>
-                        <a href="/principal/perfil/" title="" class="view-more-pro">Ver Perfil</a>
+                        <a href="/principal/amigo/'.$row["id_requisitado"].'" data-id-search="'.$row["id_requisitado"].'" title="" class="view-more-pro">Ver Perfil</a>
                     </div>
                 </div>    
                 ';
