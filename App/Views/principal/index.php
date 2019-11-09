@@ -25,7 +25,7 @@
         <div class="modal-content">
             <div class="modal-header bg-danger text-light">
                 <h5 class="modal-title" id="exampleModalLabel">Confirmação de Exclusão de Postagem</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="cursor: pointer !important;">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
@@ -33,8 +33,8 @@
                 Você tem certeza que deseja excluir a postagem <strong>"<span id="tituloPostagemVaga" class="text-danger text-uppercase"></span>"</strong>?
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-light" data-dismiss="modal">Cancelar exclusão</button>
-                <button id="excluirPostagem" type="button" class="btn btn-danger">Sim, quero excluir esta postagem!</button>
+                <button type="button" class="btn btn-light" data-dismiss="modal" style="cursor: pointer !important;">Cancelar exclusão</button>
+                <button id="excluirPostagem" type="button" class="btn btn-danger" style="cursor: pointer !important;">Sim, quero excluir esta postagem!</button>
             </div>
         </div>
     </div>
