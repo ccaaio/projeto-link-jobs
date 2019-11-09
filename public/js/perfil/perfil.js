@@ -39,6 +39,7 @@ $(document).ready(function () {
                                     $('.removerRecomendacao').addClass('recomendarPerfil');
                                     $('.removerRecomendacao').removeClass('removerRecomendacao');
                                     location.reload();
+                                    stop();
                                 }
                                 refreshContadorLikes(getIdPerfil, idUsuario);
                                 verificaSeJaRecomendou(getIdPerfil, idUsuario);
@@ -81,6 +82,7 @@ $(document).ready(function () {
                                $('.removerRecomendacao').addClass('recomendarPerfil');
                                $('.removerRecomendacao').removeClass('removerRecomendacao');
                                location.reload();
+                               stop();
                            }
                            refreshContadorLikes(getIdPerfil, idUsuario);
                            verificaSeJaRecomendou(getIdPerfil, idUsuario);
@@ -120,7 +122,7 @@ $(document).ready(function () {
                                   $('.removerRecomendacao').addClass('recomendarPerfil');
                                   $('.removerRecomendacao').removeClass('removerRecomendacao');
                                   location.reload();
-
+                                  stop();
                               }
                               refreshContadorLikes(getIdPerfil, idUsuario);
                               verificaSeJaRecomendou(getIdPerfil, idUsuario);
