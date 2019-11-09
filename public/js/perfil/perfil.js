@@ -58,7 +58,6 @@ $(document).ready(function () {
 
               }
               refreshContadorLikes(getIdPerfil, idUsuario);
-              //alert('Perfil recomendado com sucesso!');
           }
        });
     });
