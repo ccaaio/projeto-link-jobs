@@ -38,6 +38,7 @@ $(document).ready(function () {
                                     $('.la-thumbs-o-up').css('color', '#b2b2b2');
                                     $('.removerRecomendacao').addClass('recomendarPerfil');
                                     $('.removerRecomendacao').removeClass('removerRecomendacao');
+                                    location.reload();
                                 }
                                 refreshContadorLikes(getIdPerfil, idUsuario);
                                 verificaSeJaRecomendou(getIdPerfil, idUsuario);
@@ -79,6 +80,7 @@ $(document).ready(function () {
                                $('.la-thumbs-o-up').css('color', '#b2b2b2');
                                $('.removerRecomendacao').addClass('recomendarPerfil');
                                $('.removerRecomendacao').removeClass('removerRecomendacao');
+                               location.reload();
                            }
                            refreshContadorLikes(getIdPerfil, idUsuario);
                            verificaSeJaRecomendou(getIdPerfil, idUsuario);
@@ -117,6 +119,8 @@ $(document).ready(function () {
                                   $('.la-thumbs-o-up').css('color', '#b2b2b2');
                                   $('.removerRecomendacao').addClass('recomendarPerfil');
                                   $('.removerRecomendacao').removeClass('removerRecomendacao');
+                                  location.reload();
+
                               }
                               refreshContadorLikes(getIdPerfil, idUsuario);
                               verificaSeJaRecomendou(getIdPerfil, idUsuario);
