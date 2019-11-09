@@ -42,7 +42,6 @@ $(document).ready(function () {
        var titulo = $(this).attr('data-titulo-vaga');
 
         $('#modal-confirmacao-exluir-vaga').on('show.bs.modal', function (event) {
-            alert(titulo);
             $('#tituloPostagemVaga').text(titulo);
 
             $('#excluirPostagem').on('click', function () {
