@@ -329,6 +329,34 @@ class PerfilController extends Controller {
         }
     }
 
+    public function removerRecomendacao() {
+        if(isset($_POST['idUser']) && isset($_POST['idPerfil'])) {
+
+            $idUser = $_POST['idUser'];
+            $idPerfil = $_POST['idPerfil'];
+
+            $conn = mysqli_connect("remotemysql.com", "GQ4OpczpAV", "jt4ifMIloM", "GQ4OpczpAV");
+
+            $sql = "DELETE FROM recomendacoes WHERE id_amigo = '$idPerfil' AND id_pessoal = '$idUser'";
+            if(mysqli_query($conn, $sql)) {
+                $result = mysqli_query($conn, "SELECT * FROM recomendacoes WHERE id_amigo = '$idPerfil' AND id_pessoal = '$idUser' LIMIT 1");
+                if (mysqli_num_rows($result) > 0) {
+                    while($row = mysqli_fetch_assoc($result)) {
+                        header('Content-Type: application/json');
+                        echo json_encode(array('curtiu'=> '1'));
+                    }
+                } else {
+                    header('Content-Type: application/json');
+                    echo json_encode(array('curtiu'=> '0'));
+                }
+            } else {
+                $this->render('error/usuario');
+            }
+        } else {
+            $this->render('error/usuario');
+        }
+    }
+
     public function getLikes() {
         if(isset($_POST['idPerfil'])) {
 

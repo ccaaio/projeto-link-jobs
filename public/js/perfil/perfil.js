@@ -20,7 +20,8 @@ $(document).ready(function () {
             success: function (v) {
                 if(v.curtiu == '1') {
                     $('.la-thumbs-o-up').css('color', '#dc3545');
-                    $('.recomendarPerfil').removeAttr('data-id-perfil');
+                    $('.recomendarPerfil').addClass('removerRecomendacao');
+                    //$('.recomendarPerfil').removeAttr('data-id-perfil');
                     $('.recomendarPerfil').removeClass('recomendarPerfil');
                 } else if(v.curtiu == '0') {
 
@@ -60,6 +61,24 @@ $(document).ready(function () {
               refreshContadorLikes(getIdPerfil, idUsuario);
           }
        });
+    });
+
+    $('.removerRecomendacao').on('click', function () {
+        getIdPerfil = $(this).attr('data-id-perfil');
+
+        $.ajax({
+            url: '/perfil/removerRecomendacao',
+            method: 'POST',
+            data: {idPerfil: getIdPerfil, idUser: idUsuario},
+            success: function (r) {
+                if(r.curtiu == '1') {
+                    $('.la-thumbs-o-up').css('color', '#dc3545');
+                } else if(r.curtiu == '0') {
+
+                }
+                refreshContadorLikes(getIdPerfil, idUsuario);
+            }
+        });
     });
 
 
