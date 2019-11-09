@@ -53,6 +53,8 @@
         text-decoration: none !important;
         color: #7b7b7b !important;
         padding-left: 1em;
+        width: 100% !important;
+        display: block;
     }
 
     #countryList ul li:last-child{
