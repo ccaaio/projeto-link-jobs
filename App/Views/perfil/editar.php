@@ -56,11 +56,72 @@
                 <form>
                     <div class="form-group">
                         <label for="nome-sobrenome" class="col-form-label">Nome e Sobrenome:</label>
-                        <input type="text" class="form-control" id="nome-sobrenome">
+                        <input type="text" class="form-control" id="nome-sobrenome" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="senha" class="col-form-label">Senha:</label>
+                        <input type="password" class="form-control" id="senha">
+                    </div>
+                    <div class="form-group">
+                        <label for="email" class="col-form-label">E-mail:</label>
+                        <input type="email" class="form-control" id="email" placeholder="seu-email@linkjobs.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="dataNasc" class="col-form-label">Data de Nascimento:</label>
+                        <input type="date" class="form-control" id="dataNasc" placeholder="dd/mm/aaaa" required>
                     </div>
                     <div class="form-group">
                         <label for="edit-profissao" class="col-form-label">Profissão:</label>
-                        <input type="text" class="form-control" id="edit-profissao">
+                        <input type="text" class="form-control" id="edit-profissao" placeholder="Analista..." required>
+                    </div>
+                    <div class="form-group">
+                        <label for="nivel-instrucao" class="col-form-label">Nível de Instrução:</label>
+                        <input type="text" class="form-control" id="nivel-instrucao" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="inicio-area" class="col-form-label">Quando iniciou na Área:</label>
+                        <input type="text" class="form-control" id="inicio-area" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="cidade" class="col-form-label">Cidade:</label>
+                        <input type="text" class="form-control" id="cidade" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="estado" class="col-form-label">Estado:</label>
+                        <select class="form-control" id="estado" required="">
+                            <option>Selecione o Estado...</option>
+                            <option value="AC">Acre</option>
+                            <option value="AL">Alagoas</option>
+                            <option value="AP">Amapá</option>
+                            <option value="AM">Amazonas</option>
+                            <option value="BA">Bahia</option>
+                            <option value="CE">Ceará</option>
+                            <option value="DF">Distrito Federal</option>
+                            <option value="ES">Espírito Santo</option>
+                            <option value="GO">Goiás</option>
+                            <option value="MA">Maranhão</option>
+                            <option value="MT">Mato Grosso</option>
+                            <option value="MS">Mato Grosso do Sul</option>
+                            <option value="MG">Minas Gerais</option>
+                            <option value="PA">Pará</option>
+                            <option value="PB">Paraíba</option>
+                            <option value="PR">Paraná</option>
+                            <option value="PE">Pernambuco</option>
+                            <option value="PI">Piauí</option>
+                            <option value="RJ">Rio de Janeiro</option>
+                            <option value="RN">Rio Grande do Norte</option>
+                            <option value="RS">Rio Grande do Sul</option>
+                            <option value="RO">Rondônia</option>
+                            <option value="RR">Roraima</option>
+                            <option value="SC">Santa Catarina</option>
+                            <option value="SP">São Paulo</option>
+                            <option value="SE">Sergipe</option>
+                            <option value="TO">Tocantins</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="salario" class="col-form-label">Salário:</label>
+                        <input type="text" class="form-control" id="salario" required>
                     </div>
                 </form>
             </div>

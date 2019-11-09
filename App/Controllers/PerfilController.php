@@ -158,10 +158,17 @@ class PerfilController extends Controller {
         $nome = $_POST['nome'];
         $profissao = $_POST['profissao'];
         $idUser = $_POST['idUser'];
+        $email = $_POST['email'];
+        $dataNasc = $_POST['dataNasc'];
+        $salario = $_POST['salario'];
+        $inicio = $_POST['inicio'];
+        $cidade = $_POST['cidade'];
+        $estado = $_POST['estado'];
+        $instrucao = $_POST['instrucao'];
 
         $conn = mysqli_connect("remotemysql.com", "GQ4OpczpAV", "jt4ifMIloM", "GQ4OpczpAV");
 
-        $sql2 = "UPDATE usuario SET titulo = '".$nome."', profissao =  '".$profissao."' WHERE id = '$idUser'";
+        $sql2 = "UPDATE usuario SET titulo = '".$nome."', profissao =  '".$profissao."' WHERE id = '$idUser', email = '".$email."', data_nascimento = '".$dataNasc."', inicio_trabalho = '".$inicio."', cidade = '".$cidade."', estado = '".$estado."', salario = '".$salario."', nivel_instrucao = '".$instrucao."'";
         if(mysqli_query($conn, $sql2)) {
             $this->redirect('perfil/editar/');
         } else {
@@ -176,12 +183,12 @@ class PerfilController extends Controller {
 
             $conn = mysqli_connect("remotemysql.com", "GQ4OpczpAV", "jt4ifMIloM", "GQ4OpczpAV");
 
-            $result = mysqli_query($conn, "SELECT titulo,profissao FROM usuario WHERE id = '$idUser' ORDER BY id DESC LIMIT 1");
+            $result = mysqli_query($conn, "SELECT * FROM usuario WHERE id = '$idUser' ORDER BY id DESC LIMIT 1");
 
             if (mysqli_num_rows($result) > 0) {
                 while($row = mysqli_fetch_assoc($result)) {
                     header('Content-Type: application/json');
-                    echo json_encode(array('titulo'=> $row['titulo'], 'profissao'=> $row['profissao']));
+                    echo json_encode(array('titulo'=> $row['titulo'], 'profissao'=> $row['profissao'], 'email'=> $row['email'], 'dataNasc'=> $row['data_nascimento'], 'inicio'=> $row['inicio_trabalho'], 'cidade'=> $row['cidade'], 'estado'=> $row['estado'], 'instrucao'=> $row['nivel_instrucao'], 'salario' => $row['salario']));
                 }
             } else {
                 $this->render('error/usuario');

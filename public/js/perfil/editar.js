@@ -11,6 +11,13 @@ var getInfosPerfil = function () {
            setTimeout(function () {
                $('.nomeUser').text(i.titulo);
                $('#profissaoUser').text(i.profissao);
+               $('#email').val(i.email);
+               $('#dataNasc').val(i.dataNasc);
+               $('#inicio-area').val(i.inicio);
+               $('#cidade').val(i.cidade);
+               $('#estado').val(i.estado);
+               $('#salario').val(i.salario);
+               $('#nivel-instrucao').val(i.instrucao);
            },100);
        }
     });
@@ -105,7 +112,7 @@ $(document).ready(function () {
                     $.ajax({
                         url: '/perfil/atualizarInformacoes',
                         method: 'POST',
-                        data: {idUser: idUsuario, nome: nomeSobrenome, profissao: profissao},
+                        data: {idUser: idUsuario, nome: nomeSobrenome, profissao: profissao, email: $('#email').val(), dataNasc: $('#dataNasc').val(), inicio: $('#inicio-area').val(), cidade: $('#cidade').val(), estado: $('#estado').val(), instrucao: $('#nivel-instrucao').val()},
                         success: function (get) {
                             getInfosPerfil();
                             Swal.fire({
