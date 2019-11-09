@@ -10,15 +10,33 @@ $(document).ready(function () {
                 $('#texto-visao-geral').text(v.visao);
             }
         });
-    }
+    };
 
-    var refreshContadorLikes = function (idPerfil) {
+    var verificaSeJaRecomendou = function (getIdPerfil, idUsuario) {
+        $.ajax({
+            url: '/perfil/verificarRecomendacao',
+            method: 'POST',
+            data: {idPerfil: getIdPerfil, idUser: idUsuario},
+            success: function (v) {
+                if(v.curtiu == '1') {
+                    $('.la-thumbs-o-up').css('color', '#dc3545');
+                    $('.recomendarPerfil').removeAttr('data-id-perfil');
+                    $('.recomendarPerfil').removeClass('recomendarPerfil');
+                } else if(v.curtiu == '0') {
+
+                }
+            }
+        });
+    };
+
+    var refreshContadorLikes = function (idPerfil, idUsuario) {
         $.ajax({
            url: '/perfil/getLikes',
            method: 'POST',
-           data: {idUser:idUsuario, idPerfil: idPerfil},
+           data: {idPerfil: idPerfil},
            success: function (l) {
-               $('#qtd-likes').text(l.qtd);
+               $('#qtd-likes').text(l.qtdRecomendacoes);
+               verificaSeJaRecomendou(idPerfil, idUsuario)
            }
         });
     };
@@ -31,7 +49,12 @@ $(document).ready(function () {
           method: 'POST',
           data: {idPerfil: getIdPerfil, idUser: idUsuario},
           success: function (r) {
-              refreshContadorLikes(getIdPerfil);
+              if(r.curtiu == '1') {
+                $('.la-thumbs-o-up').css('color', '#dc3545');
+              } else if(r.curtiu == '0') {
+
+              }
+              refreshContadorLikes(getIdPerfil, idUsuario);
               alert('Perfil recomendado com sucesso!');
           }
        });
