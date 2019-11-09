@@ -407,7 +407,7 @@
                                 <div class="product-feed-tab" id="info-dd">
                                     <div class="user-profile-ov">
                                         <h3>Ver tudo</h3>
-                                        <p><?php echo $aViewVar['aAmigo']['visao']; ?></p>
+                                        <p><?php echo $aViewVar['aVisao']['visao']; ?></p>
                                     </div>
                                     <div class="user-profile-ov st2">
                                         <h3>Experiência</h3>
