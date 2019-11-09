@@ -289,7 +289,7 @@ class PerfilController extends Controller {
             {
                 while($row = mysqli_fetch_array($result))
                 {
-                    $output .= '<li style="background-color: #efefef;line-height: 1.9;border-bottom: 1px solid #b2b2b2;"><a href="/principal/amigo/'.$row["id"].'" data-id-search="'.$row["id"].'" style="text-decoration: none !important;color: #7b7b7b !important;padding-left: 1em;">'.$row["titulo"].'</a></li>';
+                    $output .= '<li><a href="/principal/amigo/'.$row["id"].'" data-id-search="'.$row["id"].'">'.$row["titulo"].'</a></li>';
                 }
             }
             else

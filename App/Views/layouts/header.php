@@ -38,15 +38,35 @@
         text-align: left;
         box-shadow: 0 4px 7px -5px black;
         z-index: 10;
+        transition: all 0.5s;
+    }
+
+    #countryList ul li{
+        background-color: #efefef;
+        line-height: 1.9;
+        border-bottom: 1px solid #b2b2b26b;
+        transition: all 0.5s;
+    }
+
+    #countryList ul li a{
+        transition: all 0.5s;
+        text-decoration: none !important;
+        color: #7b7b7b !important;
+        padding-left: 1em;
+    }
+
+    #countryList ul li:last-child{
+        transition: all 0.5s;
+        border-bottom: none !important;
     }
 
     #countryList li:hover{
         background-color: #ff8d8d !important;
-        transition: all 0.5ms;
+        transition: all 0.5s;
     }
 
     #countryList li:hover a{
         color: #ffffff !important;
-        transition: all 0.5ms;
+        transition: all 0.5s;
     }
 </style>
