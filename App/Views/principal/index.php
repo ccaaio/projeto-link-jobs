@@ -606,7 +606,9 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="modal-editar-vagaLabel">Editar Publicação: <strong>"<span id="titulo-publicacao-editar"></span>"</strong</h5>
+                <h5 class="modal-title" id="exampleModalLabel">
+                    Editar Publicação: <span id="titulo-editar-vaga" class="text-danger"></span>
+                </h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
