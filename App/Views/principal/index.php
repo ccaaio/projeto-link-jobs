@@ -18,6 +18,28 @@
         text-overflow: ellipsis !important;
     }
 </style>
+
+<!-- Modal Confirmação Excluir -->
+<div class="modal fade" id="#modal-confirmacao-exluir-vaga" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Confirmação de Exclusão de Postagem</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Você tem certeza que deseja excluir a postagem <strong>"<span id="tituloPostagemVaga" class="text-danger text-uppercase"></span>"</strong>?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-light" data-dismiss="modal">Cancelar exclusão</button>
+                <button id="excluirPostagem" type="button" class="btn btn-danger">Sim, quero excluir esta postagem!</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 <div class="wrapper">
     <header>
         <div class="container">
@@ -578,27 +600,4 @@
             <a href="#" title=""><i class="la la-times-circle-o"></i></a>
         </div>
     </div>
-
-    <!-- Modal Confirmação Excluir -->
-    <div class="modal fade" id="#modal-confirmacao-exluir-vaga" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Confirmação de Exclusão de Postagem</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    Você tem certeza que deseja excluir a postagem <strong>"<span id="tituloPostagemVaga" class="text-danger text-uppercase"></span>"</strong>?
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-light" data-dismiss="modal">Cancelar exclusão</button>
-                    <button id="excluirPostagem" type="button" class="btn btn-danger">Sim, quero excluir esta postagem!</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
 </div>
