@@ -302,7 +302,7 @@
                                             <i class="la la-ellipsis-v"></i>
                                         </div>
                                         <div class="profiles-slider">
-                                            <div id="id="content-voce-deveria"></div>
+                                            <div id="content-voce-deveria"></div>
                                         </div>
                                     </div>
 
