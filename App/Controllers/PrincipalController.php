@@ -252,6 +252,7 @@ class PrincipalController extends Controller {
 
             while($row = mysqli_fetch_assoc($result)) {
                 $row["listagem"] = '
+                    <div class="profiles-slider">
                     <div class="user-profy">
                         <img src="/public/images/profile-default.png" alt="" style="width: 57px;height: 57px;">
                         <h3>'.$row['titulo'].'</h3>
@@ -261,6 +262,7 @@ class PrincipalController extends Controller {
                         </ul>
                         <a href="/principal/amigo/'.$row['id'].'" title="">Visualizar Perfil</a>
                     </div>  
+                    </div>
                     ';
                 ?>
                 <?php
