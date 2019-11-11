@@ -37,7 +37,7 @@ class PrincipalController extends Controller {
 FROM amizade where id_requisitado = '$idLogado')
 AND usuario.id NOT IN (SELECT amizade.id_requisitado 
 FROM amizade where amizade.id_solicitante = '$idLogado') 
-AND usuario.id != '$idLogado'");
+AND usuario.id != '$idLogado' LIMIT 10");
 
             while($row = mysqli_fetch_assoc($result)) {
                 $row["listagem"] = "
