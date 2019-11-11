@@ -240,7 +240,7 @@ $(window).on("load", function() {
 
     //  ============= PORTFOLIO SLIDER FUNCTION =========
 
-    $('#content-voce-deveria').slick({
+    $('.profiles-slider').slick({
         slidesToShow: 3,
         slck:true,
         slidesToScroll: 1,
