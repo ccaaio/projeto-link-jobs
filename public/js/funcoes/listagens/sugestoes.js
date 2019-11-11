@@ -17,7 +17,6 @@ $(document).ready(function () {
                 method:"POST",
                 data:{idProprio: idLogado},
                 success:function(v){
-                    alert('ok');
                     $('#content-voce-deveria').html(v);
                 }
             });
