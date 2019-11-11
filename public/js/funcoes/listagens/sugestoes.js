@@ -1,5 +1,4 @@
 $(document).ready(function () {
-
         var idLogado = $('#id-logado').val();
 
             //obtem a lista de usuarios do bd e exibe em sugestoes
