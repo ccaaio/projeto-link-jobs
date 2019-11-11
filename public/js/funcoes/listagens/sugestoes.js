@@ -12,14 +12,16 @@ $(document).ready(function () {
                 }
             });
 
-            $.ajax({
-                url:"/principal/getDeveriaConhecer/",
-                method:"POST",
-                data:{idProprio: idLogado},
-                success:function(v){
-                    $('#content-voce-deveria').html(v);
-                }
-            });
+            setTimeout(function () {
+                $.ajax({
+                    url:"/principal/getDeveriaConhecer/",
+                    method:"POST",
+                    data:{idProprio: idLogado},
+                    success:function(v){
+                        $('#content-voce-deveria').html(v);
+                    }
+                });
+            },500);
 
     //ao clicar em add amigo - SUGESTOES
 
