@@ -8,20 +8,17 @@ $(document).ready(function () {
                 method:"POST",
                 data:{idProprio: idLogado},
                 success:function(s){
+                    $.ajax({
+                        url:"/principal/getDeveriaConhecer/",
+                        method:"POST",
+                        data:{idProprio: idLogado},
+                        success:function(v){
+                            $('#content-voce-deveria').html(v);
+                        }
+                    });
                     $('#content-sugestoes').html(s);
                 }
             });
-
-            setTimeout(function () {
-                $.ajax({
-                    url:"/principal/getDeveriaConhecer/",
-                    method:"POST",
-                    data:{idProprio: idLogado},
-                    success:function(v){
-                        $('#content-voce-deveria').html(v);
-                    }
-                });
-            },1200);
 
     //ao clicar em add amigo - SUGESTOES
 
