@@ -18,7 +18,7 @@ $(document).ready(function () {
                     method:"POST",
                     data:{idProprio: idLogado},
                     success:function(v){
-                        $('#content-voce-deveria').html(v);
+                        $('.profiles-slider').html(v);
                         $.ajax({
                             url:"/principal/getDadosAmizade/",
                             method:"POST",

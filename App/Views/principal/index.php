@@ -301,7 +301,8 @@
                                             <h3>Você deveria conhecer:</h3>
                                             <i class="la la-ellipsis-v"></i>
                                         </div>
-                                        <div id="content-voce-deveria">
+                                        <div class="profiles-slider">
+
                                         </div>
                                     </div>
 
