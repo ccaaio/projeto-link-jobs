@@ -33,11 +33,11 @@ class PrincipalController extends Controller {
         if(isset($_POST['idProprio'])) {
             $idLogado = $_POST['idProprio'];
             $conn = mysqli_connect("remotemysql.com", "GQ4OpczpAV", "jt4ifMIloM", "GQ4OpczpAV");
-            $result = mysqli_query($conn, "select * from usuario WHERE usuario.id NOT IN (SELECT id_solicitante
-FROM amizade where id_requisitado = '$idLogado')
-AND usuario.id NOT IN (SELECT amizade.id_requisitado 
-FROM amizade where amizade.id_solicitante = '$idLogado') 
-AND usuario.id != '$idLogado' LIMIT 10");
+            $result = mysqli_query($conn, "SELECT * FROM usuario WHERE usuario.id NOT IN (SELECT id_solicitante
+                FROM amizade WHERE id_requisitado = '$idLogado')
+                AND usuario.id NOT IN (SELECT amizade.id_requisitado 
+                FROM amizade WHERE amizade.id_solicitante = '$idLogado') 
+                AND usuario.id != '$idLogado' LIMIT 6");
 
             while($row = mysqli_fetch_assoc($result)) {
                 $row["listagem"] = "
@@ -238,5 +238,34 @@ AND usuario.id != '$idLogado' LIMIT 10");
         self::setViewJs('/public/js/perfil/perfil.js');
 
         $this->render('principal/amigo');
+    }
+
+    public function getDeveriaConhecer() {
+        if(isset($_POST['idProprio'])) {
+            $idLogado = $_POST['idProprio'];
+            $conn = mysqli_connect("remotemysql.com", "GQ4OpczpAV", "jt4ifMIloM", "GQ4OpczpAV");
+            $result = mysqli_query($conn, "SELECT * FROM usuario WHERE usuario.id NOT IN (SELECT id_solicitante
+                FROM lista_amigos WHERE id_requisitado = '$idLogado')
+                AND usuario.id NOT IN (SELECT lista_amigos.id_requisitado 
+                FROM lista_amigos WHERE lista_amigos.id_solicitante = '$idLogado') 
+                AND usuario.id != '$idLogado' LIMIT 10");
+
+            while($row = mysqli_fetch_assoc($result)) {
+                $row["listagem"] = '
+                    <div class="user-profy">
+                        <img src="/public/images/profile-default.png" alt="" style="width: 57px;height: 57px;">
+                        <h3>'.$row['titulo'].'</h3>
+                        <span>'.$row['profissao'].'</span>
+                        <ul>
+                            <li><a href="#" title="Adicionar Amigo" data-id-usuario="'.$row['id'].'" data-nome-usuario="'.$row['titulo'].'"  class="add-amigo btn btn-block btn-success" style="background-color: #53d690;border: 1px solid #50b550;height: 35px;padding-top: 0.22em;padding-left: 1em;padding-right: 1em;font-size: 15px;"><i class="la la-plus"></i> Adicionar</a></li>
+                        </ul>
+                        <a href="/principal/amigo/'.$row['id'].'" title="">Visualizar Perfil</a>
+                    </div>  
+                    ';
+                ?>
+                <?php
+                echo $row["listagem"];
+            }
+        }
     }
 }

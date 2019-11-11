@@ -12,6 +12,15 @@ $(document).ready(function () {
                 }
             });
 
+            $.ajax({
+                url:"/principal/getDeveriaConhecer/",
+                method:"POST",
+                data:{idProprio: idLogado},
+                success:function(v){
+                    $('#content-voce-deveria').html(v);
+                }
+            });
+
     //ao clicar em add amigo - SUGESTOES
 
     setTimeout(function () {

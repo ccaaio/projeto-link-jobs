@@ -301,7 +301,7 @@
                                             <h3>Você deveria conhecer:</h3>
                                             <i class="la la-ellipsis-v"></i>
                                         </div>
-                                        <div class="profiles-slider">
+                                        <div id="content-voce-deveria" class="profiles-slider">
                                             <div class="user-profy">
                                                 <img src="http://via.placeholder.com/57x57" alt="">
                                                 <h3>John Doe</h3>
