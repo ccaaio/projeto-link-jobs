@@ -19,6 +19,23 @@ $(document).ready(function () {
                     data:{idProprio: idLogado},
                     success:function(v){
                         $('#content-voce-deveria').html(v);
+                        $.ajax({
+                            url:"/principal/getDadosAmizade/",
+                            method:"POST",
+                            data:{idSolicitante: idUserLogado, idRequisitado: $('#id-amigo').val(), nome: $('#nome-amigo').val(), nomeSolicitante: $('#nome-logado').val()},
+                            success:function(s){
+                                setTimeout(function () {
+                                    $(item).remove();
+                                },300);
+                                Swal.fire({
+                                    position: 'center',
+                                    type: 'success',
+                                    title: 'Solicitação de Amizade enviada!',
+                                    showConfirmButton: false,
+                                    timer: 1500
+                                });
+                            }
+                        });
                     }
                 });
             },500);
@@ -35,26 +52,6 @@ $(document).ready(function () {
             $('#nome-amigo').val(nome);
 
             var item = $(this).parent().parent().addClass('animated zoomOut');
-
-            setTimeout(function () {
-                $.ajax({
-                    url:"/principal/getDadosAmizade/",
-                    method:"POST",
-                    data:{idSolicitante: idUserLogado, idRequisitado: $('#id-amigo').val(), nome: $('#nome-amigo').val(), nomeSolicitante: $('#nome-logado').val()},
-                    success:function(s){
-                        setTimeout(function () {
-                            $(item).remove();
-                        },300);
-                        Swal.fire({
-                            position: 'center',
-                            type: 'success',
-                            title: 'Solicitação de Amizade enviada!',
-                            showConfirmButton: false,
-                            timer: 1500
-                        });
-                    }
-                });
-            },100);
         });
     },1000);
 });
