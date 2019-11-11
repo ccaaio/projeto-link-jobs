@@ -18,27 +18,10 @@ $(document).ready(function () {
                     method:"POST",
                     data:{idProprio: idLogado},
                     success:function(v){
-                        $('.profiles-slider').html(v);
-                        $.ajax({
-                            url:"/principal/getDadosAmizade/",
-                            method:"POST",
-                            data:{idSolicitante: idUserLogado, idRequisitado: $('#id-amigo').val(), nome: $('#nome-amigo').val(), nomeSolicitante: $('#nome-logado').val()},
-                            success:function(s){
-                                setTimeout(function () {
-                                    $(item).remove();
-                                },300);
-                                Swal.fire({
-                                    position: 'center',
-                                    type: 'success',
-                                    title: 'Solicitação de Amizade enviada!',
-                                    showConfirmButton: false,
-                                    timer: 1500
-                                });
-                            }
-                        });
+                        $('#content-voce-deveria').html(v);
                     }
                 });
-            },500);
+            },1200);
 
     //ao clicar em add amigo - SUGESTOES
 

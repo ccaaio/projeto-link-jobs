@@ -301,8 +301,73 @@
                                             <h3>Você deveria conhecer:</h3>
                                             <i class="la la-ellipsis-v"></i>
                                         </div>
-                                        <div class="profiles-slider">
-
+                                        <div class="profiles-slider" id="content-voce-deveria">
+                                            <div class="user-profy">
+                                                <img src="http://via.placeholder.com/57x57" alt="">
+                                                <h3>John Doe</h3>
+                                                <span>Designer Gráfico</span>
+                                                <ul>
+                                                    <li><a href="#" title="" class="followw">Adicionar</a></li>
+                                                    <li><a href="#" title="" class="envlp"><img src="/public/images/envelop.png" alt=""></a></li>
+                                                    <li><a href="#" title="" class="hire">Contratar</a></li>
+                                                </ul>
+                                                <a href="perfildousuario2.html" title="">Visualizar Perfil</a>
+                                            </div>
+                                            <div class="user-profy">
+                                                <img src="http://via.placeholder.com/57x57" alt="">
+                                                <h3>John Doe</h3>
+                                                <span>Designer Gráfico</span>
+                                                <ul>
+                                                    <li><a href="#" title="" class="followw">Adicionar</a></li>
+                                                    <li><a href="#" title="" class="envlp"><img src="/public/images/envelop.png" alt=""></a></li>
+                                                    <li><a href="#" title="" class="hire">Contratar</a></li>
+                                                </ul>
+                                                <a href="perfildousuario2.html" title="">Visualizar Perfil</a>
+                                            </div>
+                                            <div class="user-profy">
+                                                <img src="http://via.placeholder.com/57x57" alt="">
+                                                <h3>John Doe</h3>
+                                                <span>Designer Gráfico</span>
+                                                <ul>
+                                                    <li><a href="#" title="" class="followw">Adicionar</a></li>
+                                                    <li><a href="#" title="" class="envlp"><img src="/public/images/envelop.png" alt=""></a></li>
+                                                    <li><a href="#" title="" class="hire">Contratar</a></li>
+                                                </ul>
+                                                <a href="perfildousuario2.html" title="">Visualizar Perfil</a>
+                                            </div>
+                                            <div class="user-profy">
+                                                <img src="http://via.placeholder.com/57x57" alt="">
+                                                <h3>John Doe</h3>
+                                                <span>Designer Gráfico</span>
+                                                <ul>
+                                                    <li><a href="#" title="" class="followw">Adicionar</a></li>
+                                                    <li><a href="#" title="" class="envlp"><img src="/public/images/envelop.png" alt=""></a></li>
+                                                    <li><a href="#" title="" class="hire">Contratar</a></li>
+                                                </ul>
+                                                <a href="perfildousuario2.html" title="">Visualizar Perfil</a>
+                                            </div>
+                                            <div class="user-profy">
+                                                <img src="http://via.placeholder.com/57x57" alt="">
+                                                <h3>John Doe</h3>
+                                                <span>Designer Gráfico</span>
+                                                <ul>
+                                                    <li><a href="#" title="" class="followw">Adicionar</a></li>
+                                                    <li><a href="#" title="" class="envlp"><img src="/public/images/envelop.png" alt=""></a></li>
+                                                    <li><a href="#" title="" class="hire">Contratar</a></li>
+                                                </ul>
+                                                <a href="perfildousuario2.html" title="">Visualizar Perfil</a>
+                                            </div>
+                                            <div class="user-profy">
+                                                <img src="http://via.placeholder.com/57x57" alt="">
+                                                <h3>John Doe</h3>
+                                                <span>Designer Gráfico</span>
+                                                <ul>
+                                                    <li><a href="#" title="" class="followw">Adicionar</a></li>
+                                                    <li><a href="#" title="" class="envlp"><img src="/public/images/envelop.png" alt=""></a></li>
+                                                    <li><a href="#" title="" class="hire">Contratar</a></li>
+                                                </ul>
+                                                <a href="perfildousuario2.html" title="">Visualizar Perfil</a>
+                                            </div>
                                         </div>
                                     </div>
 
