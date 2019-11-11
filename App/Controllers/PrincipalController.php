@@ -257,7 +257,7 @@ class PrincipalController extends Controller {
                         <h3>'.$row['titulo'].'</h3>
                         <span>'.$row['profissao'].'</span>
                         <ul>
-                            <li><a href="#" title="Adicionar Amigo" data-id-usuario="'.$row['id'].'" data-nome-usuario="'.$row['titulo'].'"  class="add-amigo btn btn-block btn-success" style="background-color: #53d690;border: 1px solid #50b550;height: 35px;padding-top: 0.22em;padding-left: 1em;padding-right: 1em;font-size: 15px;"><i class="la la-plus"></i> Adicionar</a></li>
+                            <li><a title="Adicionar Amigo" data-id-usuario="'.$row['id'].'" data-nome-usuario="'.$row['titulo'].'"  class="add-amigo btn btn-block btn-success" style="background-color: #53d690;border: 1px solid #50b550;height: 35px;padding-top: 0.22em;padding-left: 1em;padding-right: 1em;font-size: 15px;cursor: pointer;"><i class="la la-plus"></i> Adicionar</a></li>
                         </ul>
                         <a href="/principal/amigo/'.$row['id'].'" title="">Visualizar Perfil</a>
                     </div>  
