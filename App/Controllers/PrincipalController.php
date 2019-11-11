@@ -45,8 +45,8 @@ AND usuario.id != '$idLogado' LIMIT 10");
                         <div class='suggestion-usd'>
                             <img src='http://via.placeholder.com/35x35' alt='".$row['titulo']."'>
                             <div class='sgt-text' style='white-space: nowrap;width: 150px;overflow: hidden;text-overflow: ellipsis;'>
-                                <h4 style='text-align: left !important;'>".$row['titulo']."</h4>
-                                <span class='profissao-sidebar'>".$row['profissao']."</span>
+                                <h4 class='text-capitalize' style='text-align: left !important;'>".$row['titulo']."</h4>
+                                <span class='profissao-sidebar text-capitalize'>".$row['profissao']."</span>
                             </div>
                             <span class='add-amigo' data-id-usuario='".$row['id']."' data-nome-usuario='".$row['titulo']."'><i class='la la-plus'></i></span>
                         </div>
