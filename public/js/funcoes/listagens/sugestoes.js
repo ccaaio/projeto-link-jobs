@@ -8,12 +8,6 @@ $(document).ready(function () {
         data:{idProprio: idLogado},
         success:function(v){
             $('#content-voce-deveria').html(v);
-            $('#content-voce-deveria').removeClass('slick-initialized');
-            $('#content-voce-deveria').removeClass('slick-slider');
-            setTimeout(function () {
-                $('#content-voce-deveria').addClass('slick-initialized');
-                $('#content-voce-deveria').addClass('slick-slider');
-            },500);
         }
     });
 

@@ -240,7 +240,8 @@ $(window).on("load", function() {
 
     //  ============= PORTFOLIO SLIDER FUNCTION =========
 
-    $('.profiles-slider').slick({
+    setTimeout(function () {
+        $('.profiles-slider').slick({
         slidesToShow: 3,
         slck:true,
         slidesToScroll: 1,
@@ -280,7 +281,7 @@ $(window).on("load", function() {
 
 
     });
-
+    },1000);
 
 
 
