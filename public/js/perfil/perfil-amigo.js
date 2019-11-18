@@ -24,7 +24,7 @@ $(document).ready(function () {
                     }
                 }
             });
-        },1000);
+        },2000);
     };
 
     var verificaSeJaRecomendou = function (getIdPerfil, idUsuario) {
