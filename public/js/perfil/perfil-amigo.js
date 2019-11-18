@@ -11,20 +11,20 @@ $(document).ready(function () {
             }
         });
 
-        $.ajax({
-            url: '/principal/verificaSeEhAmigo',
-            method: 'POST',
-            data: {de: $('#idUsuario').val(), para: $('#id-do-amigo').val()},
-            success: function (v) {
-                if(v.amigo == '1') {
-                    $('#li-do-amigo').remove();
-                } else if(v.amigo == '0') {
+        setTimeout(function () {
+            $.ajax({
+                url: '/principal/verificaSeEhAmigo',
+                method: 'POST',
+                data: {de: $('#idUsuario').val(), para: $('#id-do-amigo').val()},
+                success: function (v) {
+                    if(v.amigo == '1') {
+                        $('#li-do-amigo').remove();
+                    } else if(v.amigo == '0') {
 
+                    }
                 }
-            }
-        });
-
-
+            });
+        },1000);
     };
 
     var verificaSeJaRecomendou = function (getIdPerfil, idUsuario) {
