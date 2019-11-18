@@ -25,7 +25,7 @@ $(document).ready(function () {
                 }
             }
         });
-    },1000);
+    },500);
 
     var verificaSeJaRecomendou = function (getIdPerfil, idUsuario) {
         $.ajax({
