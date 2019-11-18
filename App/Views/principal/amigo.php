@@ -455,7 +455,7 @@
                                 </div>
                                 <div class="widget widget-portfolio">
                                     <div class="wd-heady">
-                                        <h3>Portfólio</h3>
+                                        <h3>Amigos em Comum</h3>
                                         <img src="images/photo-icon.png" alt="">
                                     </div>
                                     <div class="pf-gallery">
