@@ -292,4 +292,27 @@ class PrincipalController extends Controller {
             $this->render('error/usuario');
         }
     }
+
+    public function getAmigosEmComum() {
+        if(isset($_POST['de']) && isset($_POST['para'])) {
+            $de = $_POST['de'];
+            $para = $_POST['para'];
+            $conn = mysqli_connect("remotemysql.com", "GQ4OpczpAV", "jt4ifMIloM", "GQ4OpczpAV");
+            $result = mysqli_query($conn, "select * from amizade where id_solicitante = '$para' and id_requisitado in( select id_requisitado from amizade where id_solicitante = '$de' or id_requisitado = '$de' GROUP BY id_solicitante) and id_requisitado != '$de' or id_solicitante = '$para' and id_requisitado in( select id_solicitante from amizade where id_solicitante = '$de' or id_requisitado = '$de' GROUP BY id_solicitante) and id_requisitado != '$de' LIMIT 10");
+
+            if (mysqli_num_rows($result) > 0) {
+                while($row = mysqli_fetch_assoc($result)) {
+                    $row["listagem"] = '
+
+                    <li><a href="/principal/amigo/'.$row['id_requisitado'].'" title="'.$row['nome_requisitado'].'" alt="'.$row['nome_requisitado'].'"><img src="/public/images/profile-default.png" style="width: 70px;height: 70px;" alt=""></a></li>
+                    ';
+                    ?>
+                    <?php
+                    echo $row["listagem"];
+                }
+            } else {
+
+            }
+        }
+    }
 }

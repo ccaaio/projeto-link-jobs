@@ -18,3 +18,11 @@ FROM lista_amigos where id_requisitado = 13)
 AND usuario.id NOT IN (SELECT lista_amigos.id_requisitado 
 FROM lista_amigos where lista_amigos.id_solicitante = 13) 
 AND usuario.id != 13
+
+
+
+SELECT id,id_solicitante,id_requisitado FROM amizade WHERE
+id_solicitante = 38 AND
+id_requisitado IN( SELECT nome_requisitado FROM amizade WHERE id_requisitado = 38 OR id_solicitante = 55 ) AND id_requisitado != 38 or
+id_solicitante = 55 AND
+id_requisitado IN( SELECT id_solicitante FROM amizade WHERE id_solicitante = 55 OR id_requisitado = 38 ) AND id_requisitado != 55

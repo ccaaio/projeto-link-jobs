@@ -459,7 +459,7 @@
                                         <img src="images/photo-icon.png" alt="">
                                     </div>
                                     <div class="pf-gallery">
-                                        <ul>
+                                        <ul id="amigosEmComum">
                                             <li><a href="#" title=""><img src="http://via.placeholder.com/70x70" alt=""></a></li>
                                             <li><a href="#" title=""><img src="http://via.placeholder.com/70x70" alt=""></a></li>
                                             <li><a href="#" title=""><img src="http://via.placeholder.com/70x70" alt=""></a></li>

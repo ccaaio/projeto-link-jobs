@@ -27,6 +27,18 @@ $(document).ready(function () {
         });
     },500);
 
+
+    setTimeout(function () {
+        $.ajax({
+            url: '/principal/getAmigosEmComum',
+            method: 'POST',
+            data: {de: $('#idUsuario').val(), para: $('#id-do-amigo').val()},
+            success: function (v) {
+               $('#amigosEmComum').html(v);
+            }
+        });
+    },500);
+
     var verificaSeJaRecomendou = function (getIdPerfil, idUsuario) {
         $.ajax({
             url: '/perfil/verificarRecomendacao',
