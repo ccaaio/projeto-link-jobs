@@ -7,11 +7,7 @@ $(document).ready(function () {
             method: 'POST',
             data: {idUser: idUsuario},
             success: function (v) {
-                if(v.amigo == '1') {
-                    $('#li-do-amigo').remove();
-                } else if(v.amigo == '0') {
-
-                }
+                $('#texto-visao-geral').text(v.visao);
             }
         });
 
@@ -20,7 +16,11 @@ $(document).ready(function () {
             method: 'POST',
             data: {de: $('#idUsuario').val(), para: $('#id-do-amigo').val()},
             success: function (v) {
-                $('#texto-visao-geral').text(v.visao);
+                if(v.amigo == '1') {
+                    $('#li-do-amigo').remove();
+                } else if(v.amigo == '0') {
+
+                }
             }
         });
 
