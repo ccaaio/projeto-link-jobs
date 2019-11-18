@@ -1,7 +1,9 @@
 <body>
+
 <input id="idUsuario" type="hidden" value="<?php  echo \App\Lib\Auth::usuario()->id; ?>">
 <input type="hidden" id="id-logado" value="<?php  echo \App\Lib\Auth::usuario()->id; ?>">
 <input type="hidden" id="nome-logado" value="<?php  echo \App\Lib\Auth::usuario()->usuario; ?>">
+<input type="hidden" id="id-do-amigo" value="<?php echo $aViewVar['aAmigo']['id']; ?>">
 
 <div class="wrapper">
     <header>
@@ -192,7 +194,7 @@
                                                     <span>Recomendações</span>
                                                 </a>
                                             </li>
-                                            <li id="" data-tab="feed-dd">
+                                            <li id="li-do-amigo" data-tab="feed-dd">
                                                 <a data-id-usuario="<?php echo $aViewVar['aAmigo']['id']; ?>" data-nome-usuario="<?php echo $aViewVar['aAmigo']['titulo']; ?>" class="add-amigo-perfil" title="" style="text-decoration: none !important;color: #b2b2b2;cursor: pointer;">
                                                     <i class="la la-user-plus" style="font-size: 34px;"></i>
                                                     <span>Adicionar Amigo</span>

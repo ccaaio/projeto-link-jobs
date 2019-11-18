@@ -268,4 +268,28 @@ class PrincipalController extends Controller {
             }
         }
     }
+
+    public function verificaSeEhAmigo() {
+        if(isset($_POST['de']) && isset($_POST['para'])) {
+
+            $de = $_POST['de'];
+            $para = $_POST['para'];
+
+            $conn = mysqli_connect("remotemysql.com", "GQ4OpczpAV", "jt4ifMIloM", "GQ4OpczpAV");
+
+            $result = mysqli_query($conn, "SELECT * FROM amizade WHERE id_solicitante = '$de' AND id_requisitado = '$para' ORDER BY id DESC LIMIT 1");
+
+            if (mysqli_num_rows($result) > 0) {
+                while($row = mysqli_fetch_assoc($result)) {
+                    header('Content-Type: application/json');
+                    echo json_encode(array('amigo'=> '1'));
+                }
+            } else {
+                header('Content-Type: application/json');
+                echo json_encode(array('amigo'=> '0'));
+            }
+        } else {
+            $this->render('error/usuario');
+        }
+    }
 }
