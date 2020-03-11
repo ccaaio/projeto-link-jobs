@@ -2,9 +2,9 @@
   "version": "1.0.0",
   "db": {
       "host": "remotemysql.com",
-      "username": "GQ4OpczpAV",
-      "password": "jt4ifMIloM",
-      "name": "GQ4OpczpAV",
+      "username": "8N4wZxjrtH",
+      "password": "WtiSXesHNZ",
+      "name": "8N4wZxjrtH",
       "driver": "mysql"
   },
   "api": {
